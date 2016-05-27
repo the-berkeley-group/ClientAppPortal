@@ -1,0 +1,15 @@
+//= require jquery
+//= require jquery_ujs
+//= require jquery-smooth-scroll
+//= require bootstrap/modal
+//= require bootstrap/alert
+//= require bootstrap/dropdown
+//= require moment
+//= require jquery.datetimepicker
+//= require turbolinks
+//= require react
+//= require react_ujs
+//= require toastr
+//= require underscore
+//= require components
+//= require_tree .

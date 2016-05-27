@@ -1,0 +1,55 @@
+---
+en:
+  errors:
+    applicant:
+      invalid: >
+        slot has now been filled. Please refresh or choose another.
+  pages:
+    home:
+      about-1: >
+        The Berkeley Group is a student organization at UC Berkeley that provides
+        pro bono consulting services for non-profits and social enterprises in
+        the Bay Area.
+      about-2: >
+        For more information, please visit our website
+      about-3: >
+        If you have any questions or comments, please contact us at
+        theberkeleygroup@gmail.com.
+  applicants:
+    apply:
+      submitted:
+        Your application to The Berkeley Group has been successfully submitted!
+        You should be hearing from us shortly.
+      deadline:
+        The deadline for this semester's application has already passed. Please
+        try again during our next recruitment period.
+      welcome: >
+        Welcome to the online application portal for The Berkeley Group. All
+        fields are required.
+      info-0: >
+        Applications are due by 11:59 pm on Wednesday, January 27, 2016.
+      info-1: >
+        Late or Incomplete applications will not be accepted.
+      info-2: >
+        You will be notified by email Friday afternoon (1/29) if you are
+        invited for a group interview. The case workshop for group interview
+        applicants will be in 145 Dwinelle, 8-10 PM (1/27). Following the group
+        interview, if you are further selected for a personal interview you
+        will be notified Saturday night (1/31). Finally, if you move on from
+        the personal interview stage you will be invited to a meet and greet
+        with the club, which will take place on the following Wednesday (2/3).
+      info-3: >
+        You will be asked to attach a resume and a picture of yourself.
+      info-4: >
+        Uploaded photos should be square and small in size. The picture should
+        be a close up shot and should only have you in it.
+      info-5: >
+        A one page resume is required. For assistance with writing resumes,
+        please visit the career center.
+      info-6: >
+        Please write your responses on a separate document before submitting.
+    status:
+      notify: >
+        Thank you for applying to The Berkeley Group. At this point, we've
+        decided we can't move forward with your application. Please consider
+        reapplying again next semester.

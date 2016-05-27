@@ -1,0 +1,55 @@
+@import "partials/variables";
+@import "partials/layouts";
+
+.breakdown-title {
+  margin-bottom: 25px;
+}
+
+.applicant-card {
+  display: block;
+  border: 1px solid $gray-dark-24;
+  border-radius: 2px;
+  margin-bottom: 7px;
+  overflow: hidden;
+  position: relative;
+
+  &:hover {
+    border-color: $gray-dark-60;
+  }
+
+  a {
+    color: initial;
+    text-decoration: none;
+  }
+
+  .applicant-card-img {
+    position: absolute;
+    left: 0;
+    height: 100%;
+    width: 100px;
+  }
+
+  .applicant-small-img {
+    height: 100%;
+    width: 100%;
+    object-fit: cover;
+  }
+
+  .applicant-info-container {
+    padding: 10px 15px;
+    margin-left: 100px;
+    width: calc(100% - 100px);
+  }
+
+  .applicant-info {
+    white-space: nowrap;
+    text-overflow: ellipsis;
+    overflow: hidden;
+    margin-bottom: 5px;
+
+    label {
+      margin-right: 5px;
+      margin-bottom: 0;
+    }
+  }
+}

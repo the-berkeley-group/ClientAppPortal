@@ -1,0 +1,82 @@
+.hero-container {
+  padding: 40px 0;
+
+  .logo {
+    display: inline-block;
+    margin-right: 50px;
+    margin-bottom: 30px;
+    vertical-align: middle;
+    width: 180px;
+  }
+
+  .hero-picture {
+    height: 100%;
+    width: 100%;
+    object-fit: cover;
+  }
+
+  .title-container {
+    display: inline-block;
+    vertical-align: middle;
+  }
+
+  .hero-title {
+    font-size: $f-size-title;
+    font-weight: 600;
+    margin-bottom: 10px;
+    margin-top: 0;
+  }
+
+  .hero-subtitle {
+    color: $gray-dark-72;
+    font-size: $f-size-xxl;
+    margin: 0;
+  }
+}
+
+.about-container,
+.login-container {
+  h1 {
+    font-size: $f-size-xl;
+    font-weight: 600;
+    margin-bottom: 20px;
+    margin-top: 0;
+  }
+
+  p {
+    line-height: 1.4;
+    margin-bottom: 14px;
+  }
+
+  .link {
+    font-size: $f-size-md;
+  }
+}
+
+.reset-container,
+.login-container {
+  input[type="text"],
+  input[type="password"] {
+    min-width: 250px;
+  }
+}
+
+.login-form {
+  margin-bottom: 15px;
+}
+
+.register-link {
+  cursor: pointer;
+}
+
+.about-subtitle {
+  font-size: $f-size-md;
+}
+
+p.about-link {
+  display: inline-block;
+}
+
+.full-input-container input {
+  width: 100%;
+}

@@ -1,0 +1,18 @@
+AllCops:
+  Exclude:
+    - app/views/**/*
+    - app/helpers/application_helper.rb
+    - bin/*
+    - config/initializers/*
+    - db/**/*
+    - spec/spec_helper.rb
+    - Guardfile
+
+Metrics/LineLength:
+  Max: 110
+
+Style/StringLiterals:
+  Enabled: false
+
+Style/Documentation:
+  Enabled: false
