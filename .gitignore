@@ -1,4 +1,4 @@
 # Ignore application and database YAML files.
 
-./config/application.yml
-./config/database.yml
+config/application.yml
+config/database.yml
