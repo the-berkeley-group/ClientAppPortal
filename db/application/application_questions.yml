@@ -2,77 +2,24 @@
 
 questions:
   - title:
-      'Does the nonprofit organization listed above have 501(c)3 status?'
-    qtype:
-      1
-    category:
-      0
-  - title:
-    'If selected, is the contact listed above available to meet on a weekly
-    basis with a consultant from The Berkeley Group
-    over the course of the engagement?'
-    qtype:
-      1
-    category:
-      0
-  - title:
-    'If selected, is the contact listed above available to meet with the consultants
-    at a location within an hour\'s transportation of UC Berkeley?
-    (e.g. address listed above, satellite office, café, etc.)'
-    qtype:
-      1
-    category:
-      0
-  - title:
-    'If selected, will you and your organization fully commit to an engagement
-    with TBG for January 2016 through May 2016?'
-    qtype:
-      1
-    category:
-      0
-  - title:
-    'Does the contact listed above have the ability to implement recommendations
-    developed by The Berkeley Group?'
-    qtype:
-      1
-    category:
-      0
-  - title:
-      'Have you applied to TBG in the past? If yes, when?'
+      'What is the current problem(s) your organization faces? Please clearly explain the current situation,
+      why the problem exists (if known), and other relevant information.
+      How has your organization currently addressed these problems?'
     qtype:
       0
     category:
-      1
-    limit:
-      800
-  - title:
-      'Have you worked with TBG in the past? If yes, when?'
-    qtype:
       0
-    category:
-      1
-    limit:
-      800
-  - title:
-      'What is the current problem(s) your organization faces?
-      Please clearly explain the current situation, why the problem exists (if known),
-      and other relevant information. How has your
-      organization currently addressed these problems?'
-    qtype:
-      0
-    category:
-      1
     limit:
       800
   - title:
       'What would the main objectives of the project be? How can TBG help solve these issues?
       What can TBG do in order to ensure efficiency and effectiveness?
-      If you have several projects or project objectives in mind,
-      feel free to list them all and prioritize them based on your organization\'s need.'
+      If you have several projects or project objectives in mind, feel free to list them all
+      and prioritize them based on your organization''s need.'
     qtype:
       0
     category:
-      1
+      0
     limit:
       800
   - title:
@@ -80,23 +27,21 @@ questions:
     qtype:
       0
     category:
-      1
+      0
     limit:
       200
   - title:
-      'If your nonprofit is selected to work with TBG this semester, what would success
-      look like after the project was completed? What results do you hope to
-      achieve after working with TBG? What impact will this project have on your organization?'
+      'If your nonprofit is selected to work with TBG this semester, what would success look like
+      after the project was completed? What results do you hope to achieve after working with TBG?
+      What impact will this project have on your organization?'
     qtype:
       0
     category:
-      1
+      0
     limit:
       800
   - title:
-      'In the space below, please share any additional information that you would
-      like The Berkeley Group to know. Please also include any dates or times that you
-      will be unavailable for a follow-up interview between January 19th, 2016 and January 22nd, 2016.'
+      'Have you applied to TBG in the past? If yes, when?'
     qtype:
       0
     category:
@@ -104,8 +49,51 @@ questions:
     limit:
       200
   - title:
-      'How did you hear about The Berkeley Group? (i.e., Facebook, friend
-       referral, tabling, flyer, chalking, etc.)'
+      'Have you worked with TBG in the past? If yes, when?'
+    qtype:
+      0
+    category:
+      1
+  - title:
+      'Does the nonprofit organization listed above have 501(c)3 status?'
+    qtype:
+      2
+    category:
+      1
+  - title:
+      'If selected, is the contact listed above available to meet on a
+      weekly basis with a consultant from The Berkeley Group
+      over the course of the engagement?'
+    qtype:
+      2
+    category:
+      1
+  - title:
+      'If selected, is the contact listed above available to meet with the consultants at
+      a location within an hour''s transportation of UC Berkeley?
+      (e.g. address listed above, satellite office, café, etc.)'
+    qtype:
+      2
+    category:
+      1
+  - title:
+      'If selected, will you and your organization fully commit to an engagement with TBG
+      for January 2016 through May 2016?'
+    qtype:
+      2
+    category:
+      1
+  - title:
+      'Does the contact listed above have the ability to implement recommendations
+      developed by The Berkeley Group'
+    qtype:
+      2
+    category:
+      1
+  - title:
+      'In the space below, please share any additional information that you would like The Berkeley Group to know.
+      Please also include any dates or times that you will be unavailable for a follow-up
+      interview between January 19th, 2016 and January 22nd, 2016.'
     qtype:
       0
     category:
@@ -114,7 +102,7 @@ questions:
       200
   - title:
       'By typing my name on the signature line below, I agree that the information
-      above is true to the best of my knowledge. '
+      above is true to the best of my knowledge.'
     qtype:
       0
     category:
