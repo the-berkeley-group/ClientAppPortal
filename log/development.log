@@ -3562,3 +3562,48 @@ Processing by PagesController#home as HTML
   Rendered pages/home.html.slim within layouts/application (27.4ms)
   Rendered layouts/_navbar.html.slim (0.6ms)
 Completed 200 OK in 981ms (Views: 980.3ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/" for 127.0.0.1 at 2016-06-07 23:18:50 -0400
+  [1m[36mActiveRecord::SchemaMigration Load (34.0ms)[0m  [1mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+Processing by PagesController#home as HTML
+  Rendered pages/home.html.slim within layouts/application (626.1ms)
+  Rendered layouts/_navbar.html.slim (7.1ms)
+Completed 200 OK in 3793ms (Views: 3763.5ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/" for 127.0.0.1 at 2016-06-07 23:26:47 -0400
+  [1m[36mActiveRecord::SchemaMigration Load (0.5ms)[0m  [1mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+Processing by PagesController#home as HTML
+  Rendered pages/home.html.slim within layouts/application (446.5ms)
+  Rendered layouts/_navbar.html.slim (7.2ms)
+Completed 200 OK in 1361ms (Views: 1344.7ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/" for 127.0.0.1 at 2016-06-07 23:27:09 -0400
+Processing by PagesController#home as HTML
+  Rendered pages/home.html.slim within layouts/application (3.5ms)
+  Rendered layouts/_navbar.html.slim (0.3ms)
+Completed 200 OK in 532ms (Views: 531.3ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/" for 127.0.0.1 at 2016-06-07 23:27:15 -0400
+Processing by PagesController#home as HTML
+  Rendered pages/home.html.slim within layouts/application (2.4ms)
+  Rendered layouts/_navbar.html.slim (0.2ms)
+Completed 200 OK in 510ms (Views: 508.6ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/" for 127.0.0.1 at 2016-06-07 23:27:16 -0400
+Processing by PagesController#home as HTML
+  Rendered pages/home.html.slim within layouts/application (6.2ms)
+  Rendered layouts/_navbar.html.slim (0.2ms)
+Completed 200 OK in 526ms (Views: 524.1ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/" for 127.0.0.1 at 2016-06-07 23:31:28 -0400
+  [1m[36mActiveRecord::SchemaMigration Load (0.6ms)[0m  [1mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+Processing by PagesController#home as HTML
+  Rendered pages/home.html.slim within layouts/application (399.7ms)
+  Rendered layouts/_navbar.html.slim (7.4ms)
+Completed 200 OK in 1395ms (Views: 1377.8ms | ActiveRecord: 0.0ms)
