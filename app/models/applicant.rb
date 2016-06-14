@@ -29,6 +29,13 @@
 #  stage                  :integer          default(0)
 #  interview_id           :integer
 #  token                  :string
+#  organization           :string
+#  address                :string
+#  city                   :string
+#  state                  :string
+#  website                :string
+#  mission                :string
+#  position               :string
 #
 
 class Applicant < ActiveRecord::Base
@@ -58,6 +65,7 @@ class Applicant < ActiveRecord::Base
   validates :password_confirmation, presence: true, if: :password_required?
   validates :first_name, :last_name, :year, :major, presence: true, on: :submit
   validates :gpa, :units, :phone, :resume, :picture, presence: true, on: :submit
+  validates :org, :address, :city, :state, :website, :mission, :position, presence: true, on: :submit
   validates :stage, numericality: { less_than: 3 }
 
   scope :submitted, -> { where(submit: true) }

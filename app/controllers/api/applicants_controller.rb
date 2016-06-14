@@ -79,7 +79,8 @@ module Api
     def update_params
       params[:responses_attributes] = params.delete(:responses)
       params.permit(:first_name, :last_name, :year, :gpa, :units, :phone,
-                    :major, :resume, :picture, responses_attributes: [:id, :answer])
+                    :major, :resume, :picture, :org, :address, :city, :state,
+                    :website, :mission, :position, responses_attributes: [:id, :answer])
     end
 
     def upload_params

@@ -11,7 +11,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20160122200406) do
+ActiveRecord::Schema.define(version: 20160614044308) do
 
   # These are extensions that must be enabled in order to support this database
   enable_extension "plpgsql"
@@ -63,6 +63,13 @@ ActiveRecord::Schema.define(version: 20160122200406) do
     t.integer  "stage",                  default: 0
     t.integer  "interview_id"
     t.string   "token"
+    t.string   "org"
+    t.string   "address"
+    t.string   "city"
+    t.string   "state"
+    t.string   "website"
+    t.string   "mission"
+    t.string   "position"
   end
 
   add_index "applicants", ["email"], name: "index_applicants_on_email", unique: true, using: :btree

@@ -25,6 +25,13 @@ class ApplicantInfo extends React.Component {
                 { this._renderInput("gpa", "GPA") }
                 { this._renderInput("units", "Spring 2016 Units") }
                 { this._renderInput("phone", "Phone Number") }
+                { this._renderInput("org", "Organization")}
+                { this._renderInput("address", "Address")}
+                { this._renderInput("city", "City")}
+                { this._renderInput("state", "State")}
+                { this._renderInput("website", "Website")}
+                { this._renderInput("mission", "Mission")}
+                { this._renderInput("position", "Position")}
             </div>
         );
     }
