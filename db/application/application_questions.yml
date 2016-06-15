@@ -54,6 +54,8 @@ questions:
       0
     category:
       1
+    limit:
+      200
   - title:
       'Does the nonprofit organization listed above have 501(c)3 status?'
     qtype:
