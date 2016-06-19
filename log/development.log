@@ -10831,3 +10831,743 @@ Processing by PagesController#home as HTML
   Rendered pages/home.html.slim within layouts/application (32.0ms)
   Rendered layouts/_navbar.html.slim (0.7ms)
 Completed 200 OK in 1577ms (Views: 1575.2ms | ActiveRecord: 0.0ms)
+  [1m[36mActiveRecord::SchemaMigration Load (88.7ms)[0m  [1mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+  [1m[35mActiveRecord::SchemaMigration Load (0.5ms)[0m  SELECT "schema_migrations".* FROM "schema_migrations"
+  [1m[36m (2.6ms)[0m  [1mSELECT t2.oid::regclass::text AS to_table, a1.attname AS column, a2.attname AS primary_key, c.conname AS name, c.confupdtype AS on_update, c.confdeltype AS on_delete
+FROM pg_constraint c
+JOIN pg_class t1 ON c.conrelid = t1.oid
+JOIN pg_class t2 ON c.confrelid = t2.oid
+JOIN pg_attribute a1 ON a1.attnum = c.conkey[1] AND a1.attrelid = t1.oid
+JOIN pg_attribute a2 ON a2.attnum = c.confkey[1] AND a2.attrelid = t2.oid
+JOIN pg_namespace t3 ON c.connamespace = t3.oid
+WHERE c.contype = 'f'
+  AND t1.relname = 'admins'
+  AND t3.nspname = ANY (current_schemas(false))
+ORDER BY c.conname
+[0m
+  [1m[35m (2.8ms)[0m  SELECT t2.oid::regclass::text AS to_table, a1.attname AS column, a2.attname AS primary_key, c.conname AS name, c.confupdtype AS on_update, c.confdeltype AS on_delete
+FROM pg_constraint c
+JOIN pg_class t1 ON c.conrelid = t1.oid
+JOIN pg_class t2 ON c.confrelid = t2.oid
+JOIN pg_attribute a1 ON a1.attnum = c.conkey[1] AND a1.attrelid = t1.oid
+JOIN pg_attribute a2 ON a2.attnum = c.confkey[1] AND a2.attrelid = t2.oid
+JOIN pg_namespace t3 ON c.connamespace = t3.oid
+WHERE c.contype = 'f'
+  AND t1.relname = 'applicants'
+  AND t3.nspname = ANY (current_schemas(false))
+ORDER BY c.conname
+
+  [1m[36m (2.3ms)[0m  [1mSELECT t2.oid::regclass::text AS to_table, a1.attname AS column, a2.attname AS primary_key, c.conname AS name, c.confupdtype AS on_update, c.confdeltype AS on_delete
+FROM pg_constraint c
+JOIN pg_class t1 ON c.conrelid = t1.oid
+JOIN pg_class t2 ON c.confrelid = t2.oid
+JOIN pg_attribute a1 ON a1.attnum = c.conkey[1] AND a1.attrelid = t1.oid
+JOIN pg_attribute a2 ON a2.attnum = c.confkey[1] AND a2.attrelid = t2.oid
+JOIN pg_namespace t3 ON c.connamespace = t3.oid
+WHERE c.contype = 'f'
+  AND t1.relname = 'comments'
+  AND t3.nspname = ANY (current_schemas(false))
+ORDER BY c.conname
+[0m
+  [1m[35m (2.0ms)[0m  SELECT t2.oid::regclass::text AS to_table, a1.attname AS column, a2.attname AS primary_key, c.conname AS name, c.confupdtype AS on_update, c.confdeltype AS on_delete
+FROM pg_constraint c
+JOIN pg_class t1 ON c.conrelid = t1.oid
+JOIN pg_class t2 ON c.confrelid = t2.oid
+JOIN pg_attribute a1 ON a1.attnum = c.conkey[1] AND a1.attrelid = t1.oid
+JOIN pg_attribute a2 ON a2.attnum = c.confkey[1] AND a2.attrelid = t2.oid
+JOIN pg_namespace t3 ON c.connamespace = t3.oid
+WHERE c.contype = 'f'
+  AND t1.relname = 'emails'
+  AND t3.nspname = ANY (current_schemas(false))
+ORDER BY c.conname
+
+  [1m[36m (1.9ms)[0m  [1mSELECT t2.oid::regclass::text AS to_table, a1.attname AS column, a2.attname AS primary_key, c.conname AS name, c.confupdtype AS on_update, c.confdeltype AS on_delete
+FROM pg_constraint c
+JOIN pg_class t1 ON c.conrelid = t1.oid
+JOIN pg_class t2 ON c.confrelid = t2.oid
+JOIN pg_attribute a1 ON a1.attnum = c.conkey[1] AND a1.attrelid = t1.oid
+JOIN pg_attribute a2 ON a2.attnum = c.confkey[1] AND a2.attrelid = t2.oid
+JOIN pg_namespace t3 ON c.connamespace = t3.oid
+WHERE c.contype = 'f'
+  AND t1.relname = 'interviews'
+  AND t3.nspname = ANY (current_schemas(false))
+ORDER BY c.conname
+[0m
+  [1m[35m (2.0ms)[0m  SELECT t2.oid::regclass::text AS to_table, a1.attname AS column, a2.attname AS primary_key, c.conname AS name, c.confupdtype AS on_update, c.confdeltype AS on_delete
+FROM pg_constraint c
+JOIN pg_class t1 ON c.conrelid = t1.oid
+JOIN pg_class t2 ON c.confrelid = t2.oid
+JOIN pg_attribute a1 ON a1.attnum = c.conkey[1] AND a1.attrelid = t1.oid
+JOIN pg_attribute a2 ON a2.attnum = c.confkey[1] AND a2.attrelid = t2.oid
+JOIN pg_namespace t3 ON c.connamespace = t3.oid
+WHERE c.contype = 'f'
+  AND t1.relname = 'questions'
+  AND t3.nspname = ANY (current_schemas(false))
+ORDER BY c.conname
+
+  [1m[36m (2.2ms)[0m  [1mSELECT t2.oid::regclass::text AS to_table, a1.attname AS column, a2.attname AS primary_key, c.conname AS name, c.confupdtype AS on_update, c.confdeltype AS on_delete
+FROM pg_constraint c
+JOIN pg_class t1 ON c.conrelid = t1.oid
+JOIN pg_class t2 ON c.confrelid = t2.oid
+JOIN pg_attribute a1 ON a1.attnum = c.conkey[1] AND a1.attrelid = t1.oid
+JOIN pg_attribute a2 ON a2.attnum = c.confkey[1] AND a2.attrelid = t2.oid
+JOIN pg_namespace t3 ON c.connamespace = t3.oid
+WHERE c.contype = 'f'
+  AND t1.relname = 'responses'
+  AND t3.nspname = ANY (current_schemas(false))
+ORDER BY c.conname
+[0m
+  [1m[35m (2.0ms)[0m  SELECT t2.oid::regclass::text AS to_table, a1.attname AS column, a2.attname AS primary_key, c.conname AS name, c.confupdtype AS on_update, c.confdeltype AS on_delete
+FROM pg_constraint c
+JOIN pg_class t1 ON c.conrelid = t1.oid
+JOIN pg_class t2 ON c.confrelid = t2.oid
+JOIN pg_attribute a1 ON a1.attnum = c.conkey[1] AND a1.attrelid = t1.oid
+JOIN pg_attribute a2 ON a2.attnum = c.confkey[1] AND a2.attrelid = t2.oid
+JOIN pg_namespace t3 ON c.connamespace = t3.oid
+WHERE c.contype = 'f'
+  AND t1.relname = 'settings'
+  AND t3.nspname = ANY (current_schemas(false))
+ORDER BY c.conname
+
+  [1m[36mActiveRecord::SchemaMigration Load (0.5ms)[0m  [1mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+  [1m[35mActiveRecord::SchemaMigration Load (0.2ms)[0m  SELECT "schema_migrations".* FROM "schema_migrations"
+  [1m[36m (3.7ms)[0m  [1mSELECT t2.oid::regclass::text AS to_table, a1.attname AS column, a2.attname AS primary_key, c.conname AS name, c.confupdtype AS on_update, c.confdeltype AS on_delete
+FROM pg_constraint c
+JOIN pg_class t1 ON c.conrelid = t1.oid
+JOIN pg_class t2 ON c.confrelid = t2.oid
+JOIN pg_attribute a1 ON a1.attnum = c.conkey[1] AND a1.attrelid = t1.oid
+JOIN pg_attribute a2 ON a2.attnum = c.confkey[1] AND a2.attrelid = t2.oid
+JOIN pg_namespace t3 ON c.connamespace = t3.oid
+WHERE c.contype = 'f'
+  AND t1.relname = 'admins'
+  AND t3.nspname = ANY (current_schemas(false))
+ORDER BY c.conname
+[0m
+  [1m[35m (2.3ms)[0m  SELECT t2.oid::regclass::text AS to_table, a1.attname AS column, a2.attname AS primary_key, c.conname AS name, c.confupdtype AS on_update, c.confdeltype AS on_delete
+FROM pg_constraint c
+JOIN pg_class t1 ON c.conrelid = t1.oid
+JOIN pg_class t2 ON c.confrelid = t2.oid
+JOIN pg_attribute a1 ON a1.attnum = c.conkey[1] AND a1.attrelid = t1.oid
+JOIN pg_attribute a2 ON a2.attnum = c.confkey[1] AND a2.attrelid = t2.oid
+JOIN pg_namespace t3 ON c.connamespace = t3.oid
+WHERE c.contype = 'f'
+  AND t1.relname = 'applicants'
+  AND t3.nspname = ANY (current_schemas(false))
+ORDER BY c.conname
+
+  [1m[36m (1.8ms)[0m  [1mSELECT t2.oid::regclass::text AS to_table, a1.attname AS column, a2.attname AS primary_key, c.conname AS name, c.confupdtype AS on_update, c.confdeltype AS on_delete
+FROM pg_constraint c
+JOIN pg_class t1 ON c.conrelid = t1.oid
+JOIN pg_class t2 ON c.confrelid = t2.oid
+JOIN pg_attribute a1 ON a1.attnum = c.conkey[1] AND a1.attrelid = t1.oid
+JOIN pg_attribute a2 ON a2.attnum = c.confkey[1] AND a2.attrelid = t2.oid
+JOIN pg_namespace t3 ON c.connamespace = t3.oid
+WHERE c.contype = 'f'
+  AND t1.relname = 'comments'
+  AND t3.nspname = ANY (current_schemas(false))
+ORDER BY c.conname
+[0m
+  [1m[35m (1.8ms)[0m  SELECT t2.oid::regclass::text AS to_table, a1.attname AS column, a2.attname AS primary_key, c.conname AS name, c.confupdtype AS on_update, c.confdeltype AS on_delete
+FROM pg_constraint c
+JOIN pg_class t1 ON c.conrelid = t1.oid
+JOIN pg_class t2 ON c.confrelid = t2.oid
+JOIN pg_attribute a1 ON a1.attnum = c.conkey[1] AND a1.attrelid = t1.oid
+JOIN pg_attribute a2 ON a2.attnum = c.confkey[1] AND a2.attrelid = t2.oid
+JOIN pg_namespace t3 ON c.connamespace = t3.oid
+WHERE c.contype = 'f'
+  AND t1.relname = 'emails'
+  AND t3.nspname = ANY (current_schemas(false))
+ORDER BY c.conname
+
+  [1m[36m (1.8ms)[0m  [1mSELECT t2.oid::regclass::text AS to_table, a1.attname AS column, a2.attname AS primary_key, c.conname AS name, c.confupdtype AS on_update, c.confdeltype AS on_delete
+FROM pg_constraint c
+JOIN pg_class t1 ON c.conrelid = t1.oid
+JOIN pg_class t2 ON c.confrelid = t2.oid
+JOIN pg_attribute a1 ON a1.attnum = c.conkey[1] AND a1.attrelid = t1.oid
+JOIN pg_attribute a2 ON a2.attnum = c.confkey[1] AND a2.attrelid = t2.oid
+JOIN pg_namespace t3 ON c.connamespace = t3.oid
+WHERE c.contype = 'f'
+  AND t1.relname = 'interviews'
+  AND t3.nspname = ANY (current_schemas(false))
+ORDER BY c.conname
+[0m
+  [1m[35m (1.8ms)[0m  SELECT t2.oid::regclass::text AS to_table, a1.attname AS column, a2.attname AS primary_key, c.conname AS name, c.confupdtype AS on_update, c.confdeltype AS on_delete
+FROM pg_constraint c
+JOIN pg_class t1 ON c.conrelid = t1.oid
+JOIN pg_class t2 ON c.confrelid = t2.oid
+JOIN pg_attribute a1 ON a1.attnum = c.conkey[1] AND a1.attrelid = t1.oid
+JOIN pg_attribute a2 ON a2.attnum = c.confkey[1] AND a2.attrelid = t2.oid
+JOIN pg_namespace t3 ON c.connamespace = t3.oid
+WHERE c.contype = 'f'
+  AND t1.relname = 'questions'
+  AND t3.nspname = ANY (current_schemas(false))
+ORDER BY c.conname
+
+  [1m[36m (1.8ms)[0m  [1mSELECT t2.oid::regclass::text AS to_table, a1.attname AS column, a2.attname AS primary_key, c.conname AS name, c.confupdtype AS on_update, c.confdeltype AS on_delete
+FROM pg_constraint c
+JOIN pg_class t1 ON c.conrelid = t1.oid
+JOIN pg_class t2 ON c.confrelid = t2.oid
+JOIN pg_attribute a1 ON a1.attnum = c.conkey[1] AND a1.attrelid = t1.oid
+JOIN pg_attribute a2 ON a2.attnum = c.confkey[1] AND a2.attrelid = t2.oid
+JOIN pg_namespace t3 ON c.connamespace = t3.oid
+WHERE c.contype = 'f'
+  AND t1.relname = 'responses'
+  AND t3.nspname = ANY (current_schemas(false))
+ORDER BY c.conname
+[0m
+  [1m[35m (1.9ms)[0m  SELECT t2.oid::regclass::text AS to_table, a1.attname AS column, a2.attname AS primary_key, c.conname AS name, c.confupdtype AS on_update, c.confdeltype AS on_delete
+FROM pg_constraint c
+JOIN pg_class t1 ON c.conrelid = t1.oid
+JOIN pg_class t2 ON c.confrelid = t2.oid
+JOIN pg_attribute a1 ON a1.attnum = c.conkey[1] AND a1.attrelid = t1.oid
+JOIN pg_attribute a2 ON a2.attnum = c.confkey[1] AND a2.attrelid = t2.oid
+JOIN pg_namespace t3 ON c.connamespace = t3.oid
+WHERE c.contype = 'f'
+  AND t1.relname = 'settings'
+  AND t3.nspname = ANY (current_schemas(false))
+ORDER BY c.conname
+
+  [1m[36mQuestion Load (87.7ms)[0m  [1mSELECT "questions".* FROM "questions"[0m
+  [1m[35m (0.2ms)[0m  BEGIN
+  [1m[36mSQL (98.5ms)[0m  [1mDELETE FROM "questions" WHERE "questions"."id" = $1[0m  [["id", 14]]
+  [1m[35m (1.8ms)[0m  COMMIT
+  [1m[36m (0.1ms)[0m  [1mBEGIN[0m
+  [1m[35mSQL (0.3ms)[0m  DELETE FROM "questions" WHERE "questions"."id" = $1  [["id", 15]]
+  [1m[36m (1.0ms)[0m  [1mCOMMIT[0m
+  [1m[35m (0.1ms)[0m  BEGIN
+  [1m[36mSQL (0.3ms)[0m  [1mDELETE FROM "questions" WHERE "questions"."id" = $1[0m  [["id", 16]]
+  [1m[35m (0.6ms)[0m  COMMIT
+  [1m[36m (0.1ms)[0m  [1mBEGIN[0m
+  [1m[35mSQL (0.2ms)[0m  DELETE FROM "questions" WHERE "questions"."id" = $1  [["id", 17]]
+  [1m[36m (0.6ms)[0m  [1mCOMMIT[0m
+  [1m[35m (0.2ms)[0m  BEGIN
+  [1m[36mSQL (0.2ms)[0m  [1mDELETE FROM "questions" WHERE "questions"."id" = $1[0m  [["id", 18]]
+  [1m[35m (0.7ms)[0m  COMMIT
+  [1m[36m (0.1ms)[0m  [1mBEGIN[0m
+  [1m[35mSQL (0.3ms)[0m  DELETE FROM "questions" WHERE "questions"."id" = $1  [["id", 19]]
+  [1m[36m (0.6ms)[0m  [1mCOMMIT[0m
+  [1m[35m (0.1ms)[0m  BEGIN
+  [1m[36mSQL (0.1ms)[0m  [1mDELETE FROM "questions" WHERE "questions"."id" = $1[0m  [["id", 20]]
+  [1m[35m (0.6ms)[0m  COMMIT
+  [1m[36m (0.1ms)[0m  [1mBEGIN[0m
+  [1m[35mSQL (0.1ms)[0m  DELETE FROM "questions" WHERE "questions"."id" = $1  [["id", 21]]
+  [1m[36m (0.8ms)[0m  [1mCOMMIT[0m
+  [1m[35m (0.1ms)[0m  BEGIN
+  [1m[36mSQL (0.1ms)[0m  [1mDELETE FROM "questions" WHERE "questions"."id" = $1[0m  [["id", 22]]
+  [1m[35m (0.6ms)[0m  COMMIT
+  [1m[36m (0.1ms)[0m  [1mBEGIN[0m
+  [1m[35mSQL (0.2ms)[0m  DELETE FROM "questions" WHERE "questions"."id" = $1  [["id", 23]]
+  [1m[36m (0.6ms)[0m  [1mCOMMIT[0m
+  [1m[35m (0.1ms)[0m  BEGIN
+  [1m[36mSQL (0.2ms)[0m  [1mDELETE FROM "questions" WHERE "questions"."id" = $1[0m  [["id", 24]]
+  [1m[35m (0.7ms)[0m  COMMIT
+  [1m[36m (0.1ms)[0m  [1mBEGIN[0m
+  [1m[35mSQL (0.2ms)[0m  DELETE FROM "questions" WHERE "questions"."id" = $1  [["id", 25]]
+  [1m[36m (0.7ms)[0m  [1mCOMMIT[0m
+  [1m[35m (0.1ms)[0m  BEGIN
+  [1m[36mSQL (0.2ms)[0m  [1mDELETE FROM "questions" WHERE "questions"."id" = $1[0m  [["id", 26]]
+  [1m[35m (0.6ms)[0m  COMMIT
+  [1m[36m (0.2ms)[0m  [1mBEGIN[0m
+  [1m[35mSQL (15.5ms)[0m  INSERT INTO "questions" ("title", "qtype", "category", "limit", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5, $6) RETURNING "id"  [["title", "What is the current problem(s) your organization faces? Please clearly explain the current situation, why the problem exists (if known), and other relevant information. How has your organization currently addressed these problems?"], ["qtype", 0], ["category", 0], ["limit", 800], ["created_at", "2016-06-19 03:52:51.083095"], ["updated_at", "2016-06-19 03:52:51.083095"]]
+  [1m[36m (0.9ms)[0m  [1mCOMMIT[0m
+  [1m[35m (0.1ms)[0m  BEGIN
+  [1m[36mSQL (0.2ms)[0m  [1mINSERT INTO "questions" ("title", "qtype", "category", "limit", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5, $6) RETURNING "id"[0m  [["title", "What would the main objectives of the project be? How can TBG help solve these issues? What can TBG do in order to ensure efficiency and effectiveness? If you have several projects or project objectives in mind, feel free to list them all and prioritize them based on your organization's need."], ["qtype", 0], ["category", 0], ["limit", 800], ["created_at", "2016-06-19 03:52:51.126264"], ["updated_at", "2016-06-19 03:52:51.126264"]]
+  [1m[35m (1.0ms)[0m  COMMIT
+  [1m[36m (0.1ms)[0m  [1mBEGIN[0m
+  [1m[35mSQL (0.3ms)[0m  INSERT INTO "questions" ("title", "qtype", "category", "limit", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5, $6) RETURNING "id"  [["title", "In one sentence, please explicitly summarize the goals of the project."], ["qtype", 0], ["category", 0], ["limit", 200], ["created_at", "2016-06-19 03:52:51.129631"], ["updated_at", "2016-06-19 03:52:51.129631"]]
+  [1m[36m (0.7ms)[0m  [1mCOMMIT[0m
+  [1m[35m (0.1ms)[0m  BEGIN
+  [1m[36mSQL (0.3ms)[0m  [1mINSERT INTO "questions" ("title", "qtype", "category", "limit", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5, $6) RETURNING "id"[0m  [["title", "If your nonprofit is selected to work with TBG this semester, what would success look like after the project was completed? What results do you hope to achieve after working with TBG? What impact will this project have on your organization?"], ["qtype", 0], ["category", 0], ["limit", 800], ["created_at", "2016-06-19 03:52:51.132833"], ["updated_at", "2016-06-19 03:52:51.132833"]]
+  [1m[35m (0.9ms)[0m  COMMIT
+  [1m[36m (0.1ms)[0m  [1mBEGIN[0m
+  [1m[35mSQL (0.3ms)[0m  INSERT INTO "questions" ("title", "qtype", "category", "limit", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5, $6) RETURNING "id"  [["title", "Have you applied to TBG in the past? If yes, when?"], ["qtype", 0], ["category", 1], ["limit", 200], ["created_at", "2016-06-19 03:52:51.136207"], ["updated_at", "2016-06-19 03:52:51.136207"]]
+  [1m[36m (0.9ms)[0m  [1mCOMMIT[0m
+  [1m[35m (0.1ms)[0m  BEGIN
+  [1m[36mSQL (0.3ms)[0m  [1mINSERT INTO "questions" ("title", "qtype", "category", "limit", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5, $6) RETURNING "id"[0m  [["title", "Have you worked with TBG in the past? If yes, when?"], ["qtype", 0], ["category", 1], ["limit", 200], ["created_at", "2016-06-19 03:52:51.140449"], ["updated_at", "2016-06-19 03:52:51.140449"]]
+  [1m[35m (0.6ms)[0m  COMMIT
+  [1m[36m (0.2ms)[0m  [1mBEGIN[0m
+  [1m[35mSQL (0.8ms)[0m  INSERT INTO "questions" ("title", "qtype", "category", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5) RETURNING "id"  [["title", "Does the nonprofit organization listed above have 501(c)3 status?"], ["qtype", 2], ["category", 1], ["created_at", "2016-06-19 03:52:51.144129"], ["updated_at", "2016-06-19 03:52:51.144129"]]
+  [1m[36m (0.7ms)[0m  [1mCOMMIT[0m
+  [1m[35m (0.2ms)[0m  BEGIN
+  [1m[36mSQL (0.3ms)[0m  [1mINSERT INTO "questions" ("title", "qtype", "category", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5) RETURNING "id"[0m  [["title", "If selected, is the contact listed above available to meet on a weekly basis with a consultant from The Berkeley Group over the course of the engagement?"], ["qtype", 2], ["category", 1], ["created_at", "2016-06-19 03:52:51.149480"], ["updated_at", "2016-06-19 03:52:51.149480"]]
+  [1m[35m (0.7ms)[0m  COMMIT
+  [1m[36m (0.1ms)[0m  [1mBEGIN[0m
+  [1m[35mSQL (0.2ms)[0m  INSERT INTO "questions" ("title", "qtype", "category", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5) RETURNING "id"  [["title", "If selected, is the contact listed above available to meet with the consultants at a location within an hour's transportation of UC Berkeley? (e.g. address listed above, satellite office, café, etc.)"], ["qtype", 2], ["category", 1], ["created_at", "2016-06-19 03:52:51.152268"], ["updated_at", "2016-06-19 03:52:51.152268"]]
+  [1m[36m (0.7ms)[0m  [1mCOMMIT[0m
+  [1m[35m (0.1ms)[0m  BEGIN
+  [1m[36mSQL (0.3ms)[0m  [1mINSERT INTO "questions" ("title", "qtype", "category", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5) RETURNING "id"[0m  [["title", "If selected, will you and your organization fully commit to an engagement with TBG for January 2016 through May 2016?"], ["qtype", 2], ["category", 1], ["created_at", "2016-06-19 03:52:51.155161"], ["updated_at", "2016-06-19 03:52:51.155161"]]
+  [1m[35m (0.7ms)[0m  COMMIT
+  [1m[36m (0.1ms)[0m  [1mBEGIN[0m
+  [1m[35mSQL (0.2ms)[0m  INSERT INTO "questions" ("title", "qtype", "category", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5) RETURNING "id"  [["title", "Does the contact listed above have the ability to implement recommendations developed by The Berkeley Group"], ["qtype", 2], ["category", 1], ["created_at", "2016-06-19 03:52:51.158445"], ["updated_at", "2016-06-19 03:52:51.158445"]]
+  [1m[36m (0.9ms)[0m  [1mCOMMIT[0m
+  [1m[35m (0.1ms)[0m  BEGIN
+  [1m[36mSQL (0.2ms)[0m  [1mINSERT INTO "questions" ("title", "qtype", "category", "limit", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5, $6) RETURNING "id"[0m  [["title", "In the space below, please share any additional information that you would like The Berkeley Group to know. Please also include any dates or times that you will be unavailable for a follow-up interview between January 19th, 2016 and January 22nd, 2016."], ["qtype", 0], ["category", 2], ["limit", 200], ["created_at", "2016-06-19 03:52:51.161490"], ["updated_at", "2016-06-19 03:52:51.161490"]]
+  [1m[35m (0.9ms)[0m  COMMIT
+  [1m[36m (0.1ms)[0m  [1mBEGIN[0m
+  [1m[35mSQL (10.7ms)[0m  INSERT INTO "questions" ("title", "qtype", "category", "limit", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5, $6) RETURNING "id"  [["title", "By typing my name on the signature line below, I agree that the information above is true to the best of my knowledge."], ["qtype", 0], ["category", 2], ["limit", 200], ["created_at", "2016-06-19 03:52:51.164973"], ["updated_at", "2016-06-19 03:52:51.164973"]]
+  [1m[36m (1.0ms)[0m  [1mCOMMIT[0m
+
+
+Started GET "/" for 127.0.0.1 at 2016-06-18 23:54:30 -0400
+  [1m[36mActiveRecord::SchemaMigration Load (0.6ms)[0m  [1mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+Processing by PagesController#home as HTML
+  Rendered pages/home.html.slim within layouts/application (629.4ms)
+  Rendered layouts/_navbar.html.slim (13.4ms)
+Completed 200 OK in 4308ms (Views: 4242.8ms | ActiveRecord: 0.0ms)
+
+
+Started POST "/sign_up" for 127.0.0.1 at 2016-06-18 23:54:53 -0400
+Processing by RegistrationsController#create as */*
+  Parameters: {"applicant"=>{"email"=>"test@berkeley.edu", "password"=>"[FILTERED]", "password_confirmation"=>"[FILTERED]"}}
+  [1m[35m (0.2ms)[0m  BEGIN
+  [1m[36mApplicant Exists (52.3ms)[0m  [1mSELECT  1 AS one FROM "applicants" WHERE "applicants"."email" = 'test@berkeley.edu' LIMIT 1[0m
+  [1m[35mQuestion Load (27.0ms)[0m  SELECT  "questions".* FROM "questions"  ORDER BY "questions"."id" ASC LIMIT 1000
+  [1m[36mSQL (119.1ms)[0m  [1mINSERT INTO "responses" ("question_id", "created_at", "updated_at") VALUES ($1, $2, $3) RETURNING "id"[0m  [["question_id", 27], ["created_at", "2016-06-19 03:54:54.315498"], ["updated_at", "2016-06-19 03:54:54.315498"]]
+  [1m[35mSQL (0.4ms)[0m  INSERT INTO "responses" ("question_id", "created_at", "updated_at") VALUES ($1, $2, $3) RETURNING "id"  [["question_id", 28], ["created_at", "2016-06-19 03:54:54.438048"], ["updated_at", "2016-06-19 03:54:54.438048"]]
+  [1m[36mSQL (0.6ms)[0m  [1mINSERT INTO "responses" ("question_id", "created_at", "updated_at") VALUES ($1, $2, $3) RETURNING "id"[0m  [["question_id", 29], ["created_at", "2016-06-19 03:54:54.442657"], ["updated_at", "2016-06-19 03:54:54.442657"]]
+  [1m[35mSQL (0.3ms)[0m  INSERT INTO "responses" ("question_id", "created_at", "updated_at") VALUES ($1, $2, $3) RETURNING "id"  [["question_id", 30], ["created_at", "2016-06-19 03:54:54.446374"], ["updated_at", "2016-06-19 03:54:54.446374"]]
+  [1m[36mSQL (0.3ms)[0m  [1mINSERT INTO "responses" ("question_id", "created_at", "updated_at") VALUES ($1, $2, $3) RETURNING "id"[0m  [["question_id", 31], ["created_at", "2016-06-19 03:54:54.448818"], ["updated_at", "2016-06-19 03:54:54.448818"]]
+  [1m[35mSQL (0.2ms)[0m  INSERT INTO "responses" ("question_id", "created_at", "updated_at") VALUES ($1, $2, $3) RETURNING "id"  [["question_id", 32], ["created_at", "2016-06-19 03:54:54.450612"], ["updated_at", "2016-06-19 03:54:54.450612"]]
+  [1m[36mSQL (0.2ms)[0m  [1mINSERT INTO "responses" ("question_id", "created_at", "updated_at") VALUES ($1, $2, $3) RETURNING "id"[0m  [["question_id", 33], ["created_at", "2016-06-19 03:54:54.452226"], ["updated_at", "2016-06-19 03:54:54.452226"]]
+  [1m[35mSQL (0.2ms)[0m  INSERT INTO "responses" ("question_id", "created_at", "updated_at") VALUES ($1, $2, $3) RETURNING "id"  [["question_id", 34], ["created_at", "2016-06-19 03:54:54.454182"], ["updated_at", "2016-06-19 03:54:54.454182"]]
+  [1m[36mSQL (0.2ms)[0m  [1mINSERT INTO "responses" ("question_id", "created_at", "updated_at") VALUES ($1, $2, $3) RETURNING "id"[0m  [["question_id", 35], ["created_at", "2016-06-19 03:54:54.455933"], ["updated_at", "2016-06-19 03:54:54.455933"]]
+  [1m[35mSQL (0.2ms)[0m  INSERT INTO "responses" ("question_id", "created_at", "updated_at") VALUES ($1, $2, $3) RETURNING "id"  [["question_id", 36], ["created_at", "2016-06-19 03:54:54.457496"], ["updated_at", "2016-06-19 03:54:54.457496"]]
+  [1m[36mSQL (0.2ms)[0m  [1mINSERT INTO "responses" ("question_id", "created_at", "updated_at") VALUES ($1, $2, $3) RETURNING "id"[0m  [["question_id", 37], ["created_at", "2016-06-19 03:54:54.459004"], ["updated_at", "2016-06-19 03:54:54.459004"]]
+  [1m[35mSQL (0.2ms)[0m  INSERT INTO "responses" ("question_id", "created_at", "updated_at") VALUES ($1, $2, $3) RETURNING "id"  [["question_id", 38], ["created_at", "2016-06-19 03:54:54.460558"], ["updated_at", "2016-06-19 03:54:54.460558"]]
+  [1m[36mSQL (0.2ms)[0m  [1mINSERT INTO "responses" ("question_id", "created_at", "updated_at") VALUES ($1, $2, $3) RETURNING "id"[0m  [["question_id", 39], ["created_at", "2016-06-19 03:54:54.462052"], ["updated_at", "2016-06-19 03:54:54.462052"]]
+  [1m[35mSQL (2.5ms)[0m  INSERT INTO "applicants" ("email", "encrypted_password", "created_at", "updated_at") VALUES ($1, $2, $3, $4) RETURNING "id"  [["email", "test@berkeley.edu"], ["encrypted_password", "$2a$10$1h9tylClW07ahcnPOP0LT.9Y9glXq/0Wx6VdIHENVkd0PX1a5WGw6"], ["created_at", "2016-06-19 03:54:54.216009"], ["updated_at", "2016-06-19 03:54:54.216009"]]
+  [1m[36mSQL (0.8ms)[0m  [1mUPDATE "responses" SET "applicant_id" = $1, "updated_at" = $2 WHERE "responses"."id" = $3[0m  [["applicant_id", 7], ["updated_at", "2016-06-19 03:54:54.467646"], ["id", 79]]
+  [1m[35mSQL (0.4ms)[0m  UPDATE "responses" SET "applicant_id" = $1, "updated_at" = $2 WHERE "responses"."id" = $3  [["applicant_id", 7], ["updated_at", "2016-06-19 03:54:54.503741"], ["id", 80]]
+  [1m[36mSQL (2.4ms)[0m  [1mUPDATE "responses" SET "applicant_id" = $1, "updated_at" = $2 WHERE "responses"."id" = $3[0m  [["applicant_id", 7], ["updated_at", "2016-06-19 03:54:54.505700"], ["id", 81]]
+  [1m[35mSQL (0.4ms)[0m  UPDATE "responses" SET "applicant_id" = $1, "updated_at" = $2 WHERE "responses"."id" = $3  [["applicant_id", 7], ["updated_at", "2016-06-19 03:54:54.509755"], ["id", 82]]
+  [1m[36mSQL (0.4ms)[0m  [1mUPDATE "responses" SET "applicant_id" = $1, "updated_at" = $2 WHERE "responses"."id" = $3[0m  [["applicant_id", 7], ["updated_at", "2016-06-19 03:54:54.511686"], ["id", 83]]
+  [1m[35mSQL (0.3ms)[0m  UPDATE "responses" SET "applicant_id" = $1, "updated_at" = $2 WHERE "responses"."id" = $3  [["applicant_id", 7], ["updated_at", "2016-06-19 03:54:54.514278"], ["id", 84]]
+  [1m[36mSQL (0.3ms)[0m  [1mUPDATE "responses" SET "applicant_id" = $1, "updated_at" = $2 WHERE "responses"."id" = $3[0m  [["applicant_id", 7], ["updated_at", "2016-06-19 03:54:54.516066"], ["id", 85]]
+  [1m[35mSQL (0.3ms)[0m  UPDATE "responses" SET "applicant_id" = $1, "updated_at" = $2 WHERE "responses"."id" = $3  [["applicant_id", 7], ["updated_at", "2016-06-19 03:54:54.517816"], ["id", 86]]
+  [1m[36mSQL (0.3ms)[0m  [1mUPDATE "responses" SET "applicant_id" = $1, "updated_at" = $2 WHERE "responses"."id" = $3[0m  [["applicant_id", 7], ["updated_at", "2016-06-19 03:54:54.520246"], ["id", 87]]
+  [1m[35mSQL (0.2ms)[0m  UPDATE "responses" SET "applicant_id" = $1, "updated_at" = $2 WHERE "responses"."id" = $3  [["applicant_id", 7], ["updated_at", "2016-06-19 03:54:54.521973"], ["id", 88]]
+  [1m[36mSQL (0.3ms)[0m  [1mUPDATE "responses" SET "applicant_id" = $1, "updated_at" = $2 WHERE "responses"."id" = $3[0m  [["applicant_id", 7], ["updated_at", "2016-06-19 03:54:54.523488"], ["id", 89]]
+  [1m[35mSQL (0.2ms)[0m  UPDATE "responses" SET "applicant_id" = $1, "updated_at" = $2 WHERE "responses"."id" = $3  [["applicant_id", 7], ["updated_at", "2016-06-19 03:54:54.525195"], ["id", 90]]
+  [1m[36mSQL (0.2ms)[0m  [1mUPDATE "responses" SET "applicant_id" = $1, "updated_at" = $2 WHERE "responses"."id" = $3[0m  [["applicant_id", 7], ["updated_at", "2016-06-19 03:54:54.526939"], ["id", 91]]
+  [1m[35m (24.3ms)[0m  COMMIT
+  [1m[36m (0.3ms)[0m  [1mBEGIN[0m
+  [1m[35mSQL (18.6ms)[0m  UPDATE "applicants" SET "last_sign_in_at" = $1, "current_sign_in_at" = $2, "last_sign_in_ip" = $3, "current_sign_in_ip" = $4, "sign_in_count" = $5, "updated_at" = $6 WHERE "applicants"."id" = $7  [["last_sign_in_at", "2016-06-19 03:54:54.554169"], ["current_sign_in_at", "2016-06-19 03:54:54.554169"], ["last_sign_in_ip", "127.0.0.1/32"], ["current_sign_in_ip", "127.0.0.1/32"], ["sign_in_count", 1], ["updated_at", "2016-06-19 03:54:54.556410"], ["id", 7]]
+  [1m[36m (2.2ms)[0m  [1mCOMMIT[0m
+  [1m[35mSettings Load (4.8ms)[0m  SELECT  "settings".* FROM "settings"  ORDER BY "settings"."id" ASC LIMIT 1
+Completed 200 OK in 835ms (Views: 2.9ms | ActiveRecord: 270.3ms)
+
+
+Started GET "/applicants/7/apply" for 127.0.0.1 at 2016-06-18 23:54:54 -0400
+Processing by ApplicantsController#apply as HTML
+  Parameters: {"applicant_id"=>"7"}
+  [1m[36mApplicant Load (0.4ms)[0m  [1mSELECT  "applicants".* FROM "applicants" WHERE "applicants"."id" = $1 LIMIT 1[0m  [["id", 7]]
+  [1m[35mApplicant Load (0.6ms)[0m  SELECT  "applicants".* FROM "applicants" WHERE "applicants"."id" = $1  ORDER BY "applicants"."id" ASC LIMIT 1  [["id", 7]]
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT  "applicants".* FROM "applicants" WHERE "applicants"."id" = $1 LIMIT 1[0m  [["id", "7"]]
+  [1m[35mSettings Load (0.4ms)[0m  SELECT  "settings".* FROM "settings"  ORDER BY "settings"."id" ASC LIMIT 1
+  Rendered applicants/apply.html.slim within layouts/application (13.2ms)
+  Rendered layouts/_navbar.html.slim (1.3ms)
+Completed 200 OK in 1376ms (Views: 1352.0ms | ActiveRecord: 1.3ms)
+
+
+Started GET "/api/applicants/7.json" for 127.0.0.1 at 2016-06-18 23:54:57 -0400
+Processing by Api::ApplicantsController#show as JSON
+  Parameters: {"id"=>"7"}
+  [1m[36mApplicant Load (0.4ms)[0m  [1mSELECT  "applicants".* FROM "applicants" WHERE "applicants"."id" = $1  ORDER BY "applicants"."id" ASC LIMIT 1[0m  [["id", 7]]
+  [1m[35mApplicant Load (0.4ms)[0m  SELECT  "applicants".* FROM "applicants" WHERE "applicants"."id" = $1 LIMIT 1  [["id", 7]]
+  [1m[36mResponse Load (0.3ms)[0m  [1mSELECT "responses".* FROM "responses" WHERE "responses"."applicant_id" = $1[0m  [["applicant_id", 7]]
+  [1m[35mQuestion Load (0.3ms)[0m  SELECT  "questions".* FROM "questions" WHERE "questions"."id" = $1 LIMIT 1  [["id", 27]]
+  [1m[36mQuestion Load (0.3ms)[0m  [1mSELECT  "questions".* FROM "questions" WHERE "questions"."id" = $1 LIMIT 1[0m  [["id", 28]]
+  [1m[35mQuestion Load (0.3ms)[0m  SELECT  "questions".* FROM "questions" WHERE "questions"."id" = $1 LIMIT 1  [["id", 29]]
+  [1m[36mQuestion Load (0.3ms)[0m  [1mSELECT  "questions".* FROM "questions" WHERE "questions"."id" = $1 LIMIT 1[0m  [["id", 30]]
+  [1m[35mQuestion Load (0.3ms)[0m  SELECT  "questions".* FROM "questions" WHERE "questions"."id" = $1 LIMIT 1  [["id", 31]]
+  [1m[36mQuestion Load (0.3ms)[0m  [1mSELECT  "questions".* FROM "questions" WHERE "questions"."id" = $1 LIMIT 1[0m  [["id", 32]]
+  [1m[35mQuestion Load (0.8ms)[0m  SELECT  "questions".* FROM "questions" WHERE "questions"."id" = $1 LIMIT 1  [["id", 33]]
+  [1m[36mQuestion Load (0.3ms)[0m  [1mSELECT  "questions".* FROM "questions" WHERE "questions"."id" = $1 LIMIT 1[0m  [["id", 34]]
+  [1m[35mQuestion Load (0.4ms)[0m  SELECT  "questions".* FROM "questions" WHERE "questions"."id" = $1 LIMIT 1  [["id", 35]]
+  [1m[36mQuestion Load (0.5ms)[0m  [1mSELECT  "questions".* FROM "questions" WHERE "questions"."id" = $1 LIMIT 1[0m  [["id", 36]]
+  [1m[35mQuestion Load (0.3ms)[0m  SELECT  "questions".* FROM "questions" WHERE "questions"."id" = $1 LIMIT 1  [["id", 37]]
+  [1m[36mQuestion Load (0.3ms)[0m  [1mSELECT  "questions".* FROM "questions" WHERE "questions"."id" = $1 LIMIT 1[0m  [["id", 38]]
+  [1m[35mQuestion Load (0.3ms)[0m  SELECT  "questions".* FROM "questions" WHERE "questions"."id" = $1 LIMIT 1  [["id", 39]]
+  [1m[36mComment Load (32.6ms)[0m  [1mSELECT "comments".* FROM "comments" WHERE "comments"."applicant_id" = $1[0m  [["applicant_id", 7]]
+Completed 200 OK in 219ms (Views: 172.7ms | ActiveRecord: 39.7ms)
+
+
+Started PUT "/api/applicants/7" for 127.0.0.1 at 2016-06-18 23:55:44 -0400
+Processing by Api::ApplicantsController#update as */*
+  Parameters: {"id"=>"7", "first_name"=>"Adithya", "last_name"=>"Iyengar", "year"=>"", "major"=>"", "gpa"=>"", "units"=>"", "phone"=>"9196012582", "org"=>"Save", "address"=>"Pls", "city"=>"Or", "state"=>"I", "website"=>"Will", "mission"=>"Be", "position"=>"Sad", "full_name"=>" ", "resume"=>"", "picture"=>"", "email"=>"test@berkeley.edu", "submit"=>"", "responses"=>{"0"=>{"id"=>"79", "answer"=>"a", "question"=>{"title"=>"What is the current problem(s) your organization faces? Please clearly explain the current situation, why the problem exists (if known), and other relevant information. How has your organization currently addressed these problems?", "qtype"=>"0", "category"=>"0", "limit"=>"800"}}, "1"=>{"id"=>"80", "answer"=>"b", "question"=>{"title"=>"What would the main objectives of the project be? How can TBG help solve these issues? What can TBG do in order to ensure efficiency and effectiveness? If you have several projects or project objectives in mind, feel free to list them all and prioritize them based on your organization's need.", "qtype"=>"0", "category"=>"0", "limit"=>"800"}}, "2"=>{"id"=>"81", "answer"=>"c", "question"=>{"title"=>"In one sentence, please explicitly summarize the goals of the project.", "qtype"=>"0", "category"=>"0", "limit"=>"200"}}, "3"=>{"id"=>"82", "answer"=>"d", "question"=>{"title"=>"If your nonprofit is selected to work with TBG this semester, what would success look like after the project was completed? What results do you hope to achieve after working with TBG? What impact will this project have on your organization?", "qtype"=>"0", "category"=>"0", "limit"=>"800"}}, "4"=>{"id"=>"83", "answer"=>"e", "question"=>{"title"=>"Have you applied to TBG in the past? If yes, when?", "qtype"=>"0", "category"=>"1", "limit"=>"200"}}, "5"=>{"id"=>"84", "answer"=>"f", "question"=>{"title"=>"Have you worked with TBG in the past? If yes, when?", "qtype"=>"0", "category"=>"1", "limit"=>"200"}}, "6"=>{"id"=>"85", "answer"=>"1", "question"=>{"title"=>"Does the nonprofit organization listed above have 501(c)3 status?", "qtype"=>"2", "category"=>"1", "limit"=>""}}, "7"=>{"id"=>"86", "answer"=>"1", "question"=>{"title"=>"If selected, is the contact listed above available to meet on a weekly basis with a consultant from The Berkeley Group over the course of the engagement?", "qtype"=>"2", "category"=>"1", "limit"=>""}}, "8"=>{"id"=>"87", "answer"=>"1", "question"=>{"title"=>"If selected, is the contact listed above available to meet with the consultants at a location within an hour's transportation of UC Berkeley? (e.g. address listed above, satellite office, café, etc.)", "qtype"=>"2", "category"=>"1", "limit"=>""}}, "9"=>{"id"=>"88", "answer"=>"0", "question"=>{"title"=>"If selected, will you and your organization fully commit to an engagement with TBG for January 2016 through May 2016?", "qtype"=>"2", "category"=>"1", "limit"=>""}}, "10"=>{"id"=>"89", "answer"=>"0", "question"=>{"title"=>"Does the contact listed above have the ability to implement recommendations developed by The Berkeley Group", "qtype"=>"2", "category"=>"1", "limit"=>""}}, "11"=>{"id"=>"90", "answer"=>"a", "question"=>{"title"=>"In the space below, please share any additional information that you would like The Berkeley Group to know. Please also include any dates or times that you will be unavailable for a follow-up interview between January 19th, 2016 and January 22nd, 2016.", "qtype"=>"0", "category"=>"2", "limit"=>"200"}}, "12"=>{"id"=>"91", "answer"=>"a", "question"=>{"title"=>"By typing my name on the signature line below, I agree that the information above is true to the best of my knowledge.", "qtype"=>"0", "category"=>"2", "limit"=>"200"}}}}
+  [1m[35mApplicant Load (0.8ms)[0m  SELECT  "applicants".* FROM "applicants" WHERE "applicants"."id" = $1  ORDER BY "applicants"."id" ASC LIMIT 1  [["id", 7]]
+  [1m[36mApplicant Load (0.6ms)[0m  [1mSELECT  "applicants".* FROM "applicants" WHERE "applicants"."id" = $1 LIMIT 1[0m  [["id", 7]]
+Unpermitted parameter: question
+Unpermitted parameter: question
+Unpermitted parameter: question
+Unpermitted parameter: question
+Unpermitted parameter: question
+Unpermitted parameter: question
+Unpermitted parameter: question
+Unpermitted parameter: question
+Unpermitted parameter: question
+Unpermitted parameter: question
+Unpermitted parameter: question
+Unpermitted parameter: question
+Unpermitted parameter: question
+Unpermitted parameters: id, full_name, email, submit
+  [1m[35m (0.1ms)[0m  BEGIN
+  [1m[36mResponse Load (0.5ms)[0m  [1mSELECT "responses".* FROM "responses" WHERE "responses"."applicant_id" = $1 AND "responses"."id" IN (79, 80, 81, 82, 83, 84, 85, 86, 87, 88, 89, 90, 91)[0m  [["applicant_id", 7]]
+  [1m[35mSQL (0.7ms)[0m  UPDATE "applicants" SET "first_name" = $1, "last_name" = $2, "year" = $3, "phone" = $4, "major" = $5, "resume" = $6, "picture" = $7, "org" = $8, "address" = $9, "city" = $10, "state" = $11, "website" = $12, "mission" = $13, "position" = $14, "updated_at" = $15 WHERE "applicants"."id" = $16  [["first_name", "Adithya"], ["last_name", "Iyengar"], ["year", ""], ["phone", "9196012582"], ["major", ""], ["resume", ""], ["picture", ""], ["org", "Save"], ["address", "Pls"], ["city", "Or"], ["state", "I"], ["website", "Will"], ["mission", "Be"], ["position", "Sad"], ["updated_at", "2016-06-19 03:55:44.765090"], ["id", 7]]
+  [1m[36mSQL (0.4ms)[0m  [1mUPDATE "responses" SET "answer" = $1, "updated_at" = $2 WHERE "responses"."id" = $3[0m  [["answer", "a"], ["updated_at", "2016-06-19 03:55:44.769394"], ["id", 79]]
+  [1m[35mSQL (0.3ms)[0m  UPDATE "responses" SET "answer" = $1, "updated_at" = $2 WHERE "responses"."id" = $3  [["answer", "b"], ["updated_at", "2016-06-19 03:55:44.772393"], ["id", 80]]
+  [1m[36mSQL (0.3ms)[0m  [1mUPDATE "responses" SET "answer" = $1, "updated_at" = $2 WHERE "responses"."id" = $3[0m  [["answer", "c"], ["updated_at", "2016-06-19 03:55:44.774087"], ["id", 81]]
+  [1m[35mSQL (0.3ms)[0m  UPDATE "responses" SET "answer" = $1, "updated_at" = $2 WHERE "responses"."id" = $3  [["answer", "d"], ["updated_at", "2016-06-19 03:55:44.775567"], ["id", 82]]
+  [1m[36mSQL (0.2ms)[0m  [1mUPDATE "responses" SET "answer" = $1, "updated_at" = $2 WHERE "responses"."id" = $3[0m  [["answer", "e"], ["updated_at", "2016-06-19 03:55:44.776960"], ["id", 83]]
+  [1m[35mSQL (0.3ms)[0m  UPDATE "responses" SET "answer" = $1, "updated_at" = $2 WHERE "responses"."id" = $3  [["answer", "f"], ["updated_at", "2016-06-19 03:55:44.778379"], ["id", 84]]
+  [1m[36mSQL (0.2ms)[0m  [1mUPDATE "responses" SET "answer" = $1, "updated_at" = $2 WHERE "responses"."id" = $3[0m  [["answer", "1"], ["updated_at", "2016-06-19 03:55:44.779736"], ["id", 85]]
+  [1m[35mSQL (0.2ms)[0m  UPDATE "responses" SET "answer" = $1, "updated_at" = $2 WHERE "responses"."id" = $3  [["answer", "1"], ["updated_at", "2016-06-19 03:55:44.781036"], ["id", 86]]
+  [1m[36mSQL (0.3ms)[0m  [1mUPDATE "responses" SET "answer" = $1, "updated_at" = $2 WHERE "responses"."id" = $3[0m  [["answer", "1"], ["updated_at", "2016-06-19 03:55:44.782261"], ["id", 87]]
+  [1m[35mSQL (0.2ms)[0m  UPDATE "responses" SET "answer" = $1, "updated_at" = $2 WHERE "responses"."id" = $3  [["answer", "0"], ["updated_at", "2016-06-19 03:55:44.784999"], ["id", 88]]
+  [1m[36mSQL (0.4ms)[0m  [1mUPDATE "responses" SET "answer" = $1, "updated_at" = $2 WHERE "responses"."id" = $3[0m  [["answer", "0"], ["updated_at", "2016-06-19 03:55:44.787594"], ["id", 89]]
+  [1m[35mSQL (0.3ms)[0m  UPDATE "responses" SET "answer" = $1, "updated_at" = $2 WHERE "responses"."id" = $3  [["answer", "a"], ["updated_at", "2016-06-19 03:55:44.790276"], ["id", 90]]
+  [1m[36mSQL (0.2ms)[0m  [1mUPDATE "responses" SET "answer" = $1, "updated_at" = $2 WHERE "responses"."id" = $3[0m  [["answer", "a"], ["updated_at", "2016-06-19 03:55:44.792151"], ["id", 91]]
+  [1m[35m (0.9ms)[0m  COMMIT
+  [1m[36mResponse Load (0.4ms)[0m  [1mSELECT "responses".* FROM "responses" WHERE "responses"."applicant_id" = $1[0m  [["applicant_id", 7]]
+  [1m[35mQuestion Load (0.3ms)[0m  SELECT  "questions".* FROM "questions" WHERE "questions"."id" = $1 LIMIT 1  [["id", 27]]
+  [1m[36mQuestion Load (0.3ms)[0m  [1mSELECT  "questions".* FROM "questions" WHERE "questions"."id" = $1 LIMIT 1[0m  [["id", 28]]
+  [1m[35mQuestion Load (0.3ms)[0m  SELECT  "questions".* FROM "questions" WHERE "questions"."id" = $1 LIMIT 1  [["id", 29]]
+  [1m[36mQuestion Load (0.2ms)[0m  [1mSELECT  "questions".* FROM "questions" WHERE "questions"."id" = $1 LIMIT 1[0m  [["id", 30]]
+  [1m[35mQuestion Load (0.1ms)[0m  SELECT  "questions".* FROM "questions" WHERE "questions"."id" = $1 LIMIT 1  [["id", 31]]
+  [1m[36mQuestion Load (0.2ms)[0m  [1mSELECT  "questions".* FROM "questions" WHERE "questions"."id" = $1 LIMIT 1[0m  [["id", 32]]
+  [1m[35mQuestion Load (0.2ms)[0m  SELECT  "questions".* FROM "questions" WHERE "questions"."id" = $1 LIMIT 1  [["id", 33]]
+  [1m[36mQuestion Load (0.2ms)[0m  [1mSELECT  "questions".* FROM "questions" WHERE "questions"."id" = $1 LIMIT 1[0m  [["id", 34]]
+  [1m[35mQuestion Load (0.2ms)[0m  SELECT  "questions".* FROM "questions" WHERE "questions"."id" = $1 LIMIT 1  [["id", 35]]
+  [1m[36mQuestion Load (0.1ms)[0m  [1mSELECT  "questions".* FROM "questions" WHERE "questions"."id" = $1 LIMIT 1[0m  [["id", 36]]
+  [1m[35mQuestion Load (0.1ms)[0m  SELECT  "questions".* FROM "questions" WHERE "questions"."id" = $1 LIMIT 1  [["id", 37]]
+  [1m[36mQuestion Load (0.1ms)[0m  [1mSELECT  "questions".* FROM "questions" WHERE "questions"."id" = $1 LIMIT 1[0m  [["id", 38]]
+  [1m[35mQuestion Load (0.3ms)[0m  SELECT  "questions".* FROM "questions" WHERE "questions"."id" = $1 LIMIT 1  [["id", 39]]
+  [1m[36mComment Load (0.3ms)[0m  [1mSELECT "comments".* FROM "comments" WHERE "comments"."applicant_id" = $1[0m  [["applicant_id", 7]]
+Completed 200 OK in 88ms (Views: 36.7ms | ActiveRecord: 10.3ms)
+
+
+Started GET "/" for 127.0.0.1 at 2016-06-18 23:55:49 -0400
+Processing by PagesController#home as HTML
+  [1m[35mApplicant Load (0.5ms)[0m  SELECT  "applicants".* FROM "applicants" WHERE "applicants"."id" = $1  ORDER BY "applicants"."id" ASC LIMIT 1  [["id", 7]]
+  [1m[36mSettings Load (0.4ms)[0m  [1mSELECT  "settings".* FROM "settings"  ORDER BY "settings"."id" ASC LIMIT 1[0m
+Redirected to http://localhost:3000/applicants/7/apply
+Filter chain halted as :redirect_user rendered or redirected
+Completed 302 Found in 7ms (ActiveRecord: 0.9ms)
+
+
+Started GET "/applicants/7/apply" for 127.0.0.1 at 2016-06-18 23:55:50 -0400
+Processing by ApplicantsController#apply as HTML
+  Parameters: {"applicant_id"=>"7"}
+  [1m[35mApplicant Load (0.4ms)[0m  SELECT  "applicants".* FROM "applicants" WHERE "applicants"."id" = $1 LIMIT 1  [["id", 7]]
+  [1m[36mApplicant Load (0.4ms)[0m  [1mSELECT  "applicants".* FROM "applicants" WHERE "applicants"."id" = $1  ORDER BY "applicants"."id" ASC LIMIT 1[0m  [["id", 7]]
+  [1m[35mCACHE (0.0ms)[0m  SELECT  "applicants".* FROM "applicants" WHERE "applicants"."id" = $1 LIMIT 1  [["id", "7"]]
+  [1m[36mSettings Load (0.4ms)[0m  [1mSELECT  "settings".* FROM "settings"  ORDER BY "settings"."id" ASC LIMIT 1[0m
+  Rendered applicants/apply.html.slim within layouts/application (6.4ms)
+  Rendered layouts/_navbar.html.slim (15.7ms)
+Completed 200 OK in 2493ms (Views: 2486.8ms | ActiveRecord: 1.3ms)
+
+
+Started GET "/api/applicants/7.json" for 127.0.0.1 at 2016-06-18 23:55:52 -0400
+Processing by Api::ApplicantsController#show as JSON
+  Parameters: {"id"=>"7"}
+  [1m[35mApplicant Load (1.2ms)[0m  SELECT  "applicants".* FROM "applicants" WHERE "applicants"."id" = $1  ORDER BY "applicants"."id" ASC LIMIT 1  [["id", 7]]
+  [1m[36mApplicant Load (1.5ms)[0m  [1mSELECT  "applicants".* FROM "applicants" WHERE "applicants"."id" = $1 LIMIT 1[0m  [["id", 7]]
+  [1m[35mResponse Load (1.7ms)[0m  SELECT "responses".* FROM "responses" WHERE "responses"."applicant_id" = $1  [["applicant_id", 7]]
+  [1m[36mQuestion Load (2.3ms)[0m  [1mSELECT  "questions".* FROM "questions" WHERE "questions"."id" = $1 LIMIT 1[0m  [["id", 27]]
+  [1m[35mQuestion Load (4.7ms)[0m  SELECT  "questions".* FROM "questions" WHERE "questions"."id" = $1 LIMIT 1  [["id", 28]]
+  [1m[36mQuestion Load (2.0ms)[0m  [1mSELECT  "questions".* FROM "questions" WHERE "questions"."id" = $1 LIMIT 1[0m  [["id", 29]]
+  [1m[35mQuestion Load (1.2ms)[0m  SELECT  "questions".* FROM "questions" WHERE "questions"."id" = $1 LIMIT 1  [["id", 30]]
+  [1m[36mQuestion Load (0.4ms)[0m  [1mSELECT  "questions".* FROM "questions" WHERE "questions"."id" = $1 LIMIT 1[0m  [["id", 31]]
+  [1m[35mQuestion Load (1.2ms)[0m  SELECT  "questions".* FROM "questions" WHERE "questions"."id" = $1 LIMIT 1  [["id", 32]]
+  [1m[36mQuestion Load (1.2ms)[0m  [1mSELECT  "questions".* FROM "questions" WHERE "questions"."id" = $1 LIMIT 1[0m  [["id", 33]]
+  [1m[35mQuestion Load (0.4ms)[0m  SELECT  "questions".* FROM "questions" WHERE "questions"."id" = $1 LIMIT 1  [["id", 34]]
+  [1m[36mQuestion Load (0.4ms)[0m  [1mSELECT  "questions".* FROM "questions" WHERE "questions"."id" = $1 LIMIT 1[0m  [["id", 35]]
+  [1m[35mQuestion Load (0.3ms)[0m  SELECT  "questions".* FROM "questions" WHERE "questions"."id" = $1 LIMIT 1  [["id", 36]]
+  [1m[36mQuestion Load (0.9ms)[0m  [1mSELECT  "questions".* FROM "questions" WHERE "questions"."id" = $1 LIMIT 1[0m  [["id", 37]]
+  [1m[35mQuestion Load (0.9ms)[0m  SELECT  "questions".* FROM "questions" WHERE "questions"."id" = $1 LIMIT 1  [["id", 38]]
+  [1m[36mQuestion Load (0.9ms)[0m  [1mSELECT  "questions".* FROM "questions" WHERE "questions"."id" = $1 LIMIT 1[0m  [["id", 39]]
+  [1m[35mComment Load (0.6ms)[0m  SELECT "comments".* FROM "comments" WHERE "comments"."applicant_id" = $1  [["applicant_id", 7]]
+Completed 200 OK in 61ms (Views: 34.0ms | ActiveRecord: 21.9ms)
+
+
+Started GET "/applicants/7/apply" for 127.0.0.1 at 2016-06-18 23:55:53 -0400
+Processing by ApplicantsController#apply as HTML
+  Parameters: {"applicant_id"=>"7"}
+  [1m[36mApplicant Load (0.4ms)[0m  [1mSELECT  "applicants".* FROM "applicants" WHERE "applicants"."id" = $1 LIMIT 1[0m  [["id", 7]]
+  [1m[35mApplicant Load (0.3ms)[0m  SELECT  "applicants".* FROM "applicants" WHERE "applicants"."id" = $1  ORDER BY "applicants"."id" ASC LIMIT 1  [["id", 7]]
+  [1m[36mCACHE (0.1ms)[0m  [1mSELECT  "applicants".* FROM "applicants" WHERE "applicants"."id" = $1 LIMIT 1[0m  [["id", "7"]]
+  [1m[35mSettings Load (0.3ms)[0m  SELECT  "settings".* FROM "settings"  ORDER BY "settings"."id" ASC LIMIT 1
+  Rendered applicants/apply.html.slim within layouts/application (1.6ms)
+  Rendered layouts/_navbar.html.slim (0.5ms)
+Completed 200 OK in 536ms (Views: 530.9ms | ActiveRecord: 1.2ms)
+
+
+Started GET "/api/applicants/7.json" for 127.0.0.1 at 2016-06-18 23:55:54 -0400
+Processing by Api::ApplicantsController#show as JSON
+  Parameters: {"id"=>"7"}
+  [1m[36mApplicant Load (0.4ms)[0m  [1mSELECT  "applicants".* FROM "applicants" WHERE "applicants"."id" = $1  ORDER BY "applicants"."id" ASC LIMIT 1[0m  [["id", 7]]
+  [1m[35mApplicant Load (0.3ms)[0m  SELECT  "applicants".* FROM "applicants" WHERE "applicants"."id" = $1 LIMIT 1  [["id", 7]]
+  [1m[36mResponse Load (0.4ms)[0m  [1mSELECT "responses".* FROM "responses" WHERE "responses"."applicant_id" = $1[0m  [["applicant_id", 7]]
+  [1m[35mQuestion Load (0.2ms)[0m  SELECT  "questions".* FROM "questions" WHERE "questions"."id" = $1 LIMIT 1  [["id", 27]]
+  [1m[36mQuestion Load (0.2ms)[0m  [1mSELECT  "questions".* FROM "questions" WHERE "questions"."id" = $1 LIMIT 1[0m  [["id", 28]]
+  [1m[35mQuestion Load (0.2ms)[0m  SELECT  "questions".* FROM "questions" WHERE "questions"."id" = $1 LIMIT 1  [["id", 29]]
+  [1m[36mQuestion Load (0.2ms)[0m  [1mSELECT  "questions".* FROM "questions" WHERE "questions"."id" = $1 LIMIT 1[0m  [["id", 30]]
+  [1m[35mQuestion Load (0.2ms)[0m  SELECT  "questions".* FROM "questions" WHERE "questions"."id" = $1 LIMIT 1  [["id", 31]]
+  [1m[36mQuestion Load (0.2ms)[0m  [1mSELECT  "questions".* FROM "questions" WHERE "questions"."id" = $1 LIMIT 1[0m  [["id", 32]]
+  [1m[35mQuestion Load (0.2ms)[0m  SELECT  "questions".* FROM "questions" WHERE "questions"."id" = $1 LIMIT 1  [["id", 33]]
+  [1m[36mQuestion Load (0.2ms)[0m  [1mSELECT  "questions".* FROM "questions" WHERE "questions"."id" = $1 LIMIT 1[0m  [["id", 34]]
+  [1m[35mQuestion Load (0.2ms)[0m  SELECT  "questions".* FROM "questions" WHERE "questions"."id" = $1 LIMIT 1  [["id", 35]]
+  [1m[36mQuestion Load (0.2ms)[0m  [1mSELECT  "questions".* FROM "questions" WHERE "questions"."id" = $1 LIMIT 1[0m  [["id", 36]]
+  [1m[35mQuestion Load (0.2ms)[0m  SELECT  "questions".* FROM "questions" WHERE "questions"."id" = $1 LIMIT 1  [["id", 37]]
+  [1m[36mQuestion Load (0.3ms)[0m  [1mSELECT  "questions".* FROM "questions" WHERE "questions"."id" = $1 LIMIT 1[0m  [["id", 38]]
+  [1m[35mQuestion Load (0.3ms)[0m  SELECT  "questions".* FROM "questions" WHERE "questions"."id" = $1 LIMIT 1  [["id", 39]]
+  [1m[36mComment Load (0.3ms)[0m  [1mSELECT "comments".* FROM "comments" WHERE "comments"."applicant_id" = $1[0m  [["applicant_id", 7]]
+Completed 200 OK in 23ms (Views: 16.2ms | ActiveRecord: 4.3ms)
+
+
+Started DELETE "/sign_out" for 127.0.0.1 at 2016-06-18 23:56:02 -0400
+Processing by SessionsController#destroy as HTML
+  Parameters: {"authenticity_token"=>"G/sHIkYiFQN5CvWK0DZqSbQPcalIYW2MymYxfTRBPagE3e3xKmxGcR08ekpvTUWnIH5ARGq4ar/jjF1KkyHXTg=="}
+  [1m[35mApplicant Load (0.3ms)[0m  SELECT  "applicants".* FROM "applicants" WHERE "applicants"."id" = $1  ORDER BY "applicants"."id" ASC LIMIT 1  [["id", 7]]
+  [1m[36m (0.3ms)[0m  [1mBEGIN[0m
+  [1m[35m (0.2ms)[0m  COMMIT
+Redirected to http://localhost:3000/
+Completed 302 Found in 86ms (ActiveRecord: 0.8ms)
+
+
+Started GET "/" for 127.0.0.1 at 2016-06-18 23:56:03 -0400
+Processing by PagesController#home as HTML
+  Rendered pages/home.html.slim within layouts/application (31.0ms)
+  Rendered layouts/_navbar.html.slim (0.3ms)
+Completed 200 OK in 541ms (Views: 539.7ms | ActiveRecord: 0.0ms)
+
+
+Started POST "/sign_in" for 127.0.0.1 at 2016-06-18 23:59:20 -0400
+Processing by SessionsController#create as */*
+  Parameters: {"applicant"=>{"email"=>"test@berkeley.edu", "password"=>"[FILTERED]"}}
+  [1m[36mApplicant Load (0.8ms)[0m  [1mSELECT  "applicants".* FROM "applicants" WHERE "applicants"."email" = $1  ORDER BY "applicants"."id" ASC LIMIT 1[0m  [["email", "test@berkeley.edu"]]
+  [1m[35m (0.2ms)[0m  BEGIN
+  [1m[36mSQL (0.4ms)[0m  [1mUPDATE "applicants" SET "current_sign_in_at" = $1, "sign_in_count" = $2, "updated_at" = $3 WHERE "applicants"."id" = $4[0m  [["current_sign_in_at", "2016-06-19 03:59:21.169062"], ["sign_in_count", 2], ["updated_at", "2016-06-19 03:59:21.170459"], ["id", 7]]
+  [1m[35m (6.0ms)[0m  COMMIT
+  [1m[36mSettings Load (0.3ms)[0m  [1mSELECT  "settings".* FROM "settings"  ORDER BY "settings"."id" ASC LIMIT 1[0m
+Completed 200 OK in 158ms (Views: 3.1ms | ActiveRecord: 7.6ms)
+
+
+Started GET "/applicants/7/apply" for 127.0.0.1 at 2016-06-18 23:59:21 -0400
+Processing by ApplicantsController#apply as HTML
+  Parameters: {"applicant_id"=>"7"}
+  [1m[35mApplicant Load (0.4ms)[0m  SELECT  "applicants".* FROM "applicants" WHERE "applicants"."id" = $1 LIMIT 1  [["id", 7]]
+  [1m[36mApplicant Load (0.3ms)[0m  [1mSELECT  "applicants".* FROM "applicants" WHERE "applicants"."id" = $1  ORDER BY "applicants"."id" ASC LIMIT 1[0m  [["id", 7]]
+  [1m[35mCACHE (0.0ms)[0m  SELECT  "applicants".* FROM "applicants" WHERE "applicants"."id" = $1 LIMIT 1  [["id", "7"]]
+  [1m[36mSettings Load (0.4ms)[0m  [1mSELECT  "settings".* FROM "settings"  ORDER BY "settings"."id" ASC LIMIT 1[0m
+  Rendered applicants/apply.html.slim within layouts/application (2.5ms)
+  Rendered layouts/_navbar.html.slim (1.3ms)
+Completed 200 OK in 1738ms (Views: 1731.4ms | ActiveRecord: 1.1ms)
+
+
+Started GET "/api/applicants/7.json" for 127.0.0.1 at 2016-06-18 23:59:23 -0400
+Processing by Api::ApplicantsController#show as JSON
+  Parameters: {"id"=>"7"}
+  [1m[35mApplicant Load (0.3ms)[0m  SELECT  "applicants".* FROM "applicants" WHERE "applicants"."id" = $1  ORDER BY "applicants"."id" ASC LIMIT 1  [["id", 7]]
+  [1m[36mApplicant Load (0.3ms)[0m  [1mSELECT  "applicants".* FROM "applicants" WHERE "applicants"."id" = $1 LIMIT 1[0m  [["id", 7]]
+  [1m[35mResponse Load (0.4ms)[0m  SELECT "responses".* FROM "responses" WHERE "responses"."applicant_id" = $1  [["applicant_id", 7]]
+  [1m[36mQuestion Load (0.2ms)[0m  [1mSELECT  "questions".* FROM "questions" WHERE "questions"."id" = $1 LIMIT 1[0m  [["id", 27]]
+  [1m[35mQuestion Load (0.2ms)[0m  SELECT  "questions".* FROM "questions" WHERE "questions"."id" = $1 LIMIT 1  [["id", 28]]
+  [1m[36mQuestion Load (0.2ms)[0m  [1mSELECT  "questions".* FROM "questions" WHERE "questions"."id" = $1 LIMIT 1[0m  [["id", 29]]
+  [1m[35mQuestion Load (0.2ms)[0m  SELECT  "questions".* FROM "questions" WHERE "questions"."id" = $1 LIMIT 1  [["id", 30]]
+  [1m[36mQuestion Load (0.2ms)[0m  [1mSELECT  "questions".* FROM "questions" WHERE "questions"."id" = $1 LIMIT 1[0m  [["id", 31]]
+  [1m[35mQuestion Load (0.2ms)[0m  SELECT  "questions".* FROM "questions" WHERE "questions"."id" = $1 LIMIT 1  [["id", 32]]
+  [1m[36mQuestion Load (0.2ms)[0m  [1mSELECT  "questions".* FROM "questions" WHERE "questions"."id" = $1 LIMIT 1[0m  [["id", 33]]
+  [1m[35mQuestion Load (0.2ms)[0m  SELECT  "questions".* FROM "questions" WHERE "questions"."id" = $1 LIMIT 1  [["id", 34]]
+  [1m[36mQuestion Load (0.3ms)[0m  [1mSELECT  "questions".* FROM "questions" WHERE "questions"."id" = $1 LIMIT 1[0m  [["id", 35]]
+  [1m[35mQuestion Load (0.2ms)[0m  SELECT  "questions".* FROM "questions" WHERE "questions"."id" = $1 LIMIT 1  [["id", 36]]
+  [1m[36mQuestion Load (0.2ms)[0m  [1mSELECT  "questions".* FROM "questions" WHERE "questions"."id" = $1 LIMIT 1[0m  [["id", 37]]
+  [1m[35mQuestion Load (0.2ms)[0m  SELECT  "questions".* FROM "questions" WHERE "questions"."id" = $1 LIMIT 1  [["id", 38]]
+  [1m[36mQuestion Load (0.2ms)[0m  [1mSELECT  "questions".* FROM "questions" WHERE "questions"."id" = $1 LIMIT 1[0m  [["id", 39]]
+  [1m[35mComment Load (0.3ms)[0m  SELECT "comments".* FROM "comments" WHERE "comments"."applicant_id" = $1  [["applicant_id", 7]]
+Completed 200 OK in 25ms (Views: 18.1ms | ActiveRecord: 3.9ms)
+
+
+Started POST "/api/applicants/7/resume" for 127.0.0.1 at 2016-06-18 23:59:39 -0400
+Processing by Api::ApplicantsController#upload as */*
+  Parameters: {"file"=>#<ActionDispatch::Http::UploadedFile:0x007fa445a10220 @tempfile=#<Tempfile:/var/folders/56/xnmmh9mn31s7cqfl7x4mwdyr0000gp/T/RackMultipart20160618-40511-3e0kfc.pdf>, @original_filename="YHack Reimbursement.pdf", @content_type="application/pdf", @headers="Content-Disposition: form-data; name=\"file\"; filename=\"YHack Reimbursement.pdf\"\r\nContent-Type: application/pdf\r\n">, "applicant_id"=>"7", "category"=>"resume"}
+  [1m[36mApplicant Load (0.3ms)[0m  [1mSELECT  "applicants".* FROM "applicants" WHERE "applicants"."id" = $1  ORDER BY "applicants"."id" ASC LIMIT 1[0m  [["id", 7]]
+  [1m[35mApplicant Load (0.3ms)[0m  SELECT  "applicants".* FROM "applicants" WHERE "applicants"."id" = $1 LIMIT 1  [["id", 7]]
+Unpermitted parameter: applicant_id
+  [1m[36m (0.4ms)[0m  [1mBEGIN[0m
+  [1m[35mSQL (0.4ms)[0m  UPDATE "applicants" SET "resume" = $1, "updated_at" = $2 WHERE "applicants"."id" = $3  [["resume", "https://res.cloudinary.com/hfajkttn9/image/upload/v1466308788/m8sk4myite8cp7lgvf3n.pdf"], ["updated_at", "2016-06-19 03:59:49.846139"], ["id", 7]]
+  [1m[36m (24.4ms)[0m  [1mCOMMIT[0m
+Completed 200 OK in 10483ms (Views: 6.4ms | ActiveRecord: 25.9ms)
+
+
+Started POST "/api/applicants/7/picture" for 127.0.0.1 at 2016-06-18 23:59:50 -0400
+Processing by Api::ApplicantsController#upload as */*
+  Parameters: {"file"=>#<ActionDispatch::Http::UploadedFile:0x007fa4445efa48 @tempfile=#<Tempfile:/var/folders/56/xnmmh9mn31s7cqfl7x4mwdyr0000gp/T/RackMultipart20160618-40511-1a6fl6h.jpg>, @original_filename="IMG_7889.jpg", @content_type="image/jpeg", @headers="Content-Disposition: form-data; name=\"file\"; filename=\"IMG_7889.jpg\"\r\nContent-Type: image/jpeg\r\n">, "applicant_id"=>"7", "category"=>"picture"}
+  [1m[35mApplicant Load (0.3ms)[0m  SELECT  "applicants".* FROM "applicants" WHERE "applicants"."id" = $1  ORDER BY "applicants"."id" ASC LIMIT 1  [["id", 7]]
+  [1m[36mApplicant Load (0.2ms)[0m  [1mSELECT  "applicants".* FROM "applicants" WHERE "applicants"."id" = $1 LIMIT 1[0m  [["id", 7]]
+Unpermitted parameter: applicant_id
+  [1m[35m (3.5ms)[0m  BEGIN
+  [1m[36mSQL (0.4ms)[0m  [1mUPDATE "applicants" SET "picture" = $1, "updated_at" = $2 WHERE "applicants"."id" = $3[0m  [["picture", "https://res.cloudinary.com/hfajkttn9/image/upload/v1466308793/f3j6duj6eyusfhdyrj1y.jpg"], ["updated_at", "2016-06-19 03:59:53.452033"], ["id", 7]]
+  [1m[35m (2.5ms)[0m  COMMIT
+Completed 200 OK in 3247ms (Views: 5.6ms | ActiveRecord: 6.9ms)
+
+
+Started POST "/api/applicants/7/submit" for 127.0.0.1 at 2016-06-19 00:00:00 -0400
+Processing by Api::ApplicantsController#submit as */*
+  Parameters: {"id"=>"7", "first_name"=>"Adithya", "last_name"=>"Iyengar", "year"=>"", "major"=>"", "gpa"=>"", "units"=>"", "phone"=>"9196012582", "org"=>"Save", "address"=>"Pls", "city"=>"Or", "state"=>"I", "website"=>"Will", "mission"=>"Be", "position"=>"Sad", "full_name"=>"Adithya Iyengar", "resume"=>"https://res.cloudinary.com/hfajkttn9/image/upload/v1466308788/m8sk4myite8cp7lgvf3n.pdf", "picture"=>"https://res.cloudinary.com/hfajkttn9/image/upload/v1466308793/f3j6duj6eyusfhdyrj1y.jpg", "email"=>"test@berkeley.edu", "submit"=>"", "responses"=>{"0"=>{"id"=>"79", "answer"=>"a", "question"=>{"title"=>"What is the current problem(s) your organization faces? Please clearly explain the current situation, why the problem exists (if known), and other relevant information. How has your organization currently addressed these problems?", "qtype"=>"0", "category"=>"0", "limit"=>"800"}}, "1"=>{"id"=>"80", "answer"=>"b", "question"=>{"title"=>"What would the main objectives of the project be? How can TBG help solve these issues? What can TBG do in order to ensure efficiency and effectiveness? If you have several projects or project objectives in mind, feel free to list them all and prioritize them based on your organization's need.", "qtype"=>"0", "category"=>"0", "limit"=>"800"}}, "2"=>{"id"=>"81", "answer"=>"c", "question"=>{"title"=>"In one sentence, please explicitly summarize the goals of the project.", "qtype"=>"0", "category"=>"0", "limit"=>"200"}}, "3"=>{"id"=>"82", "answer"=>"d", "question"=>{"title"=>"If your nonprofit is selected to work with TBG this semester, what would success look like after the project was completed? What results do you hope to achieve after working with TBG? What impact will this project have on your organization?", "qtype"=>"0", "category"=>"0", "limit"=>"800"}}, "4"=>{"id"=>"83", "answer"=>"e", "question"=>{"title"=>"Have you applied to TBG in the past? If yes, when?", "qtype"=>"0", "category"=>"1", "limit"=>"200"}}, "5"=>{"id"=>"84", "answer"=>"f", "question"=>{"title"=>"Have you worked with TBG in the past? If yes, when?", "qtype"=>"0", "category"=>"1", "limit"=>"200"}}, "6"=>{"id"=>"85", "answer"=>"1", "question"=>{"title"=>"Does the nonprofit organization listed above have 501(c)3 status?", "qtype"=>"2", "category"=>"1", "limit"=>""}}, "7"=>{"id"=>"86", "answer"=>"1", "question"=>{"title"=>"If selected, is the contact listed above available to meet on a weekly basis with a consultant from The Berkeley Group over the course of the engagement?", "qtype"=>"2", "category"=>"1", "limit"=>""}}, "8"=>{"id"=>"87", "answer"=>"1", "question"=>{"title"=>"If selected, is the contact listed above available to meet with the consultants at a location within an hour's transportation of UC Berkeley? (e.g. address listed above, satellite office, café, etc.)", "qtype"=>"2", "category"=>"1", "limit"=>""}}, "9"=>{"id"=>"88", "answer"=>"0", "question"=>{"title"=>"If selected, will you and your organization fully commit to an engagement with TBG for January 2016 through May 2016?", "qtype"=>"2", "category"=>"1", "limit"=>""}}, "10"=>{"id"=>"89", "answer"=>"0", "question"=>{"title"=>"Does the contact listed above have the ability to implement recommendations developed by The Berkeley Group", "qtype"=>"2", "category"=>"1", "limit"=>""}}, "11"=>{"id"=>"90", "answer"=>"a", "question"=>{"title"=>"In the space below, please share any additional information that you would like The Berkeley Group to know. Please also include any dates or times that you will be unavailable for a follow-up interview between January 19th, 2016 and January 22nd, 2016.", "qtype"=>"0", "category"=>"2", "limit"=>"200"}}, "12"=>{"id"=>"91", "answer"=>"a", "question"=>{"title"=>"By typing my name on the signature line below, I agree that the information above is true to the best of my knowledge.", "qtype"=>"0", "category"=>"2", "limit"=>"200"}}}, "resumeFile"=>"YHack Reimbursement.pdf", "pictureFile"=>"IMG_7889.jpg", "applicant_id"=>"7"}
+  [1m[36mApplicant Load (0.3ms)[0m  [1mSELECT  "applicants".* FROM "applicants" WHERE "applicants"."id" = $1  ORDER BY "applicants"."id" ASC LIMIT 1[0m  [["id", 7]]
+  [1m[35mApplicant Load (0.2ms)[0m  SELECT  "applicants".* FROM "applicants" WHERE "applicants"."id" = $1 LIMIT 1  [["id", 7]]
+Unpermitted parameter: question
+Unpermitted parameter: question
+Unpermitted parameter: question
+Unpermitted parameter: question
+Unpermitted parameter: question
+Unpermitted parameter: question
+Unpermitted parameter: question
+Unpermitted parameter: question
+Unpermitted parameter: question
+Unpermitted parameter: question
+Unpermitted parameter: question
+Unpermitted parameter: question
+Unpermitted parameter: question
+Unpermitted parameters: id, full_name, email, submit, resumeFile, pictureFile, applicant_id
+  [1m[36m (0.1ms)[0m  [1mBEGIN[0m
+  [1m[35mResponse Load (0.4ms)[0m  SELECT "responses".* FROM "responses" WHERE "responses"."applicant_id" = $1 AND "responses"."id" IN (79, 80, 81, 82, 83, 84, 85, 86, 87, 88, 89, 90, 91)  [["applicant_id", 7]]
+  [1m[36m (0.2ms)[0m  [1mCOMMIT[0m
+  [1m[35mResponse Load (0.3ms)[0m  SELECT "responses".* FROM "responses" WHERE "responses"."applicant_id" = $1  [["applicant_id", 7]]
+Completed 403 Forbidden in 37ms (Views: 6.0ms | ActiveRecord: 1.5ms)
+
+
+Started POST "/api/applicants/7/submit" for 127.0.0.1 at 2016-06-19 00:00:02 -0400
+Processing by Api::ApplicantsController#submit as */*
+  Parameters: {"id"=>"7", "first_name"=>"Adithya", "last_name"=>"Iyengar", "year"=>"", "major"=>"", "gpa"=>"", "units"=>"", "phone"=>"9196012582", "org"=>"Save", "address"=>"Pls", "city"=>"Or", "state"=>"I", "website"=>"Will", "mission"=>"Be", "position"=>"Sad", "full_name"=>"Adithya Iyengar", "resume"=>"https://res.cloudinary.com/hfajkttn9/image/upload/v1466308788/m8sk4myite8cp7lgvf3n.pdf", "picture"=>"https://res.cloudinary.com/hfajkttn9/image/upload/v1466308793/f3j6duj6eyusfhdyrj1y.jpg", "email"=>"test@berkeley.edu", "submit"=>"", "responses"=>{"0"=>{"id"=>"79", "answer"=>"a", "question"=>{"title"=>"What is the current problem(s) your organization faces? Please clearly explain the current situation, why the problem exists (if known), and other relevant information. How has your organization currently addressed these problems?", "qtype"=>"0", "category"=>"0", "limit"=>"800"}}, "1"=>{"id"=>"80", "answer"=>"b", "question"=>{"title"=>"What would the main objectives of the project be? How can TBG help solve these issues? What can TBG do in order to ensure efficiency and effectiveness? If you have several projects or project objectives in mind, feel free to list them all and prioritize them based on your organization's need.", "qtype"=>"0", "category"=>"0", "limit"=>"800"}}, "2"=>{"id"=>"81", "answer"=>"c", "question"=>{"title"=>"In one sentence, please explicitly summarize the goals of the project.", "qtype"=>"0", "category"=>"0", "limit"=>"200"}}, "3"=>{"id"=>"82", "answer"=>"d", "question"=>{"title"=>"If your nonprofit is selected to work with TBG this semester, what would success look like after the project was completed? What results do you hope to achieve after working with TBG? What impact will this project have on your organization?", "qtype"=>"0", "category"=>"0", "limit"=>"800"}}, "4"=>{"id"=>"83", "answer"=>"e", "question"=>{"title"=>"Have you applied to TBG in the past? If yes, when?", "qtype"=>"0", "category"=>"1", "limit"=>"200"}}, "5"=>{"id"=>"84", "answer"=>"f", "question"=>{"title"=>"Have you worked with TBG in the past? If yes, when?", "qtype"=>"0", "category"=>"1", "limit"=>"200"}}, "6"=>{"id"=>"85", "answer"=>"1", "question"=>{"title"=>"Does the nonprofit organization listed above have 501(c)3 status?", "qtype"=>"2", "category"=>"1", "limit"=>""}}, "7"=>{"id"=>"86", "answer"=>"1", "question"=>{"title"=>"If selected, is the contact listed above available to meet on a weekly basis with a consultant from The Berkeley Group over the course of the engagement?", "qtype"=>"2", "category"=>"1", "limit"=>""}}, "8"=>{"id"=>"87", "answer"=>"1", "question"=>{"title"=>"If selected, is the contact listed above available to meet with the consultants at a location within an hour's transportation of UC Berkeley? (e.g. address listed above, satellite office, café, etc.)", "qtype"=>"2", "category"=>"1", "limit"=>""}}, "9"=>{"id"=>"88", "answer"=>"0", "question"=>{"title"=>"If selected, will you and your organization fully commit to an engagement with TBG for January 2016 through May 2016?", "qtype"=>"2", "category"=>"1", "limit"=>""}}, "10"=>{"id"=>"89", "answer"=>"0", "question"=>{"title"=>"Does the contact listed above have the ability to implement recommendations developed by The Berkeley Group", "qtype"=>"2", "category"=>"1", "limit"=>""}}, "11"=>{"id"=>"90", "answer"=>"a", "question"=>{"title"=>"In the space below, please share any additional information that you would like The Berkeley Group to know. Please also include any dates or times that you will be unavailable for a follow-up interview between January 19th, 2016 and January 22nd, 2016.", "qtype"=>"0", "category"=>"2", "limit"=>"200"}}, "12"=>{"id"=>"91", "answer"=>"a", "question"=>{"title"=>"By typing my name on the signature line below, I agree that the information above is true to the best of my knowledge.", "qtype"=>"0", "category"=>"2", "limit"=>"200"}}}, "resumeFile"=>"YHack Reimbursement.pdf", "pictureFile"=>"IMG_7889.jpg", "applicant_id"=>"7"}
+  [1m[36mApplicant Load (0.3ms)[0m  [1mSELECT  "applicants".* FROM "applicants" WHERE "applicants"."id" = $1  ORDER BY "applicants"."id" ASC LIMIT 1[0m  [["id", 7]]
+  [1m[35mApplicant Load (0.2ms)[0m  SELECT  "applicants".* FROM "applicants" WHERE "applicants"."id" = $1 LIMIT 1  [["id", 7]]
+Unpermitted parameter: question
+Unpermitted parameter: question
+Unpermitted parameter: question
+Unpermitted parameter: question
+Unpermitted parameter: question
+Unpermitted parameter: question
+Unpermitted parameter: question
+Unpermitted parameter: question
+Unpermitted parameter: question
+Unpermitted parameter: question
+Unpermitted parameter: question
+Unpermitted parameter: question
+Unpermitted parameter: question
+Unpermitted parameters: id, full_name, email, submit, resumeFile, pictureFile, applicant_id
+  [1m[36m (0.1ms)[0m  [1mBEGIN[0m
+  [1m[35mResponse Load (0.4ms)[0m  SELECT "responses".* FROM "responses" WHERE "responses"."applicant_id" = $1 AND "responses"."id" IN (79, 80, 81, 82, 83, 84, 85, 86, 87, 88, 89, 90, 91)  [["applicant_id", 7]]
+  [1m[36m (0.2ms)[0m  [1mCOMMIT[0m
+  [1m[35mResponse Load (0.2ms)[0m  SELECT "responses".* FROM "responses" WHERE "responses"."applicant_id" = $1  [["applicant_id", 7]]
+Completed 403 Forbidden in 32ms (Views: 5.3ms | ActiveRecord: 1.4ms)
+
+
+Started POST "/api/applicants/7/submit" for 127.0.0.1 at 2016-06-19 00:00:37 -0400
+Processing by Api::ApplicantsController#submit as */*
+  Parameters: {"id"=>"7", "first_name"=>"Adithya", "last_name"=>"Iyengar", "year"=>"", "major"=>"", "gpa"=>"", "units"=>"", "phone"=>"9196012582", "org"=>"Save", "address"=>"Pls", "city"=>"Or", "state"=>"I", "website"=>"Will", "mission"=>"Be", "position"=>"Sad", "full_name"=>"Adithya Iyengar", "resume"=>"https://res.cloudinary.com/hfajkttn9/image/upload/v1466308788/m8sk4myite8cp7lgvf3n.pdf", "picture"=>"https://res.cloudinary.com/hfajkttn9/image/upload/v1466308793/f3j6duj6eyusfhdyrj1y.jpg", "email"=>"test@berkeley.edu", "submit"=>"", "responses"=>{"0"=>{"id"=>"79", "answer"=>"a", "question"=>{"title"=>"What is the current problem(s) your organization faces? Please clearly explain the current situation, why the problem exists (if known), and other relevant information. How has your organization currently addressed these problems?", "qtype"=>"0", "category"=>"0", "limit"=>"800"}}, "1"=>{"id"=>"80", "answer"=>"b", "question"=>{"title"=>"What would the main objectives of the project be? How can TBG help solve these issues? What can TBG do in order to ensure efficiency and effectiveness? If you have several projects or project objectives in mind, feel free to list them all and prioritize them based on your organization's need.", "qtype"=>"0", "category"=>"0", "limit"=>"800"}}, "2"=>{"id"=>"81", "answer"=>"c", "question"=>{"title"=>"In one sentence, please explicitly summarize the goals of the project.", "qtype"=>"0", "category"=>"0", "limit"=>"200"}}, "3"=>{"id"=>"82", "answer"=>"d", "question"=>{"title"=>"If your nonprofit is selected to work with TBG this semester, what would success look like after the project was completed? What results do you hope to achieve after working with TBG? What impact will this project have on your organization?", "qtype"=>"0", "category"=>"0", "limit"=>"800"}}, "4"=>{"id"=>"83", "answer"=>"e", "question"=>{"title"=>"Have you applied to TBG in the past? If yes, when?", "qtype"=>"0", "category"=>"1", "limit"=>"200"}}, "5"=>{"id"=>"84", "answer"=>"f", "question"=>{"title"=>"Have you worked with TBG in the past? If yes, when?", "qtype"=>"0", "category"=>"1", "limit"=>"200"}}, "6"=>{"id"=>"85", "answer"=>"1", "question"=>{"title"=>"Does the nonprofit organization listed above have 501(c)3 status?", "qtype"=>"2", "category"=>"1", "limit"=>""}}, "7"=>{"id"=>"86", "answer"=>"1", "question"=>{"title"=>"If selected, is the contact listed above available to meet on a weekly basis with a consultant from The Berkeley Group over the course of the engagement?", "qtype"=>"2", "category"=>"1", "limit"=>""}}, "8"=>{"id"=>"87", "answer"=>"1", "question"=>{"title"=>"If selected, is the contact listed above available to meet with the consultants at a location within an hour's transportation of UC Berkeley? (e.g. address listed above, satellite office, café, etc.)", "qtype"=>"2", "category"=>"1", "limit"=>""}}, "9"=>{"id"=>"88", "answer"=>"0", "question"=>{"title"=>"If selected, will you and your organization fully commit to an engagement with TBG for January 2016 through May 2016?", "qtype"=>"2", "category"=>"1", "limit"=>""}}, "10"=>{"id"=>"89", "answer"=>"0", "question"=>{"title"=>"Does the contact listed above have the ability to implement recommendations developed by The Berkeley Group", "qtype"=>"2", "category"=>"1", "limit"=>""}}, "11"=>{"id"=>"90", "answer"=>"a", "question"=>{"title"=>"In the space below, please share any additional information that you would like The Berkeley Group to know. Please also include any dates or times that you will be unavailable for a follow-up interview between January 19th, 2016 and January 22nd, 2016.", "qtype"=>"0", "category"=>"2", "limit"=>"200"}}, "12"=>{"id"=>"91", "answer"=>"a", "question"=>{"title"=>"By typing my name on the signature line below, I agree that the information above is true to the best of my knowledge.", "qtype"=>"0", "category"=>"2", "limit"=>"200"}}}, "resumeFile"=>"YHack Reimbursement.pdf", "pictureFile"=>"IMG_7889.jpg", "applicant_id"=>"7"}
+  [1m[36mApplicant Load (0.3ms)[0m  [1mSELECT  "applicants".* FROM "applicants" WHERE "applicants"."id" = $1  ORDER BY "applicants"."id" ASC LIMIT 1[0m  [["id", 7]]
+  [1m[35mApplicant Load (0.3ms)[0m  SELECT  "applicants".* FROM "applicants" WHERE "applicants"."id" = $1 LIMIT 1  [["id", 7]]
+Unpermitted parameter: question
+Unpermitted parameter: question
+Unpermitted parameter: question
+Unpermitted parameter: question
+Unpermitted parameter: question
+Unpermitted parameter: question
+Unpermitted parameter: question
+Unpermitted parameter: question
+Unpermitted parameter: question
+Unpermitted parameter: question
+Unpermitted parameter: question
+Unpermitted parameter: question
+Unpermitted parameter: question
+Unpermitted parameters: id, full_name, email, submit, resumeFile, pictureFile, applicant_id
+  [1m[36m (0.2ms)[0m  [1mBEGIN[0m
+  [1m[35mResponse Load (0.3ms)[0m  SELECT "responses".* FROM "responses" WHERE "responses"."applicant_id" = $1 AND "responses"."id" IN (79, 80, 81, 82, 83, 84, 85, 86, 87, 88, 89, 90, 91)  [["applicant_id", 7]]
+  [1m[36m (0.2ms)[0m  [1mCOMMIT[0m
+  [1m[35mResponse Load (0.3ms)[0m  SELECT "responses".* FROM "responses" WHERE "responses"."applicant_id" = $1  [["applicant_id", 7]]
+Completed 403 Forbidden in 32ms (Views: 6.0ms | ActiveRecord: 1.6ms)
+
+
+Started PUT "/api/applicants/7" for 127.0.0.1 at 2016-06-19 00:00:46 -0400
+Processing by Api::ApplicantsController#update as */*
+  Parameters: {"id"=>"7", "first_name"=>"Adithya", "last_name"=>"Iyengar", "year"=>"", "major"=>"", "gpa"=>"", "units"=>"", "phone"=>"9196012582", "org"=>"Save", "address"=>"Pls", "city"=>"Or", "state"=>"I", "website"=>"Will", "mission"=>"Be", "position"=>"Sad", "full_name"=>"Adithya Iyengar", "resume"=>"https://res.cloudinary.com/hfajkttn9/image/upload/v1466308788/m8sk4myite8cp7lgvf3n.pdf", "picture"=>"https://res.cloudinary.com/hfajkttn9/image/upload/v1466308793/f3j6duj6eyusfhdyrj1y.jpg", "email"=>"test@berkeley.edu", "submit"=>"", "responses"=>{"0"=>{"id"=>"79", "answer"=>"a", "question"=>{"title"=>"What is the current problem(s) your organization faces? Please clearly explain the current situation, why the problem exists (if known), and other relevant information. How has your organization currently addressed these problems?", "qtype"=>"0", "category"=>"0", "limit"=>"800"}}, "1"=>{"id"=>"80", "answer"=>"b", "question"=>{"title"=>"What would the main objectives of the project be? How can TBG help solve these issues? What can TBG do in order to ensure efficiency and effectiveness? If you have several projects or project objectives in mind, feel free to list them all and prioritize them based on your organization's need.", "qtype"=>"0", "category"=>"0", "limit"=>"800"}}, "2"=>{"id"=>"81", "answer"=>"c", "question"=>{"title"=>"In one sentence, please explicitly summarize the goals of the project.", "qtype"=>"0", "category"=>"0", "limit"=>"200"}}, "3"=>{"id"=>"82", "answer"=>"d", "question"=>{"title"=>"If your nonprofit is selected to work with TBG this semester, what would success look like after the project was completed? What results do you hope to achieve after working with TBG? What impact will this project have on your organization?", "qtype"=>"0", "category"=>"0", "limit"=>"800"}}, "4"=>{"id"=>"83", "answer"=>"e", "question"=>{"title"=>"Have you applied to TBG in the past? If yes, when?", "qtype"=>"0", "category"=>"1", "limit"=>"200"}}, "5"=>{"id"=>"84", "answer"=>"f", "question"=>{"title"=>"Have you worked with TBG in the past? If yes, when?", "qtype"=>"0", "category"=>"1", "limit"=>"200"}}, "6"=>{"id"=>"85", "answer"=>"1", "question"=>{"title"=>"Does the nonprofit organization listed above have 501(c)3 status?", "qtype"=>"2", "category"=>"1", "limit"=>""}}, "7"=>{"id"=>"86", "answer"=>"1", "question"=>{"title"=>"If selected, is the contact listed above available to meet on a weekly basis with a consultant from The Berkeley Group over the course of the engagement?", "qtype"=>"2", "category"=>"1", "limit"=>""}}, "8"=>{"id"=>"87", "answer"=>"1", "question"=>{"title"=>"If selected, is the contact listed above available to meet with the consultants at a location within an hour's transportation of UC Berkeley? (e.g. address listed above, satellite office, café, etc.)", "qtype"=>"2", "category"=>"1", "limit"=>""}}, "9"=>{"id"=>"88", "answer"=>"0", "question"=>{"title"=>"If selected, will you and your organization fully commit to an engagement with TBG for January 2016 through May 2016?", "qtype"=>"2", "category"=>"1", "limit"=>""}}, "10"=>{"id"=>"89", "answer"=>"0", "question"=>{"title"=>"Does the contact listed above have the ability to implement recommendations developed by The Berkeley Group", "qtype"=>"2", "category"=>"1", "limit"=>""}}, "11"=>{"id"=>"90", "answer"=>"a", "question"=>{"title"=>"In the space below, please share any additional information that you would like The Berkeley Group to know. Please also include any dates or times that you will be unavailable for a follow-up interview between January 19th, 2016 and January 22nd, 2016.", "qtype"=>"0", "category"=>"2", "limit"=>"200"}}, "12"=>{"id"=>"91", "answer"=>"a", "question"=>{"title"=>"By typing my name on the signature line below, I agree that the information above is true to the best of my knowledge.", "qtype"=>"0", "category"=>"2", "limit"=>"200"}}}, "resumeFile"=>"YHack Reimbursement.pdf", "pictureFile"=>"IMG_7889.jpg"}
+  [1m[36mApplicant Load (0.3ms)[0m  [1mSELECT  "applicants".* FROM "applicants" WHERE "applicants"."id" = $1  ORDER BY "applicants"."id" ASC LIMIT 1[0m  [["id", 7]]
+  [1m[35mApplicant Load (0.2ms)[0m  SELECT  "applicants".* FROM "applicants" WHERE "applicants"."id" = $1 LIMIT 1  [["id", 7]]
+Unpermitted parameter: question
+Unpermitted parameter: question
+Unpermitted parameter: question
+Unpermitted parameter: question
+Unpermitted parameter: question
+Unpermitted parameter: question
+Unpermitted parameter: question
+Unpermitted parameter: question
+Unpermitted parameter: question
+Unpermitted parameter: question
+Unpermitted parameter: question
+Unpermitted parameter: question
+Unpermitted parameter: question
+Unpermitted parameters: id, full_name, email, submit, resumeFile, pictureFile
+  [1m[36m (0.1ms)[0m  [1mBEGIN[0m
+  [1m[35mResponse Load (0.3ms)[0m  SELECT "responses".* FROM "responses" WHERE "responses"."applicant_id" = $1 AND "responses"."id" IN (79, 80, 81, 82, 83, 84, 85, 86, 87, 88, 89, 90, 91)  [["applicant_id", 7]]
+  [1m[36m (0.2ms)[0m  [1mCOMMIT[0m
+  [1m[35mResponse Load (0.3ms)[0m  SELECT "responses".* FROM "responses" WHERE "responses"."applicant_id" = $1  [["applicant_id", 7]]
+  [1m[36mQuestion Load (0.2ms)[0m  [1mSELECT  "questions".* FROM "questions" WHERE "questions"."id" = $1 LIMIT 1[0m  [["id", 27]]
+  [1m[35mQuestion Load (0.2ms)[0m  SELECT  "questions".* FROM "questions" WHERE "questions"."id" = $1 LIMIT 1  [["id", 28]]
+  [1m[36mQuestion Load (0.2ms)[0m  [1mSELECT  "questions".* FROM "questions" WHERE "questions"."id" = $1 LIMIT 1[0m  [["id", 29]]
+  [1m[35mQuestion Load (0.2ms)[0m  SELECT  "questions".* FROM "questions" WHERE "questions"."id" = $1 LIMIT 1  [["id", 30]]
+  [1m[36mQuestion Load (0.1ms)[0m  [1mSELECT  "questions".* FROM "questions" WHERE "questions"."id" = $1 LIMIT 1[0m  [["id", 31]]
+  [1m[35mQuestion Load (0.1ms)[0m  SELECT  "questions".* FROM "questions" WHERE "questions"."id" = $1 LIMIT 1  [["id", 32]]
+  [1m[36mQuestion Load (0.1ms)[0m  [1mSELECT  "questions".* FROM "questions" WHERE "questions"."id" = $1 LIMIT 1[0m  [["id", 33]]
+  [1m[35mQuestion Load (0.2ms)[0m  SELECT  "questions".* FROM "questions" WHERE "questions"."id" = $1 LIMIT 1  [["id", 34]]
+  [1m[36mQuestion Load (0.2ms)[0m  [1mSELECT  "questions".* FROM "questions" WHERE "questions"."id" = $1 LIMIT 1[0m  [["id", 35]]
+  [1m[35mQuestion Load (0.2ms)[0m  SELECT  "questions".* FROM "questions" WHERE "questions"."id" = $1 LIMIT 1  [["id", 36]]
+  [1m[36mQuestion Load (0.2ms)[0m  [1mSELECT  "questions".* FROM "questions" WHERE "questions"."id" = $1 LIMIT 1[0m  [["id", 37]]
+  [1m[35mQuestion Load (0.1ms)[0m  SELECT  "questions".* FROM "questions" WHERE "questions"."id" = $1 LIMIT 1  [["id", 38]]
+  [1m[36mQuestion Load (0.1ms)[0m  [1mSELECT  "questions".* FROM "questions" WHERE "questions"."id" = $1 LIMIT 1[0m  [["id", 39]]
+  [1m[35mComment Load (0.2ms)[0m  SELECT "comments".* FROM "comments" WHERE "comments"."applicant_id" = $1  [["applicant_id", 7]]
+Completed 200 OK in 44ms (Views: 25.5ms | ActiveRecord: 3.8ms)
+
+
+Started POST "/api/applicants/7/submit" for 127.0.0.1 at 2016-06-19 00:00:58 -0400
+Processing by Api::ApplicantsController#submit as */*
+  Parameters: {"id"=>"7", "first_name"=>"Adithya", "last_name"=>"Iyengar", "year"=>"", "major"=>"", "gpa"=>"", "units"=>"", "phone"=>"9196012582", "org"=>"Save", "address"=>"Pls", "city"=>"Or", "state"=>"I", "website"=>"Will", "mission"=>"Be", "position"=>"Sad", "full_name"=>"Adithya Iyengar", "resume"=>"https://res.cloudinary.com/hfajkttn9/image/upload/v1466308788/m8sk4myite8cp7lgvf3n.pdf", "picture"=>"https://res.cloudinary.com/hfajkttn9/image/upload/v1466308793/f3j6duj6eyusfhdyrj1y.jpg", "email"=>"test@berkeley.edu", "submit"=>"", "responses"=>{"0"=>{"id"=>"79", "answer"=>"a", "question"=>{"title"=>"What is the current problem(s) your organization faces? Please clearly explain the current situation, why the problem exists (if known), and other relevant information. How has your organization currently addressed these problems?", "qtype"=>"0", "category"=>"0", "limit"=>"800"}}, "1"=>{"id"=>"80", "answer"=>"b", "question"=>{"title"=>"What would the main objectives of the project be? How can TBG help solve these issues? What can TBG do in order to ensure efficiency and effectiveness? If you have several projects or project objectives in mind, feel free to list them all and prioritize them based on your organization's need.", "qtype"=>"0", "category"=>"0", "limit"=>"800"}}, "2"=>{"id"=>"81", "answer"=>"c", "question"=>{"title"=>"In one sentence, please explicitly summarize the goals of the project.", "qtype"=>"0", "category"=>"0", "limit"=>"200"}}, "3"=>{"id"=>"82", "answer"=>"d", "question"=>{"title"=>"If your nonprofit is selected to work with TBG this semester, what would success look like after the project was completed? What results do you hope to achieve after working with TBG? What impact will this project have on your organization?", "qtype"=>"0", "category"=>"0", "limit"=>"800"}}, "4"=>{"id"=>"83", "answer"=>"e", "question"=>{"title"=>"Have you applied to TBG in the past? If yes, when?", "qtype"=>"0", "category"=>"1", "limit"=>"200"}}, "5"=>{"id"=>"84", "answer"=>"f", "question"=>{"title"=>"Have you worked with TBG in the past? If yes, when?", "qtype"=>"0", "category"=>"1", "limit"=>"200"}}, "6"=>{"id"=>"85", "answer"=>"1", "question"=>{"title"=>"Does the nonprofit organization listed above have 501(c)3 status?", "qtype"=>"2", "category"=>"1", "limit"=>""}}, "7"=>{"id"=>"86", "answer"=>"1", "question"=>{"title"=>"If selected, is the contact listed above available to meet on a weekly basis with a consultant from The Berkeley Group over the course of the engagement?", "qtype"=>"2", "category"=>"1", "limit"=>""}}, "8"=>{"id"=>"87", "answer"=>"1", "question"=>{"title"=>"If selected, is the contact listed above available to meet with the consultants at a location within an hour's transportation of UC Berkeley? (e.g. address listed above, satellite office, café, etc.)", "qtype"=>"2", "category"=>"1", "limit"=>""}}, "9"=>{"id"=>"88", "answer"=>"0", "question"=>{"title"=>"If selected, will you and your organization fully commit to an engagement with TBG for January 2016 through May 2016?", "qtype"=>"2", "category"=>"1", "limit"=>""}}, "10"=>{"id"=>"89", "answer"=>"0", "question"=>{"title"=>"Does the contact listed above have the ability to implement recommendations developed by The Berkeley Group", "qtype"=>"2", "category"=>"1", "limit"=>""}}, "11"=>{"id"=>"90", "answer"=>"a", "question"=>{"title"=>"In the space below, please share any additional information that you would like The Berkeley Group to know. Please also include any dates or times that you will be unavailable for a follow-up interview between January 19th, 2016 and January 22nd, 2016.", "qtype"=>"0", "category"=>"2", "limit"=>"200"}}, "12"=>{"id"=>"91", "answer"=>"a", "question"=>{"title"=>"By typing my name on the signature line below, I agree that the information above is true to the best of my knowledge.", "qtype"=>"0", "category"=>"2", "limit"=>"200"}}}, "applicant_id"=>"7"}
+  [1m[36mApplicant Load (0.3ms)[0m  [1mSELECT  "applicants".* FROM "applicants" WHERE "applicants"."id" = $1  ORDER BY "applicants"."id" ASC LIMIT 1[0m  [["id", 7]]
+  [1m[35mApplicant Load (0.2ms)[0m  SELECT  "applicants".* FROM "applicants" WHERE "applicants"."id" = $1 LIMIT 1  [["id", 7]]
+Unpermitted parameter: question
+Unpermitted parameter: question
+Unpermitted parameter: question
+Unpermitted parameter: question
+Unpermitted parameter: question
+Unpermitted parameter: question
+Unpermitted parameter: question
+Unpermitted parameter: question
+Unpermitted parameter: question
+Unpermitted parameter: question
+Unpermitted parameter: question
+Unpermitted parameter: question
+Unpermitted parameter: question
+Unpermitted parameters: id, full_name, email, submit, applicant_id
+  [1m[36m (0.1ms)[0m  [1mBEGIN[0m
+  [1m[35mResponse Load (0.3ms)[0m  SELECT "responses".* FROM "responses" WHERE "responses"."applicant_id" = $1 AND "responses"."id" IN (79, 80, 81, 82, 83, 84, 85, 86, 87, 88, 89, 90, 91)  [["applicant_id", 7]]
+  [1m[36m (0.2ms)[0m  [1mCOMMIT[0m
+  [1m[35mResponse Load (0.5ms)[0m  SELECT "responses".* FROM "responses" WHERE "responses"."applicant_id" = $1  [["applicant_id", 7]]
+Completed 403 Forbidden in 36ms (Views: 9.0ms | ActiveRecord: 1.6ms)
+
+
+Started DELETE "/sign_out" for 127.0.0.1 at 2016-06-19 00:03:10 -0400
+Processing by SessionsController#destroy as HTML
+  Parameters: {"authenticity_token"=>"2B9Lj2d8cstSuCg3p0BZPYFVWC/GCiXGGBvnf+9sqeErAgFAM5aLTiPbmrqfX4YVKotGWVVLt3y89ezHJBUJfA=="}
+  [1m[36mApplicant Load (0.3ms)[0m  [1mSELECT  "applicants".* FROM "applicants" WHERE "applicants"."id" = $1  ORDER BY "applicants"."id" ASC LIMIT 1[0m  [["id", 7]]
+  [1m[35m (0.1ms)[0m  BEGIN
+  [1m[36m (0.1ms)[0m  [1mCOMMIT[0m
+Redirected to http://localhost:3000/
+Completed 302 Found in 6ms (ActiveRecord: 0.6ms)
+
+
+Started GET "/" for 127.0.0.1 at 2016-06-19 00:03:10 -0400
+Processing by PagesController#home as HTML
+  Rendered pages/home.html.slim within layouts/application (28.4ms)
+  Rendered layouts/_navbar.html.slim (0.5ms)
+Completed 200 OK in 1412ms (Views: 1410.5ms | ActiveRecord: 0.0ms)
