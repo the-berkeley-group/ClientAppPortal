@@ -20,10 +20,6 @@ class AdminApplication extends AltComponent {
         return (
             <div className="admin-application">
                 <AdminApplicantInfo applicant = {this.state.applicant} />
-                <div className="applicant-resume">
-                    <h3>Resume</h3>
-                    <object data={this.state.applicant.resume} />
-                </div>
                 <Application responses = {this.state.applicant.responses}
                              view      = {ApplicationView.ADMIN} />
                 <CommentSection comments     = {this.state.applicant.comments}

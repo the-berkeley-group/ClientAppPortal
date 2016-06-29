@@ -1,6 +1,6 @@
 /* Table Headers */
 TABLE_HEADERS = [
-    "Applicant Name", "Year", "GPA", "Major", "PRES", "IVP", "VPD", "PVP", "EVP"
+    "Applicant Name", "Organization", "Position", "Website", "PRES", "IVP", "VPD", "PVP", "EVP"
 ];
 
 class OverviewTable extends AltComponent {

@@ -28,13 +28,13 @@ class ApplicantRow extends React.Component {
                     { this.props.applicant.full_name }
                 </td>
                 <td>
-                    { this.props.applicant.year }
+                    { this.props.applicant.org }
                 </td>
                 <td>
-                    { this.props.applicant.gpa }
+                    { this.props.applicant.position }
                 </td>
                 <td>
-                    { this.props.applicant.major }
+                    { this.props.applicant.website }
                 </td>
                 { this._renderDecisions() }
             </tr>
