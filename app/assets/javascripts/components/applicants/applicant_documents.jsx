@@ -61,37 +61,7 @@ class ApplicantDocuments extends React.Component {
 
     render() {
         return (
-            <div className={`upload-container scroll-${ScrollTargets.UPLOAD}`}>
-                <h2 className="category-title">{CategoryTitles.UPLOAD}</h2>
-                <div className="single-upload-container">
-                    <label className="upload-label">Resume</label>
-                    <input type="file" name={Attributes.RESUME} id="resume-upload"
-                        accept={FileInputs.RESUME}
-                        onChange={this._handleFileSelect} />
-                    <label className={`button upload-button
-                            upload-${this._hasSubmit(Attributes.RESUME)}`}
-                            htmlFor="resume-upload">
-                        <span className={`fa
-                            ${this._uploadIcon(Attributes.RESUME)}`} />
-                        { this.state.resumeFile }
-                    </label>
-                    { this._renderDocumentViewer(Attributes.RESUME) }
-                </div>
-                <div className="single-upload-container">
-                    <label className="upload-label">Picture</label>
-                    <input type="file" name={Attributes.PICTURE}
-                        id="picture-upload" accept={FileInputs.PICTURE}
-                        onChange={this._handleFileSelect} />
-                    <label className={`button upload-button
-                            upload-${this._hasSubmit(Attributes.PICTURE)}`}
-                            htmlFor="picture-upload">
-                        <span className={`fa
-                            ${this._uploadIcon(Attributes.PICTURE)}`} />
-                        { this.state.pictureFile }
-                    </label>
-                    { this._renderDocumentViewer(Attributes.PICTURE) }
-                </div>
-            </div>
+            <div></div>
         );
     }
 }

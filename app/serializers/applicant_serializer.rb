@@ -1,7 +1,7 @@
 class ApplicantSerializer < ActiveModel::Serializer
-  attributes :id, :first_name, :last_name, :year, :major, :gpa, :units, :phone
+  attributes :id, :first_name, :last_name, :phone
   attributes :org, :address, :city, :state, :website, :mission, :position
-  attributes :full_name, :resume, :picture, :email, :submit
+  attributes :full_name, :email, :submit
 
   has_many :responses, :comments
 

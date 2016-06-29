@@ -10,10 +10,13 @@ def make_applicants
       password_confirmation: "password",
       first_name: FFaker::Name.first_name,
       last_name: FFaker::Name.last_name,
-      year: "Sophomore",
-      major: "EECS",
-      gpa: 4.0,
-      units: 15,
+      org: "TBG",
+      address: "test",
+      city: "berkeley",
+      state: "ca",
+      website: "www.google.com",
+      mission: "work",
+      position: "ceo",
       phone: FFaker::PhoneNumber.short_phone_number
     )
   end

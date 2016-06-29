@@ -17,13 +17,7 @@
 #  updated_at             :datetime         not null
 #  first_name             :string
 #  last_name              :string
-#  year                   :string
-#  major                  :string
-#  gpa                    :integer
-#  units                  :integer
 #  phone                  :string
-#  resume                 :string
-#  picture                :string
 #  submit                 :boolean
 #  decisions              :integer          default([]), is an Array
 #  stage                  :integer          default(0)
@@ -63,8 +57,7 @@ class Applicant < ActiveRecord::Base
   validate :interview_available?, if: :interview_id_changed?
 
   validates :password_confirmation, presence: true, if: :password_required?
-  validates :first_name, :last_name, :year, :major, presence: true, on: :submit
-  validates :gpa, :units, :phone, :resume, :picture, presence: true, on: :submit
+  validates :first_name, :last_name, :phone, presence: true, on: :submit
   validates :org, :address, :city, :state, :website, :mission, :position, presence: true, on: :submit
   validates :stage, numericality: { less_than: 3 }
 
