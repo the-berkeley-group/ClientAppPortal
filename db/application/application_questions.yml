@@ -10,7 +10,7 @@ questions:
     category:
       0
     limit:
-      800
+      1500
   - title:
       'What would the main objectives of the project be? How can TBG help solve these issues?
       What can TBG do in order to ensure efficiency and effectiveness?
@@ -21,7 +21,7 @@ questions:
     category:
       0
     limit:
-      800
+      1500
   - title:
       'In one sentence, please explicitly summarize the goals of the project.'
     qtype:
@@ -29,7 +29,7 @@ questions:
     category:
       0
     limit:
-      200
+      500
   - title:
       'If your nonprofit is selected to work with TBG this semester, what would success look like
       after the project was completed? What results do you hope to achieve after working with TBG?
@@ -39,7 +39,7 @@ questions:
     category:
       0
     limit:
-      800
+      1500
   - title:
       'Have you applied to TBG in the past? If yes, when?'
     qtype:
@@ -47,7 +47,7 @@ questions:
     category:
       1
     limit:
-      200
+      500
   - title:
       'Have you worked with TBG in the past? If yes, when?'
     qtype:
@@ -55,7 +55,7 @@ questions:
     category:
       1
     limit:
-      200
+      500
   - title:
       'Does the nonprofit organization listed above have 501(c)3 status?'
     qtype:
@@ -80,14 +80,14 @@ questions:
       1
   - title:
       'If selected, will you and your organization fully commit to an engagement with TBG
-      for January 2016 through May 2016?'
+      for September 2016 through December 2016?'
     qtype:
       2
     category:
       1
   - title:
       'Does the contact listed above have the ability to implement recommendations
-      developed by The Berkeley Group'
+      developed by The Berkeley Group?'
     qtype:
       2
     category:
@@ -95,15 +95,15 @@ questions:
   - title:
       'In the space below, please share any additional information that you would like The Berkeley Group to know.
       Please also include any dates or times that you will be unavailable for a follow-up
-      interview between January 19th, 2016 and January 22nd, 2016.'
+      interview between August 1th, 2016 and August 3rd, 2016.'
     qtype:
       0
     category:
       2
     limit:
-      200
+      500
   - title:
-      'By typing my name on the signature line below, I agree that the information
+      'By typing my full name in the space below, I agree that the information
       above is true to the best of my knowledge.'
     qtype:
       0

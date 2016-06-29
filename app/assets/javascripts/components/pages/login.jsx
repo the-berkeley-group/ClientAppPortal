@@ -9,7 +9,7 @@ class LoginModal extends DefaultForm {
         return (
             <div className="login-form">
                 <form>
-                    { this._renderInput("email", "Email", "text", "email@berkeley.edu", "focus") }
+                    { this._renderInput("email", "Email", "text", "email@domain.edu", "focus") }
                     { this._renderInput("password", "Password", "password") }
                     <input name="submit" type="button" value="Login"
                         className="submit-button login-button"

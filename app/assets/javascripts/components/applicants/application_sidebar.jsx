@@ -3,8 +3,7 @@ const ScrollTargets = {
     PERSONAL : 0,
     ESSAY    : 1,
     QUESTION : 2,
-    EXTRA    : 3,
-    UPLOAD   : 4
+    EXTRA    : 3
 }
 
 /*

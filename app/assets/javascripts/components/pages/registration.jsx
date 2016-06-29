@@ -20,7 +20,7 @@ class RegistrationModal extends DefaultForm {
                                 <h1 className="modal-title">Create New Account</h1>
                             </div>
                             <div className="modal-body full-input-container">
-                                { this._renderInput("email", "Email", "text", "email@berkeley.edu", "focus") }
+                                { this._renderInput("email", "Email", "text", "email@domain.edu", "focus") }
                                 { this._renderInput("password", "Password", "password") }
                                 { this._renderInput("password_confirmation", "Confirm Password", "password") }
                             </div>

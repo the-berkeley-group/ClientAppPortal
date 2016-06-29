@@ -27357,3 +27357,563 @@ Completed 401 Unauthorized in 4ms (ActiveRecord: 0.5ms)
 Processing by SessionsController#failure as */*
   Parameters: {"applicant"=>{"email"=>"adithya.iyengar@berkeley.edu", "password"=>"[FILTERED]"}, "admin"=>{"email"=>"adithya.iyengar@berkeley.edu", "password"=>"[FILTERED]"}}
 Completed 401 Unauthorized in 4ms (Views: 3.1ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/" for 127.0.0.1 at 2016-06-28 23:51:11 -0400
+  [1m[36mActiveRecord::SchemaMigration Load (62.1ms)[0m  [1mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+Processing by PagesController#home as HTML
+  Rendered pages/home.html.slim within layouts/application (676.8ms)
+  Rendered layouts/_navbar.html.slim (19.3ms)
+Completed 200 OK in 7791ms (Views: 7746.4ms | ActiveRecord: 0.0ms)
+
+
+Started POST "/sign_up" for 127.0.0.1 at 2016-06-28 23:51:29 -0400
+Processing by RegistrationsController#create as */*
+  Parameters: {"applicant"=>{"email"=>"adithya.iyengar@berkeley.edu", "password"=>"[FILTERED]", "password_confirmation"=>"[FILTERED]"}}
+  [1m[35m (0.2ms)[0m  BEGIN
+  [1m[36mApplicant Exists (159.9ms)[0m  [1mSELECT  1 AS one FROM "applicants" WHERE "applicants"."email" = 'adithya.iyengar@berkeley.edu' LIMIT 1[0m
+  [1m[35mQuestion Load (129.7ms)[0m  SELECT  "questions".* FROM "questions"  ORDER BY "questions"."id" ASC LIMIT 1000
+  [1m[36mSQL (106.6ms)[0m  [1mINSERT INTO "responses" ("question_id", "created_at", "updated_at") VALUES ($1, $2, $3) RETURNING "id"[0m  [["question_id", 27], ["created_at", "2016-06-29 03:51:30.926706"], ["updated_at", "2016-06-29 03:51:30.926706"]]
+  [1m[35mSQL (0.4ms)[0m  INSERT INTO "responses" ("question_id", "created_at", "updated_at") VALUES ($1, $2, $3) RETURNING "id"  [["question_id", 28], ["created_at", "2016-06-29 03:51:31.094061"], ["updated_at", "2016-06-29 03:51:31.094061"]]
+  [1m[36mSQL (0.4ms)[0m  [1mINSERT INTO "responses" ("question_id", "created_at", "updated_at") VALUES ($1, $2, $3) RETURNING "id"[0m  [["question_id", 29], ["created_at", "2016-06-29 03:51:31.097296"], ["updated_at", "2016-06-29 03:51:31.097296"]]
+  [1m[35mSQL (0.3ms)[0m  INSERT INTO "responses" ("question_id", "created_at", "updated_at") VALUES ($1, $2, $3) RETURNING "id"  [["question_id", 30], ["created_at", "2016-06-29 03:51:31.100552"], ["updated_at", "2016-06-29 03:51:31.100552"]]
+  [1m[36mSQL (0.3ms)[0m  [1mINSERT INTO "responses" ("question_id", "created_at", "updated_at") VALUES ($1, $2, $3) RETURNING "id"[0m  [["question_id", 31], ["created_at", "2016-06-29 03:51:31.103308"], ["updated_at", "2016-06-29 03:51:31.103308"]]
+  [1m[35mSQL (0.3ms)[0m  INSERT INTO "responses" ("question_id", "created_at", "updated_at") VALUES ($1, $2, $3) RETURNING "id"  [["question_id", 32], ["created_at", "2016-06-29 03:51:31.105480"], ["updated_at", "2016-06-29 03:51:31.105480"]]
+  [1m[36mSQL (0.2ms)[0m  [1mINSERT INTO "responses" ("question_id", "created_at", "updated_at") VALUES ($1, $2, $3) RETURNING "id"[0m  [["question_id", 33], ["created_at", "2016-06-29 03:51:31.107483"], ["updated_at", "2016-06-29 03:51:31.107483"]]
+  [1m[35mSQL (0.2ms)[0m  INSERT INTO "responses" ("question_id", "created_at", "updated_at") VALUES ($1, $2, $3) RETURNING "id"  [["question_id", 34], ["created_at", "2016-06-29 03:51:31.109357"], ["updated_at", "2016-06-29 03:51:31.109357"]]
+  [1m[36mSQL (0.2ms)[0m  [1mINSERT INTO "responses" ("question_id", "created_at", "updated_at") VALUES ($1, $2, $3) RETURNING "id"[0m  [["question_id", 35], ["created_at", "2016-06-29 03:51:31.111021"], ["updated_at", "2016-06-29 03:51:31.111021"]]
+  [1m[35mSQL (0.2ms)[0m  INSERT INTO "responses" ("question_id", "created_at", "updated_at") VALUES ($1, $2, $3) RETURNING "id"  [["question_id", 36], ["created_at", "2016-06-29 03:51:31.112643"], ["updated_at", "2016-06-29 03:51:31.112643"]]
+  [1m[36mSQL (0.2ms)[0m  [1mINSERT INTO "responses" ("question_id", "created_at", "updated_at") VALUES ($1, $2, $3) RETURNING "id"[0m  [["question_id", 37], ["created_at", "2016-06-29 03:51:31.114180"], ["updated_at", "2016-06-29 03:51:31.114180"]]
+  [1m[35mSQL (0.2ms)[0m  INSERT INTO "responses" ("question_id", "created_at", "updated_at") VALUES ($1, $2, $3) RETURNING "id"  [["question_id", 38], ["created_at", "2016-06-29 03:51:31.115756"], ["updated_at", "2016-06-29 03:51:31.115756"]]
+  [1m[36mSQL (0.2ms)[0m  [1mINSERT INTO "responses" ("question_id", "created_at", "updated_at") VALUES ($1, $2, $3) RETURNING "id"[0m  [["question_id", 39], ["created_at", "2016-06-29 03:51:31.117317"], ["updated_at", "2016-06-29 03:51:31.117317"]]
+  [1m[35mSQL (90.6ms)[0m  INSERT INTO "applicants" ("email", "encrypted_password", "created_at", "updated_at") VALUES ($1, $2, $3, $4) RETURNING "id"  [["email", "adithya.iyengar@berkeley.edu"], ["encrypted_password", "$2a$10$qw0FEeuxqV7pKp/cXDfGa.x.pGdN.3emYnygskARCV6/Rmk84fvbm"], ["created_at", "2016-06-29 03:51:30.665396"], ["updated_at", "2016-06-29 03:51:30.665396"]]
+  [1m[36mSQL (21.1ms)[0m  [1mUPDATE "responses" SET "applicant_id" = $1, "updated_at" = $2 WHERE "responses"."id" = $3[0m  [["applicant_id", 8], ["updated_at", "2016-06-29 03:51:31.211926"], ["id", 92]]
+  [1m[35mSQL (0.4ms)[0m  UPDATE "responses" SET "applicant_id" = $1, "updated_at" = $2 WHERE "responses"."id" = $3  [["applicant_id", 8], ["updated_at", "2016-06-29 03:51:31.265770"], ["id", 93]]
+  [1m[36mSQL (0.3ms)[0m  [1mUPDATE "responses" SET "applicant_id" = $1, "updated_at" = $2 WHERE "responses"."id" = $3[0m  [["applicant_id", 8], ["updated_at", "2016-06-29 03:51:31.268225"], ["id", 94]]
+  [1m[35mSQL (0.3ms)[0m  UPDATE "responses" SET "applicant_id" = $1, "updated_at" = $2 WHERE "responses"."id" = $3  [["applicant_id", 8], ["updated_at", "2016-06-29 03:51:31.270128"], ["id", 95]]
+  [1m[36mSQL (0.3ms)[0m  [1mUPDATE "responses" SET "applicant_id" = $1, "updated_at" = $2 WHERE "responses"."id" = $3[0m  [["applicant_id", 8], ["updated_at", "2016-06-29 03:51:31.271837"], ["id", 96]]
+  [1m[35mSQL (0.3ms)[0m  UPDATE "responses" SET "applicant_id" = $1, "updated_at" = $2 WHERE "responses"."id" = $3  [["applicant_id", 8], ["updated_at", "2016-06-29 03:51:31.273640"], ["id", 97]]
+  [1m[36mSQL (0.2ms)[0m  [1mUPDATE "responses" SET "applicant_id" = $1, "updated_at" = $2 WHERE "responses"."id" = $3[0m  [["applicant_id", 8], ["updated_at", "2016-06-29 03:51:31.275305"], ["id", 98]]
+  [1m[35mSQL (0.3ms)[0m  UPDATE "responses" SET "applicant_id" = $1, "updated_at" = $2 WHERE "responses"."id" = $3  [["applicant_id", 8], ["updated_at", "2016-06-29 03:51:31.276817"], ["id", 99]]
+  [1m[36mSQL (0.2ms)[0m  [1mUPDATE "responses" SET "applicant_id" = $1, "updated_at" = $2 WHERE "responses"."id" = $3[0m  [["applicant_id", 8], ["updated_at", "2016-06-29 03:51:31.278593"], ["id", 100]]
+  [1m[35mSQL (0.2ms)[0m  UPDATE "responses" SET "applicant_id" = $1, "updated_at" = $2 WHERE "responses"."id" = $3  [["applicant_id", 8], ["updated_at", "2016-06-29 03:51:31.280309"], ["id", 101]]
+  [1m[36mSQL (0.2ms)[0m  [1mUPDATE "responses" SET "applicant_id" = $1, "updated_at" = $2 WHERE "responses"."id" = $3[0m  [["applicant_id", 8], ["updated_at", "2016-06-29 03:51:31.281754"], ["id", 102]]
+  [1m[35mSQL (0.2ms)[0m  UPDATE "responses" SET "applicant_id" = $1, "updated_at" = $2 WHERE "responses"."id" = $3  [["applicant_id", 8], ["updated_at", "2016-06-29 03:51:31.283196"], ["id", 103]]
+  [1m[36mSQL (0.2ms)[0m  [1mUPDATE "responses" SET "applicant_id" = $1, "updated_at" = $2 WHERE "responses"."id" = $3[0m  [["applicant_id", 8], ["updated_at", "2016-06-29 03:51:31.284557"], ["id", 104]]
+  [1m[35m (1.1ms)[0m  COMMIT
+  [1m[36m (0.1ms)[0m  [1mBEGIN[0m
+  [1m[35mSQL (14.1ms)[0m  UPDATE "applicants" SET "last_sign_in_at" = $1, "current_sign_in_at" = $2, "last_sign_in_ip" = $3, "current_sign_in_ip" = $4, "sign_in_count" = $5, "updated_at" = $6 WHERE "applicants"."id" = $7  [["last_sign_in_at", "2016-06-29 03:51:31.287840"], ["current_sign_in_at", "2016-06-29 03:51:31.287840"], ["last_sign_in_ip", "127.0.0.1/32"], ["current_sign_in_ip", "127.0.0.1/32"], ["sign_in_count", 1], ["updated_at", "2016-06-29 03:51:31.288948"], ["id", 8]]
+  [1m[36m (0.8ms)[0m  [1mCOMMIT[0m
+  [1m[35mSettings Load (22.5ms)[0m  SELECT  "settings".* FROM "settings"  ORDER BY "settings"."id" ASC LIMIT 1
+Completed 200 OK in 1599ms (Views: 3.2ms | ActiveRecord: 960.0ms)
+
+
+Started GET "/applicants/8/apply" for 127.0.0.1 at 2016-06-28 23:51:31 -0400
+Processing by ApplicantsController#apply as HTML
+  Parameters: {"applicant_id"=>"8"}
+  [1m[36mApplicant Load (0.4ms)[0m  [1mSELECT  "applicants".* FROM "applicants" WHERE "applicants"."id" = $1 LIMIT 1[0m  [["id", 8]]
+  [1m[35mApplicant Load (0.8ms)[0m  SELECT  "applicants".* FROM "applicants" WHERE "applicants"."id" = $1  ORDER BY "applicants"."id" ASC LIMIT 1  [["id", 8]]
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT  "applicants".* FROM "applicants" WHERE "applicants"."id" = $1 LIMIT 1[0m  [["id", "8"]]
+  [1m[35mSettings Load (0.5ms)[0m  SELECT  "settings".* FROM "settings"  ORDER BY "settings"."id" ASC LIMIT 1
+  Rendered applicants/apply.html.slim within layouts/application (9.9ms)
+  Rendered layouts/_navbar.html.slim (1.4ms)
+Completed 200 OK in 653ms (Views: 625.9ms | ActiveRecord: 1.8ms)
+
+
+Started GET "/api/applicants/8.json" for 127.0.0.1 at 2016-06-28 23:51:33 -0400
+Processing by Api::ApplicantsController#show as JSON
+  Parameters: {"id"=>"8"}
+  [1m[36mApplicant Load (0.6ms)[0m  [1mSELECT  "applicants".* FROM "applicants" WHERE "applicants"."id" = $1  ORDER BY "applicants"."id" ASC LIMIT 1[0m  [["id", 8]]
+  [1m[35mApplicant Load (0.6ms)[0m  SELECT  "applicants".* FROM "applicants" WHERE "applicants"."id" = $1 LIMIT 1  [["id", 8]]
+  [1m[36mResponse Load (0.5ms)[0m  [1mSELECT "responses".* FROM "responses" WHERE "responses"."applicant_id" = $1[0m  [["applicant_id", 8]]
+  [1m[35mQuestion Load (0.2ms)[0m  SELECT  "questions".* FROM "questions" WHERE "questions"."id" = $1 LIMIT 1  [["id", 27]]
+  [1m[36mQuestion Load (0.3ms)[0m  [1mSELECT  "questions".* FROM "questions" WHERE "questions"."id" = $1 LIMIT 1[0m  [["id", 28]]
+  [1m[35mQuestion Load (0.3ms)[0m  SELECT  "questions".* FROM "questions" WHERE "questions"."id" = $1 LIMIT 1  [["id", 29]]
+  [1m[36mQuestion Load (0.3ms)[0m  [1mSELECT  "questions".* FROM "questions" WHERE "questions"."id" = $1 LIMIT 1[0m  [["id", 30]]
+  [1m[35mQuestion Load (0.2ms)[0m  SELECT  "questions".* FROM "questions" WHERE "questions"."id" = $1 LIMIT 1  [["id", 31]]
+  [1m[36mQuestion Load (0.3ms)[0m  [1mSELECT  "questions".* FROM "questions" WHERE "questions"."id" = $1 LIMIT 1[0m  [["id", 32]]
+  [1m[35mQuestion Load (0.2ms)[0m  SELECT  "questions".* FROM "questions" WHERE "questions"."id" = $1 LIMIT 1  [["id", 33]]
+  [1m[36mQuestion Load (0.2ms)[0m  [1mSELECT  "questions".* FROM "questions" WHERE "questions"."id" = $1 LIMIT 1[0m  [["id", 34]]
+  [1m[35mQuestion Load (0.2ms)[0m  SELECT  "questions".* FROM "questions" WHERE "questions"."id" = $1 LIMIT 1  [["id", 35]]
+  [1m[36mQuestion Load (0.2ms)[0m  [1mSELECT  "questions".* FROM "questions" WHERE "questions"."id" = $1 LIMIT 1[0m  [["id", 36]]
+  [1m[35mQuestion Load (0.2ms)[0m  SELECT  "questions".* FROM "questions" WHERE "questions"."id" = $1 LIMIT 1  [["id", 37]]
+  [1m[36mQuestion Load (0.2ms)[0m  [1mSELECT  "questions".* FROM "questions" WHERE "questions"."id" = $1 LIMIT 1[0m  [["id", 38]]
+  [1m[35mQuestion Load (0.2ms)[0m  SELECT  "questions".* FROM "questions" WHERE "questions"."id" = $1 LIMIT 1  [["id", 39]]
+  [1m[36mComment Load (103.1ms)[0m  [1mSELECT "comments".* FROM "comments" WHERE "comments"."applicant_id" = $1[0m  [["applicant_id", 8]]
+Completed 200 OK in 306ms (Views: 123.6ms | ActiveRecord: 108.8ms)
+
+
+Started POST "/api/applicants/8/submit" for 127.0.0.1 at 2016-06-28 23:51:39 -0400
+Processing by Api::ApplicantsController#submit as */*
+  Parameters: {"id"=>"8", "first_name"=>"", "last_name"=>"", "phone"=>"", "org"=>"", "address"=>"", "city"=>"", "state"=>"", "website"=>"", "mission"=>"", "position"=>"", "full_name"=>" ", "email"=>"adithya.iyengar@berkeley.edu", "submit"=>"", "responses"=>{"0"=>{"id"=>"92", "answer"=>"", "question"=>{"title"=>"What is the current problem(s) your organization faces? Please clearly explain the current situation, why the problem exists (if known), and other relevant information. How has your organization currently addressed these problems?", "qtype"=>"0", "category"=>"0", "limit"=>"800"}}, "1"=>{"id"=>"93", "answer"=>"", "question"=>{"title"=>"What would the main objectives of the project be? How can TBG help solve these issues? What can TBG do in order to ensure efficiency and effectiveness? If you have several projects or project objectives in mind, feel free to list them all and prioritize them based on your organization's need.", "qtype"=>"0", "category"=>"0", "limit"=>"800"}}, "2"=>{"id"=>"94", "answer"=>"", "question"=>{"title"=>"In one sentence, please explicitly summarize the goals of the project.", "qtype"=>"0", "category"=>"0", "limit"=>"200"}}, "3"=>{"id"=>"95", "answer"=>"", "question"=>{"title"=>"If your nonprofit is selected to work with TBG this semester, what would success look like after the project was completed? What results do you hope to achieve after working with TBG? What impact will this project have on your organization?", "qtype"=>"0", "category"=>"0", "limit"=>"800"}}, "4"=>{"id"=>"96", "answer"=>"", "question"=>{"title"=>"Have you applied to TBG in the past? If yes, when?", "qtype"=>"0", "category"=>"1", "limit"=>"200"}}, "5"=>{"id"=>"97", "answer"=>"", "question"=>{"title"=>"Have you worked with TBG in the past? If yes, when?", "qtype"=>"0", "category"=>"1", "limit"=>"200"}}, "6"=>{"id"=>"98", "answer"=>"", "question"=>{"title"=>"Does the nonprofit organization listed above have 501(c)3 status?", "qtype"=>"2", "category"=>"1", "limit"=>""}}, "7"=>{"id"=>"99", "answer"=>"", "question"=>{"title"=>"If selected, is the contact listed above available to meet on a weekly basis with a consultant from The Berkeley Group over the course of the engagement?", "qtype"=>"2", "category"=>"1", "limit"=>""}}, "8"=>{"id"=>"100", "answer"=>"", "question"=>{"title"=>"If selected, is the contact listed above available to meet with the consultants at a location within an hour's transportation of UC Berkeley? (e.g. address listed above, satellite office, café, etc.)", "qtype"=>"2", "category"=>"1", "limit"=>""}}, "9"=>{"id"=>"101", "answer"=>"", "question"=>{"title"=>"If selected, will you and your organization fully commit to an engagement with TBG for January 2016 through May 2016?", "qtype"=>"2", "category"=>"1", "limit"=>""}}, "10"=>{"id"=>"102", "answer"=>"", "question"=>{"title"=>"Does the contact listed above have the ability to implement recommendations developed by The Berkeley Group", "qtype"=>"2", "category"=>"1", "limit"=>""}}, "11"=>{"id"=>"103", "answer"=>"", "question"=>{"title"=>"In the space below, please share any additional information that you would like The Berkeley Group to know. Please also include any dates or times that you will be unavailable for a follow-up interview between January 19th, 2016 and January 22nd, 2016.", "qtype"=>"0", "category"=>"2", "limit"=>"200"}}, "12"=>{"id"=>"104", "answer"=>"", "question"=>{"title"=>"By typing my name on the signature line below, I agree that the information above is true to the best of my knowledge.", "qtype"=>"0", "category"=>"2", "limit"=>"200"}}}, "applicant_id"=>"8"}
+  [1m[35mApplicant Load (0.4ms)[0m  SELECT  "applicants".* FROM "applicants" WHERE "applicants"."id" = $1  ORDER BY "applicants"."id" ASC LIMIT 1  [["id", 8]]
+  [1m[36mApplicant Load (0.3ms)[0m  [1mSELECT  "applicants".* FROM "applicants" WHERE "applicants"."id" = $1 LIMIT 1[0m  [["id", 8]]
+Unpermitted parameter: question
+Unpermitted parameter: question
+Unpermitted parameter: question
+Unpermitted parameter: question
+Unpermitted parameter: question
+Unpermitted parameter: question
+Unpermitted parameter: question
+Unpermitted parameter: question
+Unpermitted parameter: question
+Unpermitted parameter: question
+Unpermitted parameter: question
+Unpermitted parameter: question
+Unpermitted parameter: question
+Unpermitted parameters: id, full_name, email, submit, applicant_id
+  [1m[35m (0.1ms)[0m  BEGIN
+  [1m[36mResponse Load (0.3ms)[0m  [1mSELECT "responses".* FROM "responses" WHERE "responses"."applicant_id" = $1 AND "responses"."id" IN (92, 93, 94, 95, 96, 97, 98, 99, 100, 101, 102, 103, 104)[0m  [["applicant_id", 8]]
+  [1m[35mSQL (0.4ms)[0m  UPDATE "applicants" SET "first_name" = $1, "last_name" = $2, "phone" = $3, "org" = $4, "address" = $5, "city" = $6, "state" = $7, "website" = $8, "mission" = $9, "position" = $10, "updated_at" = $11 WHERE "applicants"."id" = $12  [["first_name", ""], ["last_name", ""], ["phone", ""], ["org", ""], ["address", ""], ["city", ""], ["state", ""], ["website", ""], ["mission", ""], ["position", ""], ["updated_at", "2016-06-29 03:51:39.602507"], ["id", 8]]
+  [1m[36m (0.9ms)[0m  [1mCOMMIT[0m
+  [1m[35mResponse Load (0.3ms)[0m  SELECT "responses".* FROM "responses" WHERE "responses"."applicant_id" = $1  [["applicant_id", 8]]
+Completed 403 Forbidden in 28ms (Views: 4.3ms | ActiveRecord: 2.8ms)
+
+
+Started PUT "/api/applicants/8" for 127.0.0.1 at 2016-06-28 23:52:04 -0400
+Processing by Api::ApplicantsController#update as */*
+  Parameters: {"id"=>"8", "first_name"=>"Adithya", "last_name"=>"Iyengar", "phone"=>"9196012582", "org"=>"a", "address"=>"a", "city"=>"a", "state"=>"a", "website"=>"a", "mission"=>"a", "position"=>"a", "full_name"=>" ", "email"=>"adithya.iyengar@berkeley.edu", "submit"=>"", "responses"=>{"0"=>{"id"=>"92", "answer"=>"a", "question"=>{"title"=>"What is the current problem(s) your organization faces? Please clearly explain the current situation, why the problem exists (if known), and other relevant information. How has your organization currently addressed these problems?", "qtype"=>"0", "category"=>"0", "limit"=>"800"}}, "1"=>{"id"=>"93", "answer"=>"a", "question"=>{"title"=>"What would the main objectives of the project be? How can TBG help solve these issues? What can TBG do in order to ensure efficiency and effectiveness? If you have several projects or project objectives in mind, feel free to list them all and prioritize them based on your organization's need.", "qtype"=>"0", "category"=>"0", "limit"=>"800"}}, "2"=>{"id"=>"94", "answer"=>"a", "question"=>{"title"=>"In one sentence, please explicitly summarize the goals of the project.", "qtype"=>"0", "category"=>"0", "limit"=>"200"}}, "3"=>{"id"=>"95", "answer"=>"a", "question"=>{"title"=>"If your nonprofit is selected to work with TBG this semester, what would success look like after the project was completed? What results do you hope to achieve after working with TBG? What impact will this project have on your organization?", "qtype"=>"0", "category"=>"0", "limit"=>"800"}}, "4"=>{"id"=>"96", "answer"=>"a", "question"=>{"title"=>"Have you applied to TBG in the past? If yes, when?", "qtype"=>"0", "category"=>"1", "limit"=>"200"}}, "5"=>{"id"=>"97", "answer"=>"a", "question"=>{"title"=>"Have you worked with TBG in the past? If yes, when?", "qtype"=>"0", "category"=>"1", "limit"=>"200"}}, "6"=>{"id"=>"98", "answer"=>"1", "question"=>{"title"=>"Does the nonprofit organization listed above have 501(c)3 status?", "qtype"=>"2", "category"=>"1", "limit"=>""}}, "7"=>{"id"=>"99", "answer"=>"1", "question"=>{"title"=>"If selected, is the contact listed above available to meet on a weekly basis with a consultant from The Berkeley Group over the course of the engagement?", "qtype"=>"2", "category"=>"1", "limit"=>""}}, "8"=>{"id"=>"100", "answer"=>"0", "question"=>{"title"=>"If selected, is the contact listed above available to meet with the consultants at a location within an hour's transportation of UC Berkeley? (e.g. address listed above, satellite office, café, etc.)", "qtype"=>"2", "category"=>"1", "limit"=>""}}, "9"=>{"id"=>"101", "answer"=>"0", "question"=>{"title"=>"If selected, will you and your organization fully commit to an engagement with TBG for January 2016 through May 2016?", "qtype"=>"2", "category"=>"1", "limit"=>""}}, "10"=>{"id"=>"102", "answer"=>"1", "question"=>{"title"=>"Does the contact listed above have the ability to implement recommendations developed by The Berkeley Group", "qtype"=>"2", "category"=>"1", "limit"=>""}}, "11"=>{"id"=>"103", "answer"=>"a", "question"=>{"title"=>"In the space below, please share any additional information that you would like The Berkeley Group to know. Please also include any dates or times that you will be unavailable for a follow-up interview between January 19th, 2016 and January 22nd, 2016.", "qtype"=>"0", "category"=>"2", "limit"=>"200"}}, "12"=>{"id"=>"104", "answer"=>"a", "question"=>{"title"=>"By typing my name on the signature line below, I agree that the information above is true to the best of my knowledge.", "qtype"=>"0", "category"=>"2", "limit"=>"200"}}}}
+  [1m[36mApplicant Load (0.4ms)[0m  [1mSELECT  "applicants".* FROM "applicants" WHERE "applicants"."id" = $1  ORDER BY "applicants"."id" ASC LIMIT 1[0m  [["id", 8]]
+  [1m[35mApplicant Load (0.7ms)[0m  SELECT  "applicants".* FROM "applicants" WHERE "applicants"."id" = $1 LIMIT 1  [["id", 8]]
+Unpermitted parameter: question
+Unpermitted parameter: question
+Unpermitted parameter: question
+Unpermitted parameter: question
+Unpermitted parameter: question
+Unpermitted parameter: question
+Unpermitted parameter: question
+Unpermitted parameter: question
+Unpermitted parameter: question
+Unpermitted parameter: question
+Unpermitted parameter: question
+Unpermitted parameter: question
+Unpermitted parameter: question
+Unpermitted parameters: id, full_name, email, submit
+  [1m[36m (0.2ms)[0m  [1mBEGIN[0m
+  [1m[35mResponse Load (0.4ms)[0m  SELECT "responses".* FROM "responses" WHERE "responses"."applicant_id" = $1 AND "responses"."id" IN (92, 93, 94, 95, 96, 97, 98, 99, 100, 101, 102, 103, 104)  [["applicant_id", 8]]
+  [1m[36mSQL (0.4ms)[0m  [1mUPDATE "applicants" SET "first_name" = $1, "last_name" = $2, "phone" = $3, "org" = $4, "address" = $5, "city" = $6, "state" = $7, "website" = $8, "mission" = $9, "position" = $10, "updated_at" = $11 WHERE "applicants"."id" = $12[0m  [["first_name", "Adithya"], ["last_name", "Iyengar"], ["phone", "9196012582"], ["org", "a"], ["address", "a"], ["city", "a"], ["state", "a"], ["website", "a"], ["mission", "a"], ["position", "a"], ["updated_at", "2016-06-29 03:52:04.363575"], ["id", 8]]
+  [1m[35mSQL (0.3ms)[0m  UPDATE "responses" SET "answer" = $1, "updated_at" = $2 WHERE "responses"."id" = $3  [["answer", "a"], ["updated_at", "2016-06-29 03:52:04.366370"], ["id", 92]]
+  [1m[36mSQL (0.4ms)[0m  [1mUPDATE "responses" SET "answer" = $1, "updated_at" = $2 WHERE "responses"."id" = $3[0m  [["answer", "a"], ["updated_at", "2016-06-29 03:52:04.368878"], ["id", 93]]
+  [1m[35mSQL (0.4ms)[0m  UPDATE "responses" SET "answer" = $1, "updated_at" = $2 WHERE "responses"."id" = $3  [["answer", "a"], ["updated_at", "2016-06-29 03:52:04.371179"], ["id", 94]]
+  [1m[36mSQL (0.3ms)[0m  [1mUPDATE "responses" SET "answer" = $1, "updated_at" = $2 WHERE "responses"."id" = $3[0m  [["answer", "a"], ["updated_at", "2016-06-29 03:52:04.373359"], ["id", 95]]
+  [1m[35mSQL (0.3ms)[0m  UPDATE "responses" SET "answer" = $1, "updated_at" = $2 WHERE "responses"."id" = $3  [["answer", "a"], ["updated_at", "2016-06-29 03:52:04.375248"], ["id", 96]]
+  [1m[36mSQL (0.2ms)[0m  [1mUPDATE "responses" SET "answer" = $1, "updated_at" = $2 WHERE "responses"."id" = $3[0m  [["answer", "a"], ["updated_at", "2016-06-29 03:52:04.376708"], ["id", 97]]
+  [1m[35mSQL (0.2ms)[0m  UPDATE "responses" SET "answer" = $1, "updated_at" = $2 WHERE "responses"."id" = $3  [["answer", "1"], ["updated_at", "2016-06-29 03:52:04.378150"], ["id", 98]]
+  [1m[36mSQL (0.2ms)[0m  [1mUPDATE "responses" SET "answer" = $1, "updated_at" = $2 WHERE "responses"."id" = $3[0m  [["answer", "1"], ["updated_at", "2016-06-29 03:52:04.379510"], ["id", 99]]
+  [1m[35mSQL (0.2ms)[0m  UPDATE "responses" SET "answer" = $1, "updated_at" = $2 WHERE "responses"."id" = $3  [["answer", "0"], ["updated_at", "2016-06-29 03:52:04.380814"], ["id", 100]]
+  [1m[36mSQL (0.3ms)[0m  [1mUPDATE "responses" SET "answer" = $1, "updated_at" = $2 WHERE "responses"."id" = $3[0m  [["answer", "0"], ["updated_at", "2016-06-29 03:52:04.382398"], ["id", 101]]
+  [1m[35mSQL (0.2ms)[0m  UPDATE "responses" SET "answer" = $1, "updated_at" = $2 WHERE "responses"."id" = $3  [["answer", "1"], ["updated_at", "2016-06-29 03:52:04.384685"], ["id", 102]]
+  [1m[36mSQL (0.2ms)[0m  [1mUPDATE "responses" SET "answer" = $1, "updated_at" = $2 WHERE "responses"."id" = $3[0m  [["answer", "a"], ["updated_at", "2016-06-29 03:52:04.386300"], ["id", 103]]
+  [1m[35mSQL (0.2ms)[0m  UPDATE "responses" SET "answer" = $1, "updated_at" = $2 WHERE "responses"."id" = $3  [["answer", "a"], ["updated_at", "2016-06-29 03:52:04.387709"], ["id", 104]]
+  [1m[36m (1.0ms)[0m  [1mCOMMIT[0m
+  [1m[35mResponse Load (0.7ms)[0m  SELECT "responses".* FROM "responses" WHERE "responses"."applicant_id" = $1  [["applicant_id", 8]]
+  [1m[36mQuestion Load (0.3ms)[0m  [1mSELECT  "questions".* FROM "questions" WHERE "questions"."id" = $1 LIMIT 1[0m  [["id", 27]]
+  [1m[35mQuestion Load (0.2ms)[0m  SELECT  "questions".* FROM "questions" WHERE "questions"."id" = $1 LIMIT 1  [["id", 28]]
+  [1m[36mQuestion Load (0.2ms)[0m  [1mSELECT  "questions".* FROM "questions" WHERE "questions"."id" = $1 LIMIT 1[0m  [["id", 29]]
+  [1m[35mQuestion Load (0.1ms)[0m  SELECT  "questions".* FROM "questions" WHERE "questions"."id" = $1 LIMIT 1  [["id", 30]]
+  [1m[36mQuestion Load (0.2ms)[0m  [1mSELECT  "questions".* FROM "questions" WHERE "questions"."id" = $1 LIMIT 1[0m  [["id", 31]]
+  [1m[35mQuestion Load (0.2ms)[0m  SELECT  "questions".* FROM "questions" WHERE "questions"."id" = $1 LIMIT 1  [["id", 32]]
+  [1m[36mQuestion Load (0.1ms)[0m  [1mSELECT  "questions".* FROM "questions" WHERE "questions"."id" = $1 LIMIT 1[0m  [["id", 33]]
+  [1m[35mQuestion Load (0.1ms)[0m  SELECT  "questions".* FROM "questions" WHERE "questions"."id" = $1 LIMIT 1  [["id", 34]]
+  [1m[36mQuestion Load (0.2ms)[0m  [1mSELECT  "questions".* FROM "questions" WHERE "questions"."id" = $1 LIMIT 1[0m  [["id", 35]]
+  [1m[35mQuestion Load (0.1ms)[0m  SELECT  "questions".* FROM "questions" WHERE "questions"."id" = $1 LIMIT 1  [["id", 36]]
+  [1m[36mQuestion Load (0.2ms)[0m  [1mSELECT  "questions".* FROM "questions" WHERE "questions"."id" = $1 LIMIT 1[0m  [["id", 37]]
+  [1m[35mQuestion Load (0.3ms)[0m  SELECT  "questions".* FROM "questions" WHERE "questions"."id" = $1 LIMIT 1  [["id", 38]]
+  [1m[36mQuestion Load (0.2ms)[0m  [1mSELECT  "questions".* FROM "questions" WHERE "questions"."id" = $1 LIMIT 1[0m  [["id", 39]]
+  [1m[35mComment Load (0.3ms)[0m  SELECT "comments".* FROM "comments" WHERE "comments"."applicant_id" = $1  [["applicant_id", 8]]
+Completed 200 OK in 76ms (Views: 27.7ms | ActiveRecord: 9.9ms)
+
+
+Started POST "/api/applicants/8/submit" for 127.0.0.1 at 2016-06-28 23:52:05 -0400
+Processing by Api::ApplicantsController#submit as */*
+  Parameters: {"id"=>"8", "first_name"=>"Adithya", "last_name"=>"Iyengar", "phone"=>"9196012582", "org"=>"a", "address"=>"a", "city"=>"a", "state"=>"a", "website"=>"a", "mission"=>"a", "position"=>"a", "full_name"=>"Adithya Iyengar", "email"=>"adithya.iyengar@berkeley.edu", "submit"=>"", "responses"=>{"0"=>{"id"=>"92", "answer"=>"a", "question"=>{"title"=>"What is the current problem(s) your organization faces? Please clearly explain the current situation, why the problem exists (if known), and other relevant information. How has your organization currently addressed these problems?", "qtype"=>"0", "category"=>"0", "limit"=>"800"}}, "1"=>{"id"=>"93", "answer"=>"a", "question"=>{"title"=>"What would the main objectives of the project be? How can TBG help solve these issues? What can TBG do in order to ensure efficiency and effectiveness? If you have several projects or project objectives in mind, feel free to list them all and prioritize them based on your organization's need.", "qtype"=>"0", "category"=>"0", "limit"=>"800"}}, "2"=>{"id"=>"94", "answer"=>"a", "question"=>{"title"=>"In one sentence, please explicitly summarize the goals of the project.", "qtype"=>"0", "category"=>"0", "limit"=>"200"}}, "3"=>{"id"=>"95", "answer"=>"a", "question"=>{"title"=>"If your nonprofit is selected to work with TBG this semester, what would success look like after the project was completed? What results do you hope to achieve after working with TBG? What impact will this project have on your organization?", "qtype"=>"0", "category"=>"0", "limit"=>"800"}}, "4"=>{"id"=>"96", "answer"=>"a", "question"=>{"title"=>"Have you applied to TBG in the past? If yes, when?", "qtype"=>"0", "category"=>"1", "limit"=>"200"}}, "5"=>{"id"=>"97", "answer"=>"a", "question"=>{"title"=>"Have you worked with TBG in the past? If yes, when?", "qtype"=>"0", "category"=>"1", "limit"=>"200"}}, "6"=>{"id"=>"98", "answer"=>"1", "question"=>{"title"=>"Does the nonprofit organization listed above have 501(c)3 status?", "qtype"=>"2", "category"=>"1", "limit"=>""}}, "7"=>{"id"=>"99", "answer"=>"1", "question"=>{"title"=>"If selected, is the contact listed above available to meet on a weekly basis with a consultant from The Berkeley Group over the course of the engagement?", "qtype"=>"2", "category"=>"1", "limit"=>""}}, "8"=>{"id"=>"100", "answer"=>"0", "question"=>{"title"=>"If selected, is the contact listed above available to meet with the consultants at a location within an hour's transportation of UC Berkeley? (e.g. address listed above, satellite office, café, etc.)", "qtype"=>"2", "category"=>"1", "limit"=>""}}, "9"=>{"id"=>"101", "answer"=>"0", "question"=>{"title"=>"If selected, will you and your organization fully commit to an engagement with TBG for January 2016 through May 2016?", "qtype"=>"2", "category"=>"1", "limit"=>""}}, "10"=>{"id"=>"102", "answer"=>"1", "question"=>{"title"=>"Does the contact listed above have the ability to implement recommendations developed by The Berkeley Group", "qtype"=>"2", "category"=>"1", "limit"=>""}}, "11"=>{"id"=>"103", "answer"=>"a", "question"=>{"title"=>"In the space below, please share any additional information that you would like The Berkeley Group to know. Please also include any dates or times that you will be unavailable for a follow-up interview between January 19th, 2016 and January 22nd, 2016.", "qtype"=>"0", "category"=>"2", "limit"=>"200"}}, "12"=>{"id"=>"104", "answer"=>"a", "question"=>{"title"=>"By typing my name on the signature line below, I agree that the information above is true to the best of my knowledge.", "qtype"=>"0", "category"=>"2", "limit"=>"200"}}}, "applicant_id"=>"8"}
+  [1m[36mApplicant Load (0.6ms)[0m  [1mSELECT  "applicants".* FROM "applicants" WHERE "applicants"."id" = $1  ORDER BY "applicants"."id" ASC LIMIT 1[0m  [["id", 8]]
+  [1m[35mApplicant Load (0.5ms)[0m  SELECT  "applicants".* FROM "applicants" WHERE "applicants"."id" = $1 LIMIT 1  [["id", 8]]
+Unpermitted parameter: question
+Unpermitted parameter: question
+Unpermitted parameter: question
+Unpermitted parameter: question
+Unpermitted parameter: question
+Unpermitted parameter: question
+Unpermitted parameter: question
+Unpermitted parameter: question
+Unpermitted parameter: question
+Unpermitted parameter: question
+Unpermitted parameter: question
+Unpermitted parameter: question
+Unpermitted parameter: question
+Unpermitted parameters: id, full_name, email, submit, applicant_id
+  [1m[36m (0.2ms)[0m  [1mBEGIN[0m
+  [1m[35mResponse Load (0.4ms)[0m  SELECT "responses".* FROM "responses" WHERE "responses"."applicant_id" = $1 AND "responses"."id" IN (92, 93, 94, 95, 96, 97, 98, 99, 100, 101, 102, 103, 104)  [["applicant_id", 8]]
+  [1m[36m (0.2ms)[0m  [1mCOMMIT[0m
+  [1m[35mResponse Load (0.4ms)[0m  SELECT "responses".* FROM "responses" WHERE "responses"."applicant_id" = $1  [["applicant_id", 8]]
+  [1m[36m (0.2ms)[0m  [1mBEGIN[0m
+  [1m[35mSQL (65.9ms)[0m  UPDATE "applicants" SET "submit" = $1, "decisions" = $2, "updated_at" = $3 WHERE "applicants"."id" = $4  [["submit", "t"], ["decisions", "{1,1,1,1,1}"], ["updated_at", "2016-06-29 03:52:05.346538"], ["id", 8]]
+  [1m[36m (0.9ms)[0m  [1mCOMMIT[0m
+  [1m[35mQuestion Load (0.2ms)[0m  SELECT  "questions".* FROM "questions" WHERE "questions"."id" = $1 LIMIT 1  [["id", 27]]
+  [1m[36mQuestion Load (0.2ms)[0m  [1mSELECT  "questions".* FROM "questions" WHERE "questions"."id" = $1 LIMIT 1[0m  [["id", 28]]
+  [1m[35mQuestion Load (0.2ms)[0m  SELECT  "questions".* FROM "questions" WHERE "questions"."id" = $1 LIMIT 1  [["id", 29]]
+  [1m[36mQuestion Load (0.1ms)[0m  [1mSELECT  "questions".* FROM "questions" WHERE "questions"."id" = $1 LIMIT 1[0m  [["id", 30]]
+  [1m[35mQuestion Load (0.1ms)[0m  SELECT  "questions".* FROM "questions" WHERE "questions"."id" = $1 LIMIT 1  [["id", 31]]
+  [1m[36mQuestion Load (0.1ms)[0m  [1mSELECT  "questions".* FROM "questions" WHERE "questions"."id" = $1 LIMIT 1[0m  [["id", 32]]
+  [1m[35mQuestion Load (0.2ms)[0m  SELECT  "questions".* FROM "questions" WHERE "questions"."id" = $1 LIMIT 1  [["id", 33]]
+  [1m[36mQuestion Load (0.1ms)[0m  [1mSELECT  "questions".* FROM "questions" WHERE "questions"."id" = $1 LIMIT 1[0m  [["id", 34]]
+  [1m[35mQuestion Load (0.1ms)[0m  SELECT  "questions".* FROM "questions" WHERE "questions"."id" = $1 LIMIT 1  [["id", 35]]
+  [1m[36mQuestion Load (0.2ms)[0m  [1mSELECT  "questions".* FROM "questions" WHERE "questions"."id" = $1 LIMIT 1[0m  [["id", 36]]
+  [1m[35mQuestion Load (0.3ms)[0m  SELECT  "questions".* FROM "questions" WHERE "questions"."id" = $1 LIMIT 1  [["id", 37]]
+  [1m[36mQuestion Load (0.2ms)[0m  [1mSELECT  "questions".* FROM "questions" WHERE "questions"."id" = $1 LIMIT 1[0m  [["id", 38]]
+  [1m[35mQuestion Load (0.1ms)[0m  SELECT  "questions".* FROM "questions" WHERE "questions"."id" = $1 LIMIT 1  [["id", 39]]
+  [1m[36mComment Load (0.3ms)[0m  [1mSELECT "comments".* FROM "comments" WHERE "comments"."applicant_id" = $1[0m  [["applicant_id", 8]]
+Completed 200 OK in 136ms (Views: 38.0ms | ActiveRecord: 71.8ms)
+
+
+Started GET "/applicants/8/apply" for 127.0.0.1 at 2016-06-28 23:52:05 -0400
+Processing by ApplicantsController#apply as HTML
+  Parameters: {"applicant_id"=>"8"}
+  [1m[35mApplicant Load (1.0ms)[0m  SELECT  "applicants".* FROM "applicants" WHERE "applicants"."id" = $1 LIMIT 1  [["id", 8]]
+  [1m[36mApplicant Load (0.4ms)[0m  [1mSELECT  "applicants".* FROM "applicants" WHERE "applicants"."id" = $1  ORDER BY "applicants"."id" ASC LIMIT 1[0m  [["id", 8]]
+  [1m[35mCACHE (0.0ms)[0m  SELECT  "applicants".* FROM "applicants" WHERE "applicants"."id" = $1 LIMIT 1  [["id", "8"]]
+  [1m[36mSettings Load (0.4ms)[0m  [1mSELECT  "settings".* FROM "settings"  ORDER BY "settings"."id" ASC LIMIT 1[0m
+  Rendered applicants/apply.html.slim within layouts/application (0.3ms)
+  Rendered layouts/_navbar.html.slim (1.8ms)
+Completed 200 OK in 1798ms (Views: 1789.9ms | ActiveRecord: 1.8ms)
+
+
+Started DELETE "/sign_out" for 127.0.0.1 at 2016-06-28 23:52:10 -0400
+Processing by SessionsController#destroy as HTML
+  Parameters: {"authenticity_token"=>"bgGEz9pIpAvgoh/JouQccETtR+lE2MYCz6vB4n0XuIa7aAKkhARo3ZSgoTaYXMu7KxAkUL4GiWk+9eCNy2SUpw=="}
+  [1m[35mApplicant Load (0.3ms)[0m  SELECT  "applicants".* FROM "applicants" WHERE "applicants"."id" = $1  ORDER BY "applicants"."id" ASC LIMIT 1  [["id", 8]]
+  [1m[36m (0.2ms)[0m  [1mBEGIN[0m
+  [1m[35m (0.1ms)[0m  COMMIT
+Redirected to http://localhost:3000/
+Completed 302 Found in 9ms (ActiveRecord: 0.6ms)
+
+
+Started GET "/" for 127.0.0.1 at 2016-06-28 23:52:10 -0400
+Processing by PagesController#home as HTML
+  Rendered pages/home.html.slim within layouts/application (35.3ms)
+  Rendered layouts/_navbar.html.slim (0.2ms)
+Completed 200 OK in 761ms (Views: 759.4ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/" for 127.0.0.1 at 2016-06-29 00:03:24 -0400
+Processing by PagesController#home as HTML
+  Rendered pages/home.html.slim within layouts/application (166.4ms)
+  Rendered layouts/_navbar.html.slim (0.7ms)
+Completed 200 OK in 8358ms (Views: 8356.9ms | ActiveRecord: 0.0ms)
+
+
+Started POST "/sign_in" for 127.0.0.1 at 2016-06-29 00:03:44 -0400
+Processing by SessionsController#create as */*
+  Parameters: {"applicant"=>{"email"=>"adithya.iyengar@berkeley.edu", "password"=>"[FILTERED]"}}
+  [1m[36mApplicant Load (0.4ms)[0m  [1mSELECT  "applicants".* FROM "applicants" WHERE "applicants"."email" = $1  ORDER BY "applicants"."id" ASC LIMIT 1[0m  [["email", "adithya.iyengar@berkeley.edu"]]
+  [1m[35m (0.2ms)[0m  BEGIN
+  [1m[36mSQL (0.3ms)[0m  [1mUPDATE "applicants" SET "current_sign_in_at" = $1, "sign_in_count" = $2, "updated_at" = $3 WHERE "applicants"."id" = $4[0m  [["current_sign_in_at", "2016-06-29 04:03:44.424840"], ["sign_in_count", 2], ["updated_at", "2016-06-29 04:03:44.426405"], ["id", 8]]
+  [1m[35m (0.8ms)[0m  COMMIT
+  [1m[36mSettings Load (0.3ms)[0m  [1mSELECT  "settings".* FROM "settings"  ORDER BY "settings"."id" ASC LIMIT 1[0m
+Completed 200 OK in 176ms (Views: 4.9ms | ActiveRecord: 6.3ms)
+
+
+Started GET "/applicants/8/apply" for 127.0.0.1 at 2016-06-29 00:03:44 -0400
+Processing by ApplicantsController#apply as HTML
+  Parameters: {"applicant_id"=>"8"}
+  [1m[35mApplicant Load (0.3ms)[0m  SELECT  "applicants".* FROM "applicants" WHERE "applicants"."id" = $1 LIMIT 1  [["id", 8]]
+  [1m[36mApplicant Load (0.3ms)[0m  [1mSELECT  "applicants".* FROM "applicants" WHERE "applicants"."id" = $1  ORDER BY "applicants"."id" ASC LIMIT 1[0m  [["id", 8]]
+  [1m[35mCACHE (0.0ms)[0m  SELECT  "applicants".* FROM "applicants" WHERE "applicants"."id" = $1 LIMIT 1  [["id", "8"]]
+  [1m[36mSettings Load (0.4ms)[0m  [1mSELECT  "settings".* FROM "settings"  ORDER BY "settings"."id" ASC LIMIT 1[0m
+  Rendered applicants/apply.html.slim within layouts/application (9.1ms)
+  Rendered layouts/_navbar.html.slim (0.7ms)
+Completed 200 OK in 680ms (Views: 669.8ms | ActiveRecord: 0.9ms)
+
+
+Started DELETE "/sign_out" for 127.0.0.1 at 2016-06-29 00:03:48 -0400
+Processing by SessionsController#destroy as HTML
+  Parameters: {"authenticity_token"=>"rFVIk5gwjtsKhHReeF47cOdCHP5XUM3MFqv8IPPCjRoiEaKT3MVB58cIX/rKcWRhyn3FveaLy0v0wa2hbLXrkg=="}
+  [1m[35mApplicant Load (0.3ms)[0m  SELECT  "applicants".* FROM "applicants" WHERE "applicants"."id" = $1  ORDER BY "applicants"."id" ASC LIMIT 1  [["id", 8]]
+  [1m[36m (0.2ms)[0m  [1mBEGIN[0m
+  [1m[35m (0.1ms)[0m  COMMIT
+Redirected to http://localhost:3000/
+Completed 302 Found in 7ms (ActiveRecord: 0.6ms)
+
+
+Started GET "/" for 127.0.0.1 at 2016-06-29 00:03:49 -0400
+Processing by PagesController#home as HTML
+  Rendered pages/home.html.slim within layouts/application (3.1ms)
+  Rendered layouts/_navbar.html.slim (0.2ms)
+Completed 200 OK in 905ms (Views: 903.5ms | ActiveRecord: 0.0ms)
+
+
+Started POST "/sign_up" for 127.0.0.1 at 2016-06-29 00:03:55 -0400
+Processing by RegistrationsController#create as */*
+  Parameters: {"applicant"=>{"email"=>"adithya.iyengar@gmail.com", "password"=>"[FILTERED]", "password_confirmation"=>"[FILTERED]"}}
+  [1m[36m (0.2ms)[0m  [1mBEGIN[0m
+  [1m[35mApplicant Exists (0.4ms)[0m  SELECT  1 AS one FROM "applicants" WHERE "applicants"."email" = 'adithya.iyengar@gmail.com' LIMIT 1
+  [1m[36mQuestion Load (0.4ms)[0m  [1mSELECT  "questions".* FROM "questions"  ORDER BY "questions"."id" ASC LIMIT 1000[0m
+  [1m[35mSQL (0.3ms)[0m  INSERT INTO "responses" ("question_id", "created_at", "updated_at") VALUES ($1, $2, $3) RETURNING "id"  [["question_id", 27], ["created_at", "2016-06-29 04:03:55.921178"], ["updated_at", "2016-06-29 04:03:55.921178"]]
+  [1m[36mSQL (0.2ms)[0m  [1mINSERT INTO "responses" ("question_id", "created_at", "updated_at") VALUES ($1, $2, $3) RETURNING "id"[0m  [["question_id", 28], ["created_at", "2016-06-29 04:03:55.923534"], ["updated_at", "2016-06-29 04:03:55.923534"]]
+  [1m[35mSQL (0.2ms)[0m  INSERT INTO "responses" ("question_id", "created_at", "updated_at") VALUES ($1, $2, $3) RETURNING "id"  [["question_id", 29], ["created_at", "2016-06-29 04:03:55.925255"], ["updated_at", "2016-06-29 04:03:55.925255"]]
+  [1m[36mSQL (0.2ms)[0m  [1mINSERT INTO "responses" ("question_id", "created_at", "updated_at") VALUES ($1, $2, $3) RETURNING "id"[0m  [["question_id", 30], ["created_at", "2016-06-29 04:03:55.926885"], ["updated_at", "2016-06-29 04:03:55.926885"]]
+  [1m[35mSQL (0.3ms)[0m  INSERT INTO "responses" ("question_id", "created_at", "updated_at") VALUES ($1, $2, $3) RETURNING "id"  [["question_id", 31], ["created_at", "2016-06-29 04:03:55.928728"], ["updated_at", "2016-06-29 04:03:55.928728"]]
+  [1m[36mSQL (0.2ms)[0m  [1mINSERT INTO "responses" ("question_id", "created_at", "updated_at") VALUES ($1, $2, $3) RETURNING "id"[0m  [["question_id", 32], ["created_at", "2016-06-29 04:03:55.930886"], ["updated_at", "2016-06-29 04:03:55.930886"]]
+  [1m[35mSQL (0.2ms)[0m  INSERT INTO "responses" ("question_id", "created_at", "updated_at") VALUES ($1, $2, $3) RETURNING "id"  [["question_id", 33], ["created_at", "2016-06-29 04:03:55.932652"], ["updated_at", "2016-06-29 04:03:55.932652"]]
+  [1m[36mSQL (0.2ms)[0m  [1mINSERT INTO "responses" ("question_id", "created_at", "updated_at") VALUES ($1, $2, $3) RETURNING "id"[0m  [["question_id", 34], ["created_at", "2016-06-29 04:03:55.934383"], ["updated_at", "2016-06-29 04:03:55.934383"]]
+  [1m[35mSQL (0.3ms)[0m  INSERT INTO "responses" ("question_id", "created_at", "updated_at") VALUES ($1, $2, $3) RETURNING "id"  [["question_id", 35], ["created_at", "2016-06-29 04:03:55.935987"], ["updated_at", "2016-06-29 04:03:55.935987"]]
+  [1m[36mSQL (0.2ms)[0m  [1mINSERT INTO "responses" ("question_id", "created_at", "updated_at") VALUES ($1, $2, $3) RETURNING "id"[0m  [["question_id", 36], ["created_at", "2016-06-29 04:03:55.937661"], ["updated_at", "2016-06-29 04:03:55.937661"]]
+  [1m[35mSQL (0.3ms)[0m  INSERT INTO "responses" ("question_id", "created_at", "updated_at") VALUES ($1, $2, $3) RETURNING "id"  [["question_id", 37], ["created_at", "2016-06-29 04:03:55.939277"], ["updated_at", "2016-06-29 04:03:55.939277"]]
+  [1m[36mSQL (0.2ms)[0m  [1mINSERT INTO "responses" ("question_id", "created_at", "updated_at") VALUES ($1, $2, $3) RETURNING "id"[0m  [["question_id", 38], ["created_at", "2016-06-29 04:03:55.941167"], ["updated_at", "2016-06-29 04:03:55.941167"]]
+  [1m[35mSQL (0.2ms)[0m  INSERT INTO "responses" ("question_id", "created_at", "updated_at") VALUES ($1, $2, $3) RETURNING "id"  [["question_id", 39], ["created_at", "2016-06-29 04:03:55.942983"], ["updated_at", "2016-06-29 04:03:55.942983"]]
+  [1m[36mSQL (0.4ms)[0m  [1mINSERT INTO "applicants" ("email", "encrypted_password", "created_at", "updated_at") VALUES ($1, $2, $3, $4) RETURNING "id"[0m  [["email", "adithya.iyengar@gmail.com"], ["encrypted_password", "$2a$10$pGjmfHJed7s1CG2dxgy0f.G85YcItDthaYQCrdgXM4ITE5w5DNKpW"], ["created_at", "2016-06-29 04:03:55.878194"], ["updated_at", "2016-06-29 04:03:55.878194"]]
+  [1m[35mSQL (0.2ms)[0m  UPDATE "responses" SET "applicant_id" = $1, "updated_at" = $2 WHERE "responses"."id" = $3  [["applicant_id", 9], ["updated_at", "2016-06-29 04:03:55.947044"], ["id", 105]]
+  [1m[36mSQL (0.2ms)[0m  [1mUPDATE "responses" SET "applicant_id" = $1, "updated_at" = $2 WHERE "responses"."id" = $3[0m  [["applicant_id", 9], ["updated_at", "2016-06-29 04:03:55.948684"], ["id", 106]]
+  [1m[35mSQL (0.2ms)[0m  UPDATE "responses" SET "applicant_id" = $1, "updated_at" = $2 WHERE "responses"."id" = $3  [["applicant_id", 9], ["updated_at", "2016-06-29 04:03:55.950049"], ["id", 107]]
+  [1m[36mSQL (0.2ms)[0m  [1mUPDATE "responses" SET "applicant_id" = $1, "updated_at" = $2 WHERE "responses"."id" = $3[0m  [["applicant_id", 9], ["updated_at", "2016-06-29 04:03:55.951652"], ["id", 108]]
+  [1m[35mSQL (0.3ms)[0m  UPDATE "responses" SET "applicant_id" = $1, "updated_at" = $2 WHERE "responses"."id" = $3  [["applicant_id", 9], ["updated_at", "2016-06-29 04:03:55.953141"], ["id", 109]]
+  [1m[36mSQL (0.3ms)[0m  [1mUPDATE "responses" SET "applicant_id" = $1, "updated_at" = $2 WHERE "responses"."id" = $3[0m  [["applicant_id", 9], ["updated_at", "2016-06-29 04:03:55.955806"], ["id", 110]]
+  [1m[35mSQL (0.4ms)[0m  UPDATE "responses" SET "applicant_id" = $1, "updated_at" = $2 WHERE "responses"."id" = $3  [["applicant_id", 9], ["updated_at", "2016-06-29 04:03:55.958143"], ["id", 111]]
+  [1m[36mSQL (0.2ms)[0m  [1mUPDATE "responses" SET "applicant_id" = $1, "updated_at" = $2 WHERE "responses"."id" = $3[0m  [["applicant_id", 9], ["updated_at", "2016-06-29 04:03:55.960918"], ["id", 112]]
+  [1m[35mSQL (0.2ms)[0m  UPDATE "responses" SET "applicant_id" = $1, "updated_at" = $2 WHERE "responses"."id" = $3  [["applicant_id", 9], ["updated_at", "2016-06-29 04:03:55.962683"], ["id", 113]]
+  [1m[36mSQL (0.2ms)[0m  [1mUPDATE "responses" SET "applicant_id" = $1, "updated_at" = $2 WHERE "responses"."id" = $3[0m  [["applicant_id", 9], ["updated_at", "2016-06-29 04:03:55.964065"], ["id", 114]]
+  [1m[35mSQL (0.2ms)[0m  UPDATE "responses" SET "applicant_id" = $1, "updated_at" = $2 WHERE "responses"."id" = $3  [["applicant_id", 9], ["updated_at", "2016-06-29 04:03:55.965423"], ["id", 115]]
+  [1m[36mSQL (0.2ms)[0m  [1mUPDATE "responses" SET "applicant_id" = $1, "updated_at" = $2 WHERE "responses"."id" = $3[0m  [["applicant_id", 9], ["updated_at", "2016-06-29 04:03:55.966919"], ["id", 116]]
+  [1m[35mSQL (0.2ms)[0m  UPDATE "responses" SET "applicant_id" = $1, "updated_at" = $2 WHERE "responses"."id" = $3  [["applicant_id", 9], ["updated_at", "2016-06-29 04:03:55.968455"], ["id", 117]]
+  [1m[36m (19.5ms)[0m  [1mCOMMIT[0m
+  [1m[35m (0.3ms)[0m  BEGIN
+  [1m[36mSQL (0.6ms)[0m  [1mUPDATE "applicants" SET "last_sign_in_at" = $1, "current_sign_in_at" = $2, "last_sign_in_ip" = $3, "current_sign_in_ip" = $4, "sign_in_count" = $5, "updated_at" = $6 WHERE "applicants"."id" = $7[0m  [["last_sign_in_at", "2016-06-29 04:03:55.990616"], ["current_sign_in_at", "2016-06-29 04:03:55.990616"], ["last_sign_in_ip", "127.0.0.1/32"], ["current_sign_in_ip", "127.0.0.1/32"], ["sign_in_count", 1], ["updated_at", "2016-06-29 04:03:55.992611"], ["id", 9]]
+  [1m[35m (1.8ms)[0m  COMMIT
+  [1m[36mSettings Load (0.5ms)[0m  [1mSELECT  "settings".* FROM "settings"  ORDER BY "settings"."id" ASC LIMIT 1[0m
+Completed 200 OK in 226ms (Views: 3.9ms | ActiveRecord: 33.2ms)
+
+
+Started GET "/applicants/9/apply" for 127.0.0.1 at 2016-06-29 00:03:56 -0400
+Processing by ApplicantsController#apply as HTML
+  Parameters: {"applicant_id"=>"9"}
+  [1m[35mApplicant Load (0.3ms)[0m  SELECT  "applicants".* FROM "applicants" WHERE "applicants"."id" = $1 LIMIT 1  [["id", 9]]
+  [1m[36mApplicant Load (1.2ms)[0m  [1mSELECT  "applicants".* FROM "applicants" WHERE "applicants"."id" = $1  ORDER BY "applicants"."id" ASC LIMIT 1[0m  [["id", 9]]
+  [1m[35mCACHE (0.0ms)[0m  SELECT  "applicants".* FROM "applicants" WHERE "applicants"."id" = $1 LIMIT 1  [["id", "9"]]
+  [1m[36mSettings Load (0.4ms)[0m  [1mSELECT  "settings".* FROM "settings"  ORDER BY "settings"."id" ASC LIMIT 1[0m
+  Rendered applicants/apply.html.slim within layouts/application (0.9ms)
+  Rendered layouts/_navbar.html.slim (0.6ms)
+Completed 200 OK in 643ms (Views: 633.9ms | ActiveRecord: 1.9ms)
+
+
+Started GET "/api/applicants/9.json" for 127.0.0.1 at 2016-06-29 00:03:57 -0400
+Processing by Api::ApplicantsController#show as JSON
+  Parameters: {"id"=>"9"}
+  [1m[35mApplicant Load (0.3ms)[0m  SELECT  "applicants".* FROM "applicants" WHERE "applicants"."id" = $1  ORDER BY "applicants"."id" ASC LIMIT 1  [["id", 9]]
+  [1m[36mApplicant Load (0.3ms)[0m  [1mSELECT  "applicants".* FROM "applicants" WHERE "applicants"."id" = $1 LIMIT 1[0m  [["id", 9]]
+  [1m[35mResponse Load (3.3ms)[0m  SELECT "responses".* FROM "responses" WHERE "responses"."applicant_id" = $1  [["applicant_id", 9]]
+  [1m[36mQuestion Load (0.3ms)[0m  [1mSELECT  "questions".* FROM "questions" WHERE "questions"."id" = $1 LIMIT 1[0m  [["id", 27]]
+  [1m[35mQuestion Load (0.2ms)[0m  SELECT  "questions".* FROM "questions" WHERE "questions"."id" = $1 LIMIT 1  [["id", 28]]
+  [1m[36mQuestion Load (0.2ms)[0m  [1mSELECT  "questions".* FROM "questions" WHERE "questions"."id" = $1 LIMIT 1[0m  [["id", 29]]
+  [1m[35mQuestion Load (0.2ms)[0m  SELECT  "questions".* FROM "questions" WHERE "questions"."id" = $1 LIMIT 1  [["id", 30]]
+  [1m[36mQuestion Load (0.2ms)[0m  [1mSELECT  "questions".* FROM "questions" WHERE "questions"."id" = $1 LIMIT 1[0m  [["id", 31]]
+  [1m[35mQuestion Load (0.3ms)[0m  SELECT  "questions".* FROM "questions" WHERE "questions"."id" = $1 LIMIT 1  [["id", 32]]
+  [1m[36mQuestion Load (0.2ms)[0m  [1mSELECT  "questions".* FROM "questions" WHERE "questions"."id" = $1 LIMIT 1[0m  [["id", 33]]
+  [1m[35mQuestion Load (0.2ms)[0m  SELECT  "questions".* FROM "questions" WHERE "questions"."id" = $1 LIMIT 1  [["id", 34]]
+  [1m[36mQuestion Load (0.2ms)[0m  [1mSELECT  "questions".* FROM "questions" WHERE "questions"."id" = $1 LIMIT 1[0m  [["id", 35]]
+  [1m[35mQuestion Load (0.2ms)[0m  SELECT  "questions".* FROM "questions" WHERE "questions"."id" = $1 LIMIT 1  [["id", 36]]
+  [1m[36mQuestion Load (0.2ms)[0m  [1mSELECT  "questions".* FROM "questions" WHERE "questions"."id" = $1 LIMIT 1[0m  [["id", 37]]
+  [1m[35mQuestion Load (0.2ms)[0m  SELECT  "questions".* FROM "questions" WHERE "questions"."id" = $1 LIMIT 1  [["id", 38]]
+  [1m[36mQuestion Load (0.2ms)[0m  [1mSELECT  "questions".* FROM "questions" WHERE "questions"."id" = $1 LIMIT 1[0m  [["id", 39]]
+  [1m[35mComment Load (0.5ms)[0m  SELECT "comments".* FROM "comments" WHERE "comments"."applicant_id" = $1  [["applicant_id", 9]]
+Completed 200 OK in 91ms (Views: 68.4ms | ActiveRecord: 8.5ms)
+
+
+Started GET "/" for 127.0.0.1 at 2016-06-29 00:08:37 -0400
+Processing by PagesController#home as HTML
+  [1m[36mApplicant Load (0.3ms)[0m  [1mSELECT  "applicants".* FROM "applicants" WHERE "applicants"."id" = $1  ORDER BY "applicants"."id" ASC LIMIT 1[0m  [["id", 9]]
+  [1m[35mSettings Load (0.4ms)[0m  SELECT  "settings".* FROM "settings"  ORDER BY "settings"."id" ASC LIMIT 1
+Redirected to http://localhost:3000/applicants/9/apply
+Filter chain halted as :redirect_user rendered or redirected
+Completed 302 Found in 4ms (ActiveRecord: 0.7ms)
+
+
+Started GET "/applicants/9/apply" for 127.0.0.1 at 2016-06-29 00:08:37 -0400
+Processing by ApplicantsController#apply as HTML
+  Parameters: {"applicant_id"=>"9"}
+  [1m[36mApplicant Load (0.3ms)[0m  [1mSELECT  "applicants".* FROM "applicants" WHERE "applicants"."id" = $1 LIMIT 1[0m  [["id", 9]]
+  [1m[35mApplicant Load (0.2ms)[0m  SELECT  "applicants".* FROM "applicants" WHERE "applicants"."id" = $1  ORDER BY "applicants"."id" ASC LIMIT 1  [["id", 9]]
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT  "applicants".* FROM "applicants" WHERE "applicants"."id" = $1 LIMIT 1[0m  [["id", "9"]]
+  [1m[35mSettings Load (0.4ms)[0m  SELECT  "settings".* FROM "settings"  ORDER BY "settings"."id" ASC LIMIT 1
+  Rendered applicants/apply.html.slim within layouts/application (0.7ms)
+  Rendered layouts/_navbar.html.slim (1.0ms)
+Completed 200 OK in 693ms (Views: 686.9ms | ActiveRecord: 0.8ms)
+
+
+Started GET "/api/applicants/9.json" for 127.0.0.1 at 2016-06-29 00:08:40 -0400
+Processing by Api::ApplicantsController#show as JSON
+  Parameters: {"id"=>"9"}
+  [1m[36mApplicant Load (0.3ms)[0m  [1mSELECT  "applicants".* FROM "applicants" WHERE "applicants"."id" = $1  ORDER BY "applicants"."id" ASC LIMIT 1[0m  [["id", 9]]
+  [1m[35mApplicant Load (0.2ms)[0m  SELECT  "applicants".* FROM "applicants" WHERE "applicants"."id" = $1 LIMIT 1  [["id", 9]]
+  [1m[36mResponse Load (0.7ms)[0m  [1mSELECT "responses".* FROM "responses" WHERE "responses"."applicant_id" = $1[0m  [["applicant_id", 9]]
+  [1m[35mQuestion Load (0.2ms)[0m  SELECT  "questions".* FROM "questions" WHERE "questions"."id" = $1 LIMIT 1  [["id", 27]]
+  [1m[36mQuestion Load (0.2ms)[0m  [1mSELECT  "questions".* FROM "questions" WHERE "questions"."id" = $1 LIMIT 1[0m  [["id", 28]]
+  [1m[35mQuestion Load (0.2ms)[0m  SELECT  "questions".* FROM "questions" WHERE "questions"."id" = $1 LIMIT 1  [["id", 29]]
+  [1m[36mQuestion Load (0.5ms)[0m  [1mSELECT  "questions".* FROM "questions" WHERE "questions"."id" = $1 LIMIT 1[0m  [["id", 30]]
+  [1m[35mQuestion Load (0.3ms)[0m  SELECT  "questions".* FROM "questions" WHERE "questions"."id" = $1 LIMIT 1  [["id", 31]]
+  [1m[36mQuestion Load (0.2ms)[0m  [1mSELECT  "questions".* FROM "questions" WHERE "questions"."id" = $1 LIMIT 1[0m  [["id", 32]]
+  [1m[35mQuestion Load (0.1ms)[0m  SELECT  "questions".* FROM "questions" WHERE "questions"."id" = $1 LIMIT 1  [["id", 33]]
+  [1m[36mQuestion Load (0.2ms)[0m  [1mSELECT  "questions".* FROM "questions" WHERE "questions"."id" = $1 LIMIT 1[0m  [["id", 34]]
+  [1m[35mQuestion Load (0.2ms)[0m  SELECT  "questions".* FROM "questions" WHERE "questions"."id" = $1 LIMIT 1  [["id", 35]]
+  [1m[36mQuestion Load (0.2ms)[0m  [1mSELECT  "questions".* FROM "questions" WHERE "questions"."id" = $1 LIMIT 1[0m  [["id", 36]]
+  [1m[35mQuestion Load (0.2ms)[0m  SELECT  "questions".* FROM "questions" WHERE "questions"."id" = $1 LIMIT 1  [["id", 37]]
+  [1m[36mQuestion Load (0.2ms)[0m  [1mSELECT  "questions".* FROM "questions" WHERE "questions"."id" = $1 LIMIT 1[0m  [["id", 38]]
+  [1m[35mQuestion Load (0.2ms)[0m  SELECT  "questions".* FROM "questions" WHERE "questions"."id" = $1 LIMIT 1  [["id", 39]]
+  [1m[36mComment Load (0.2ms)[0m  [1mSELECT "comments".* FROM "comments" WHERE "comments"."applicant_id" = $1[0m  [["applicant_id", 9]]
+Completed 200 OK in 22ms (Views: 15.2ms | ActiveRecord: 4.1ms)
+
+
+Started DELETE "/sign_out" for 127.0.0.1 at 2016-06-29 00:08:45 -0400
+Processing by SessionsController#destroy as HTML
+  Parameters: {"authenticity_token"=>"ZP6X7DMeJeZpCQFNaxzrGa8OlLqAcUACnhTh6ou4u1/22/rAsUGczVZpa3ceALJireXhXHptIyEitBEiECRI9A=="}
+  [1m[35mApplicant Load (0.3ms)[0m  SELECT  "applicants".* FROM "applicants" WHERE "applicants"."id" = $1  ORDER BY "applicants"."id" ASC LIMIT 1  [["id", 9]]
+  [1m[36m (0.7ms)[0m  [1mBEGIN[0m
+  [1m[35m (0.4ms)[0m  COMMIT
+Redirected to http://localhost:3000/
+Completed 302 Found in 9ms (ActiveRecord: 1.4ms)
+
+
+Started GET "/" for 127.0.0.1 at 2016-06-29 00:08:45 -0400
+Processing by PagesController#home as HTML
+  Rendered pages/home.html.slim within layouts/application (2.8ms)
+  Rendered layouts/_navbar.html.slim (0.2ms)
+Completed 200 OK in 558ms (Views: 557.0ms | ActiveRecord: 0.0ms)
+
+
+Started POST "/sign_up" for 127.0.0.1 at 2016-06-29 00:08:53 -0400
+Processing by RegistrationsController#create as */*
+  Parameters: {"applicant"=>{"email"=>"test@test.com", "password"=>"[FILTERED]", "password_confirmation"=>"[FILTERED]"}}
+  [1m[36m (0.2ms)[0m  [1mBEGIN[0m
+  [1m[35mApplicant Exists (0.3ms)[0m  SELECT  1 AS one FROM "applicants" WHERE "applicants"."email" = 'test@test.com' LIMIT 1
+  [1m[36mQuestion Load (0.4ms)[0m  [1mSELECT  "questions".* FROM "questions"  ORDER BY "questions"."id" ASC LIMIT 1000[0m
+  [1m[35mSQL (0.4ms)[0m  INSERT INTO "responses" ("question_id", "created_at", "updated_at") VALUES ($1, $2, $3) RETURNING "id"  [["question_id", 27], ["created_at", "2016-06-29 04:08:53.240916"], ["updated_at", "2016-06-29 04:08:53.240916"]]
+  [1m[36mSQL (0.3ms)[0m  [1mINSERT INTO "responses" ("question_id", "created_at", "updated_at") VALUES ($1, $2, $3) RETURNING "id"[0m  [["question_id", 28], ["created_at", "2016-06-29 04:08:53.242912"], ["updated_at", "2016-06-29 04:08:53.242912"]]
+  [1m[35mSQL (0.2ms)[0m  INSERT INTO "responses" ("question_id", "created_at", "updated_at") VALUES ($1, $2, $3) RETURNING "id"  [["question_id", 29], ["created_at", "2016-06-29 04:08:53.244945"], ["updated_at", "2016-06-29 04:08:53.244945"]]
+  [1m[36mSQL (0.2ms)[0m  [1mINSERT INTO "responses" ("question_id", "created_at", "updated_at") VALUES ($1, $2, $3) RETURNING "id"[0m  [["question_id", 30], ["created_at", "2016-06-29 04:08:53.246701"], ["updated_at", "2016-06-29 04:08:53.246701"]]
+  [1m[35mSQL (0.2ms)[0m  INSERT INTO "responses" ("question_id", "created_at", "updated_at") VALUES ($1, $2, $3) RETURNING "id"  [["question_id", 31], ["created_at", "2016-06-29 04:08:53.249246"], ["updated_at", "2016-06-29 04:08:53.249246"]]
+  [1m[36mSQL (0.2ms)[0m  [1mINSERT INTO "responses" ("question_id", "created_at", "updated_at") VALUES ($1, $2, $3) RETURNING "id"[0m  [["question_id", 32], ["created_at", "2016-06-29 04:08:53.250851"], ["updated_at", "2016-06-29 04:08:53.250851"]]
+  [1m[35mSQL (0.2ms)[0m  INSERT INTO "responses" ("question_id", "created_at", "updated_at") VALUES ($1, $2, $3) RETURNING "id"  [["question_id", 33], ["created_at", "2016-06-29 04:08:53.252508"], ["updated_at", "2016-06-29 04:08:53.252508"]]
+  [1m[36mSQL (0.2ms)[0m  [1mINSERT INTO "responses" ("question_id", "created_at", "updated_at") VALUES ($1, $2, $3) RETURNING "id"[0m  [["question_id", 34], ["created_at", "2016-06-29 04:08:53.254107"], ["updated_at", "2016-06-29 04:08:53.254107"]]
+  [1m[35mSQL (0.2ms)[0m  INSERT INTO "responses" ("question_id", "created_at", "updated_at") VALUES ($1, $2, $3) RETURNING "id"  [["question_id", 35], ["created_at", "2016-06-29 04:08:53.255702"], ["updated_at", "2016-06-29 04:08:53.255702"]]
+  [1m[36mSQL (0.2ms)[0m  [1mINSERT INTO "responses" ("question_id", "created_at", "updated_at") VALUES ($1, $2, $3) RETURNING "id"[0m  [["question_id", 36], ["created_at", "2016-06-29 04:08:53.257408"], ["updated_at", "2016-06-29 04:08:53.257408"]]
+  [1m[35mSQL (0.2ms)[0m  INSERT INTO "responses" ("question_id", "created_at", "updated_at") VALUES ($1, $2, $3) RETURNING "id"  [["question_id", 37], ["created_at", "2016-06-29 04:08:53.259089"], ["updated_at", "2016-06-29 04:08:53.259089"]]
+  [1m[36mSQL (0.2ms)[0m  [1mINSERT INTO "responses" ("question_id", "created_at", "updated_at") VALUES ($1, $2, $3) RETURNING "id"[0m  [["question_id", 38], ["created_at", "2016-06-29 04:08:53.260701"], ["updated_at", "2016-06-29 04:08:53.260701"]]
+  [1m[35mSQL (0.2ms)[0m  INSERT INTO "responses" ("question_id", "created_at", "updated_at") VALUES ($1, $2, $3) RETURNING "id"  [["question_id", 39], ["created_at", "2016-06-29 04:08:53.262682"], ["updated_at", "2016-06-29 04:08:53.262682"]]
+  [1m[36mSQL (0.3ms)[0m  [1mINSERT INTO "applicants" ("email", "encrypted_password", "created_at", "updated_at") VALUES ($1, $2, $3, $4) RETURNING "id"[0m  [["email", "test@test.com"], ["encrypted_password", "$2a$10$xZNrGpwUgsUMQ0SLpz8DPemW8CvDGwgOnPDIXOSDv4mnELYuU6Cpy"], ["created_at", "2016-06-29 04:08:53.238374"], ["updated_at", "2016-06-29 04:08:53.238374"]]
+  [1m[35mSQL (0.3ms)[0m  UPDATE "responses" SET "applicant_id" = $1, "updated_at" = $2 WHERE "responses"."id" = $3  [["applicant_id", 10], ["updated_at", "2016-06-29 04:08:53.265699"], ["id", 118]]
+  [1m[36mSQL (0.2ms)[0m  [1mUPDATE "responses" SET "applicant_id" = $1, "updated_at" = $2 WHERE "responses"."id" = $3[0m  [["applicant_id", 10], ["updated_at", "2016-06-29 04:08:53.267372"], ["id", 119]]
+  [1m[35mSQL (0.2ms)[0m  UPDATE "responses" SET "applicant_id" = $1, "updated_at" = $2 WHERE "responses"."id" = $3  [["applicant_id", 10], ["updated_at", "2016-06-29 04:08:53.268831"], ["id", 120]]
+  [1m[36mSQL (0.2ms)[0m  [1mUPDATE "responses" SET "applicant_id" = $1, "updated_at" = $2 WHERE "responses"."id" = $3[0m  [["applicant_id", 10], ["updated_at", "2016-06-29 04:08:53.270222"], ["id", 121]]
+  [1m[35mSQL (0.2ms)[0m  UPDATE "responses" SET "applicant_id" = $1, "updated_at" = $2 WHERE "responses"."id" = $3  [["applicant_id", 10], ["updated_at", "2016-06-29 04:08:53.271665"], ["id", 122]]
+  [1m[36mSQL (0.3ms)[0m  [1mUPDATE "responses" SET "applicant_id" = $1, "updated_at" = $2 WHERE "responses"."id" = $3[0m  [["applicant_id", 10], ["updated_at", "2016-06-29 04:08:53.273300"], ["id", 123]]
+  [1m[35mSQL (0.2ms)[0m  UPDATE "responses" SET "applicant_id" = $1, "updated_at" = $2 WHERE "responses"."id" = $3  [["applicant_id", 10], ["updated_at", "2016-06-29 04:08:53.274844"], ["id", 124]]
+  [1m[36mSQL (0.2ms)[0m  [1mUPDATE "responses" SET "applicant_id" = $1, "updated_at" = $2 WHERE "responses"."id" = $3[0m  [["applicant_id", 10], ["updated_at", "2016-06-29 04:08:53.276211"], ["id", 125]]
+  [1m[35mSQL (0.2ms)[0m  UPDATE "responses" SET "applicant_id" = $1, "updated_at" = $2 WHERE "responses"."id" = $3  [["applicant_id", 10], ["updated_at", "2016-06-29 04:08:53.277776"], ["id", 126]]
+  [1m[36mSQL (0.2ms)[0m  [1mUPDATE "responses" SET "applicant_id" = $1, "updated_at" = $2 WHERE "responses"."id" = $3[0m  [["applicant_id", 10], ["updated_at", "2016-06-29 04:08:53.279332"], ["id", 127]]
+  [1m[35mSQL (0.3ms)[0m  UPDATE "responses" SET "applicant_id" = $1, "updated_at" = $2 WHERE "responses"."id" = $3  [["applicant_id", 10], ["updated_at", "2016-06-29 04:08:53.280767"], ["id", 128]]
+  [1m[36mSQL (0.2ms)[0m  [1mUPDATE "responses" SET "applicant_id" = $1, "updated_at" = $2 WHERE "responses"."id" = $3[0m  [["applicant_id", 10], ["updated_at", "2016-06-29 04:08:53.282765"], ["id", 129]]
+  [1m[35mSQL (0.2ms)[0m  UPDATE "responses" SET "applicant_id" = $1, "updated_at" = $2 WHERE "responses"."id" = $3  [["applicant_id", 10], ["updated_at", "2016-06-29 04:08:53.284180"], ["id", 130]]
+  [1m[36m (1.2ms)[0m  [1mCOMMIT[0m
+  [1m[35m (0.1ms)[0m  BEGIN
+  [1m[36mSQL (0.4ms)[0m  [1mUPDATE "applicants" SET "last_sign_in_at" = $1, "current_sign_in_at" = $2, "last_sign_in_ip" = $3, "current_sign_in_ip" = $4, "sign_in_count" = $5, "updated_at" = $6 WHERE "applicants"."id" = $7[0m  [["last_sign_in_at", "2016-06-29 04:08:53.287594"], ["current_sign_in_at", "2016-06-29 04:08:53.287594"], ["last_sign_in_ip", "127.0.0.1/32"], ["current_sign_in_ip", "127.0.0.1/32"], ["sign_in_count", 1], ["updated_at", "2016-06-29 04:08:53.288553"], ["id", 10]]
+  [1m[35m (0.8ms)[0m  COMMIT
+  [1m[36mSettings Load (0.3ms)[0m  [1mSELECT  "settings".* FROM "settings"  ORDER BY "settings"."id" ASC LIMIT 1[0m
+Completed 200 OK in 167ms (Views: 3.3ms | ActiveRecord: 10.2ms)
+
+
+Started GET "/applicants/10/apply" for 127.0.0.1 at 2016-06-29 00:08:53 -0400
+Processing by ApplicantsController#apply as HTML
+  Parameters: {"applicant_id"=>"10"}
+  [1m[35mApplicant Load (0.3ms)[0m  SELECT  "applicants".* FROM "applicants" WHERE "applicants"."id" = $1 LIMIT 1  [["id", 10]]
+  [1m[36mApplicant Load (0.4ms)[0m  [1mSELECT  "applicants".* FROM "applicants" WHERE "applicants"."id" = $1  ORDER BY "applicants"."id" ASC LIMIT 1[0m  [["id", 10]]
+  [1m[35mCACHE (0.0ms)[0m  SELECT  "applicants".* FROM "applicants" WHERE "applicants"."id" = $1 LIMIT 1  [["id", "10"]]
+  [1m[36mSettings Load (0.9ms)[0m  [1mSELECT  "settings".* FROM "settings"  ORDER BY "settings"."id" ASC LIMIT 1[0m
+  Rendered applicants/apply.html.slim within layouts/application (0.7ms)
+  Rendered layouts/_navbar.html.slim (0.7ms)
+Completed 200 OK in 585ms (Views: 576.8ms | ActiveRecord: 1.6ms)
+
+
+Started GET "/api/applicants/10.json" for 127.0.0.1 at 2016-06-29 00:08:54 -0400
+Processing by Api::ApplicantsController#show as JSON
+  Parameters: {"id"=>"10"}
+  [1m[35mApplicant Load (0.3ms)[0m  SELECT  "applicants".* FROM "applicants" WHERE "applicants"."id" = $1  ORDER BY "applicants"."id" ASC LIMIT 1  [["id", 10]]
+  [1m[36mApplicant Load (0.2ms)[0m  [1mSELECT  "applicants".* FROM "applicants" WHERE "applicants"."id" = $1 LIMIT 1[0m  [["id", 10]]
+  [1m[35mResponse Load (0.3ms)[0m  SELECT "responses".* FROM "responses" WHERE "responses"."applicant_id" = $1  [["applicant_id", 10]]
+  [1m[36mQuestion Load (0.2ms)[0m  [1mSELECT  "questions".* FROM "questions" WHERE "questions"."id" = $1 LIMIT 1[0m  [["id", 27]]
+  [1m[35mQuestion Load (0.3ms)[0m  SELECT  "questions".* FROM "questions" WHERE "questions"."id" = $1 LIMIT 1  [["id", 28]]
+  [1m[36mQuestion Load (0.2ms)[0m  [1mSELECT  "questions".* FROM "questions" WHERE "questions"."id" = $1 LIMIT 1[0m  [["id", 29]]
+  [1m[35mQuestion Load (0.2ms)[0m  SELECT  "questions".* FROM "questions" WHERE "questions"."id" = $1 LIMIT 1  [["id", 30]]
+  [1m[36mQuestion Load (0.2ms)[0m  [1mSELECT  "questions".* FROM "questions" WHERE "questions"."id" = $1 LIMIT 1[0m  [["id", 31]]
+  [1m[35mQuestion Load (0.2ms)[0m  SELECT  "questions".* FROM "questions" WHERE "questions"."id" = $1 LIMIT 1  [["id", 32]]
+  [1m[36mQuestion Load (0.2ms)[0m  [1mSELECT  "questions".* FROM "questions" WHERE "questions"."id" = $1 LIMIT 1[0m  [["id", 33]]
+  [1m[35mQuestion Load (0.2ms)[0m  SELECT  "questions".* FROM "questions" WHERE "questions"."id" = $1 LIMIT 1  [["id", 34]]
+  [1m[36mQuestion Load (0.2ms)[0m  [1mSELECT  "questions".* FROM "questions" WHERE "questions"."id" = $1 LIMIT 1[0m  [["id", 35]]
+  [1m[35mQuestion Load (0.2ms)[0m  SELECT  "questions".* FROM "questions" WHERE "questions"."id" = $1 LIMIT 1  [["id", 36]]
+  [1m[36mQuestion Load (0.2ms)[0m  [1mSELECT  "questions".* FROM "questions" WHERE "questions"."id" = $1 LIMIT 1[0m  [["id", 37]]
+  [1m[35mQuestion Load (0.2ms)[0m  SELECT  "questions".* FROM "questions" WHERE "questions"."id" = $1 LIMIT 1  [["id", 38]]
+  [1m[36mQuestion Load (0.3ms)[0m  [1mSELECT  "questions".* FROM "questions" WHERE "questions"."id" = $1 LIMIT 1[0m  [["id", 39]]
+  [1m[35mComment Load (0.4ms)[0m  SELECT "comments".* FROM "comments" WHERE "comments"."applicant_id" = $1  [["applicant_id", 10]]
+Completed 200 OK in 26ms (Views: 19.1ms | ActiveRecord: 4.0ms)
+
+
+Started DELETE "/sign_out" for 127.0.0.1 at 2016-06-29 00:08:58 -0400
+Processing by SessionsController#destroy as HTML
+  Parameters: {"authenticity_token"=>"SNDpr9aob6VVRfm4+spumTvb5tmGC4hOJiunviJGHfKPmAzo0TOMatfzljk9Q60LQPfRFnFgedK5/MtkruIBkQ=="}
+  [1m[36mApplicant Load (0.3ms)[0m  [1mSELECT  "applicants".* FROM "applicants" WHERE "applicants"."id" = $1  ORDER BY "applicants"."id" ASC LIMIT 1[0m  [["id", 10]]
+  [1m[35m (0.1ms)[0m  BEGIN
+  [1m[36m (0.1ms)[0m  [1mCOMMIT[0m
+Redirected to http://localhost:3000/
+Completed 302 Found in 5ms (ActiveRecord: 0.6ms)
+
+
+Started GET "/" for 127.0.0.1 at 2016-06-29 00:08:58 -0400
+Processing by PagesController#home as HTML
+  Rendered pages/home.html.slim within layouts/application (2.7ms)
+  Rendered layouts/_navbar.html.slim (0.2ms)
+Completed 200 OK in 561ms (Views: 560.2ms | ActiveRecord: 0.0ms)
+
+
+Started POST "/sign_in" for 127.0.0.1 at 2016-06-29 00:11:18 -0400
+Processing by SessionsController#create as */*
+  Parameters: {"applicant"=>{"email"=>"test@test.com", "password"=>"[FILTERED]"}}
+  [1m[35mApplicant Load (0.3ms)[0m  SELECT  "applicants".* FROM "applicants" WHERE "applicants"."email" = $1  ORDER BY "applicants"."id" ASC LIMIT 1  [["email", "test@test.com"]]
+  [1m[36m (0.2ms)[0m  [1mBEGIN[0m
+  [1m[35mSQL (0.3ms)[0m  UPDATE "applicants" SET "current_sign_in_at" = $1, "sign_in_count" = $2, "updated_at" = $3 WHERE "applicants"."id" = $4  [["current_sign_in_at", "2016-06-29 04:11:18.761099"], ["sign_in_count", 2], ["updated_at", "2016-06-29 04:11:18.762555"], ["id", 10]]
+  [1m[36m (1.2ms)[0m  [1mCOMMIT[0m
+  [1m[35mSettings Load (0.4ms)[0m  SELECT  "settings".* FROM "settings"  ORDER BY "settings"."id" ASC LIMIT 1
+Completed 200 OK in 150ms (Views: 2.9ms | ActiveRecord: 6.1ms)
+
+
+Started GET "/applicants/10/apply" for 127.0.0.1 at 2016-06-29 00:11:18 -0400
+Processing by ApplicantsController#apply as HTML
+  Parameters: {"applicant_id"=>"10"}
+  [1m[36mApplicant Load (0.3ms)[0m  [1mSELECT  "applicants".* FROM "applicants" WHERE "applicants"."id" = $1 LIMIT 1[0m  [["id", 10]]
+  [1m[35mApplicant Load (0.3ms)[0m  SELECT  "applicants".* FROM "applicants" WHERE "applicants"."id" = $1  ORDER BY "applicants"."id" ASC LIMIT 1  [["id", 10]]
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT  "applicants".* FROM "applicants" WHERE "applicants"."id" = $1 LIMIT 1[0m  [["id", "10"]]
+  [1m[35mSettings Load (0.5ms)[0m  SELECT  "settings".* FROM "settings"  ORDER BY "settings"."id" ASC LIMIT 1
+  Rendered applicants/apply.html.slim within layouts/application (0.8ms)
+  Rendered layouts/_navbar.html.slim (0.9ms)
+Completed 200 OK in 4355ms (Views: 4343.6ms | ActiveRecord: 1.2ms)
+
+
+Started GET "/api/applicants/10.json" for 127.0.0.1 at 2016-06-29 00:11:24 -0400
+Processing by Api::ApplicantsController#show as JSON
+  Parameters: {"id"=>"10"}
+  [1m[36mApplicant Load (0.4ms)[0m  [1mSELECT  "applicants".* FROM "applicants" WHERE "applicants"."id" = $1  ORDER BY "applicants"."id" ASC LIMIT 1[0m  [["id", 10]]
+  [1m[35mApplicant Load (0.3ms)[0m  SELECT  "applicants".* FROM "applicants" WHERE "applicants"."id" = $1 LIMIT 1  [["id", 10]]
+  [1m[36mResponse Load (0.7ms)[0m  [1mSELECT "responses".* FROM "responses" WHERE "responses"."applicant_id" = $1[0m  [["applicant_id", 10]]
+  [1m[35mQuestion Load (0.3ms)[0m  SELECT  "questions".* FROM "questions" WHERE "questions"."id" = $1 LIMIT 1  [["id", 27]]
+  [1m[36mQuestion Load (0.3ms)[0m  [1mSELECT  "questions".* FROM "questions" WHERE "questions"."id" = $1 LIMIT 1[0m  [["id", 28]]
+  [1m[35mQuestion Load (0.3ms)[0m  SELECT  "questions".* FROM "questions" WHERE "questions"."id" = $1 LIMIT 1  [["id", 29]]
+  [1m[36mQuestion Load (0.2ms)[0m  [1mSELECT  "questions".* FROM "questions" WHERE "questions"."id" = $1 LIMIT 1[0m  [["id", 30]]
+  [1m[35mQuestion Load (0.4ms)[0m  SELECT  "questions".* FROM "questions" WHERE "questions"."id" = $1 LIMIT 1  [["id", 31]]
+  [1m[36mQuestion Load (0.2ms)[0m  [1mSELECT  "questions".* FROM "questions" WHERE "questions"."id" = $1 LIMIT 1[0m  [["id", 32]]
+  [1m[35mQuestion Load (0.3ms)[0m  SELECT  "questions".* FROM "questions" WHERE "questions"."id" = $1 LIMIT 1  [["id", 33]]
+  [1m[36mQuestion Load (0.2ms)[0m  [1mSELECT  "questions".* FROM "questions" WHERE "questions"."id" = $1 LIMIT 1[0m  [["id", 34]]
+  [1m[35mQuestion Load (0.3ms)[0m  SELECT  "questions".* FROM "questions" WHERE "questions"."id" = $1 LIMIT 1  [["id", 35]]
+  [1m[36mQuestion Load (0.4ms)[0m  [1mSELECT  "questions".* FROM "questions" WHERE "questions"."id" = $1 LIMIT 1[0m  [["id", 36]]
+  [1m[35mQuestion Load (0.2ms)[0m  SELECT  "questions".* FROM "questions" WHERE "questions"."id" = $1 LIMIT 1  [["id", 37]]
+  [1m[36mQuestion Load (0.2ms)[0m  [1mSELECT  "questions".* FROM "questions" WHERE "questions"."id" = $1 LIMIT 1[0m  [["id", 38]]
+  [1m[35mQuestion Load (0.3ms)[0m  SELECT  "questions".* FROM "questions" WHERE "questions"."id" = $1 LIMIT 1  [["id", 39]]
+  [1m[36mComment Load (0.2ms)[0m  [1mSELECT "comments".* FROM "comments" WHERE "comments"."applicant_id" = $1[0m  [["applicant_id", 10]]
+Completed 200 OK in 134ms (Views: 103.7ms | ActiveRecord: 12.7ms)

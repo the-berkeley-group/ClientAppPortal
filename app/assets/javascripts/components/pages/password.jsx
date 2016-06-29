@@ -21,7 +21,7 @@ class PasswordModal extends DefaultForm {
                                 </h1>
                             </div>
                             <div className="modal-body full-input-container">
-                                { this._renderInput("email", "Email", "text", "email@berkeley.edu", "focus") }
+                                { this._renderInput("email", "Email", "text", "email@domain.edu", "focus") }
                             </div>
                             <div className="modal-footer">
                                 <button type="button" className="button"
