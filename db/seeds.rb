@@ -23,7 +23,7 @@ def make_applicants
 end
 
 def make_admins
-  %w(pres ivp vpd pvp evp).each.with_index do |name, index|
+  %w(pres ivp vpd pvp evp pl1 pl2 pl3 pl4 pl5).each.with_index do |name, index|
     Admin.create(
       email: "#{name}@tbg.com",
       name: name,
