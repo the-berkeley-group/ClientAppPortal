@@ -27917,3 +27917,943 @@ Processing by Api::ApplicantsController#show as JSON
   [1m[35mQuestion Load (0.3ms)[0m  SELECT  "questions".* FROM "questions" WHERE "questions"."id" = $1 LIMIT 1  [["id", 39]]
   [1m[36mComment Load (0.2ms)[0m  [1mSELECT "comments".* FROM "comments" WHERE "comments"."applicant_id" = $1[0m  [["applicant_id", 10]]
 Completed 200 OK in 134ms (Views: 103.7ms | ActiveRecord: 12.7ms)
+
+
+Started GET "/" for 127.0.0.1 at 2016-06-30 12:27:26 -0400
+  [1m[36mActiveRecord::SchemaMigration Load (42.3ms)[0m  [1mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+Processing by PagesController#home as HTML
+  [1m[35mApplicant Load (29.7ms)[0m  SELECT  "applicants".* FROM "applicants" WHERE "applicants"."id" = $1  ORDER BY "applicants"."id" ASC LIMIT 1  [["id", 10]]
+  [1m[36mSettings Load (15.3ms)[0m  [1mSELECT  "settings".* FROM "settings"  ORDER BY "settings"."id" ASC LIMIT 1[0m
+Redirected to http://localhost:3000/applicants/10/apply
+Filter chain halted as :redirect_user rendered or redirected
+Completed 302 Found in 394ms (ActiveRecord: 226.6ms)
+
+
+Started GET "/applicants/10/apply" for 127.0.0.1 at 2016-06-30 12:27:28 -0400
+Processing by ApplicantsController#apply as HTML
+  Parameters: {"applicant_id"=>"10"}
+  [1m[35mApplicant Load (0.4ms)[0m  SELECT  "applicants".* FROM "applicants" WHERE "applicants"."id" = $1 LIMIT 1  [["id", 10]]
+  [1m[36mApplicant Load (0.4ms)[0m  [1mSELECT  "applicants".* FROM "applicants" WHERE "applicants"."id" = $1  ORDER BY "applicants"."id" ASC LIMIT 1[0m  [["id", 10]]
+  [1m[35mCACHE (0.0ms)[0m  SELECT  "applicants".* FROM "applicants" WHERE "applicants"."id" = $1 LIMIT 1  [["id", "10"]]
+  [1m[36mSettings Load (0.3ms)[0m  [1mSELECT  "settings".* FROM "settings"  ORDER BY "settings"."id" ASC LIMIT 1[0m
+  Rendered applicants/apply.html.slim within layouts/application (194.4ms)
+  Rendered layouts/_navbar.html.slim (25.5ms)
+Completed 200 OK in 4214ms (Views: 4197.4ms | ActiveRecord: 1.2ms)
+
+
+Started GET "/applicants/10/apply" for 127.0.0.1 at 2016-06-30 12:27:33 -0400
+Processing by ApplicantsController#apply as HTML
+  Parameters: {"applicant_id"=>"10"}
+  [1m[35mApplicant Load (0.7ms)[0m  SELECT  "applicants".* FROM "applicants" WHERE "applicants"."id" = $1 LIMIT 1  [["id", 10]]
+  [1m[36mApplicant Load (0.5ms)[0m  [1mSELECT  "applicants".* FROM "applicants" WHERE "applicants"."id" = $1  ORDER BY "applicants"."id" ASC LIMIT 1[0m  [["id", 10]]
+  [1m[35mCACHE (0.0ms)[0m  SELECT  "applicants".* FROM "applicants" WHERE "applicants"."id" = $1 LIMIT 1  [["id", "10"]]
+  [1m[36mSettings Load (1.8ms)[0m  [1mSELECT  "settings".* FROM "settings"  ORDER BY "settings"."id" ASC LIMIT 1[0m
+  Rendered applicants/apply.html.slim within layouts/application (1.8ms)
+  Rendered layouts/_navbar.html.slim (0.5ms)
+Completed 200 OK in 659ms (Views: 646.9ms | ActiveRecord: 3.0ms)
+
+
+Started GET "/api/applicants/10.json" for 127.0.0.1 at 2016-06-30 12:27:35 -0400
+Processing by Api::ApplicantsController#show as JSON
+  Parameters: {"id"=>"10"}
+  [1m[35mApplicant Load (0.4ms)[0m  SELECT  "applicants".* FROM "applicants" WHERE "applicants"."id" = $1  ORDER BY "applicants"."id" ASC LIMIT 1  [["id", 10]]
+  [1m[36mApplicant Load (1.7ms)[0m  [1mSELECT  "applicants".* FROM "applicants" WHERE "applicants"."id" = $1 LIMIT 1[0m  [["id", 10]]
+  [1m[35mResponse Load (151.7ms)[0m  SELECT "responses".* FROM "responses" WHERE "responses"."applicant_id" = $1  [["applicant_id", 10]]
+  [1m[36mQuestion Load (28.5ms)[0m  [1mSELECT  "questions".* FROM "questions" WHERE "questions"."id" = $1 LIMIT 1[0m  [["id", 27]]
+  [1m[35mQuestion Load (0.4ms)[0m  SELECT  "questions".* FROM "questions" WHERE "questions"."id" = $1 LIMIT 1  [["id", 28]]
+  [1m[36mQuestion Load (0.2ms)[0m  [1mSELECT  "questions".* FROM "questions" WHERE "questions"."id" = $1 LIMIT 1[0m  [["id", 29]]
+  [1m[35mQuestion Load (0.2ms)[0m  SELECT  "questions".* FROM "questions" WHERE "questions"."id" = $1 LIMIT 1  [["id", 30]]
+  [1m[36mQuestion Load (0.2ms)[0m  [1mSELECT  "questions".* FROM "questions" WHERE "questions"."id" = $1 LIMIT 1[0m  [["id", 31]]
+  [1m[35mQuestion Load (0.4ms)[0m  SELECT  "questions".* FROM "questions" WHERE "questions"."id" = $1 LIMIT 1  [["id", 32]]
+  [1m[36mQuestion Load (0.2ms)[0m  [1mSELECT  "questions".* FROM "questions" WHERE "questions"."id" = $1 LIMIT 1[0m  [["id", 33]]
+  [1m[35mQuestion Load (0.2ms)[0m  SELECT  "questions".* FROM "questions" WHERE "questions"."id" = $1 LIMIT 1  [["id", 34]]
+  [1m[36mQuestion Load (0.1ms)[0m  [1mSELECT  "questions".* FROM "questions" WHERE "questions"."id" = $1 LIMIT 1[0m  [["id", 35]]
+  [1m[35mQuestion Load (0.2ms)[0m  SELECT  "questions".* FROM "questions" WHERE "questions"."id" = $1 LIMIT 1  [["id", 36]]
+  [1m[36mQuestion Load (0.2ms)[0m  [1mSELECT  "questions".* FROM "questions" WHERE "questions"."id" = $1 LIMIT 1[0m  [["id", 37]]
+  [1m[35mQuestion Load (0.2ms)[0m  SELECT  "questions".* FROM "questions" WHERE "questions"."id" = $1 LIMIT 1  [["id", 38]]
+  [1m[36mQuestion Load (4.9ms)[0m  [1mSELECT  "questions".* FROM "questions" WHERE "questions"."id" = $1 LIMIT 1[0m  [["id", 39]]
+  [1m[35mComment Load (132.0ms)[0m  SELECT "comments".* FROM "comments" WHERE "comments"."applicant_id" = $1  [["applicant_id", 10]]
+Completed 200 OK in 863ms (Views: 465.1ms | ActiveRecord: 344.0ms)
+
+
+Started DELETE "/sign_out" for 127.0.0.1 at 2016-06-30 12:27:38 -0400
+Processing by SessionsController#destroy as HTML
+  Parameters: {"authenticity_token"=>"1cng0KfvqSob3OMXjmd9T1gzrf4fuiBDMxyA1/WH3SMoNiuIxZH5PSB3d2ivXID+SF1N3Mt75xtCy/E0tNf3BA=="}
+  [1m[36mApplicant Load (0.4ms)[0m  [1mSELECT  "applicants".* FROM "applicants" WHERE "applicants"."id" = $1  ORDER BY "applicants"."id" ASC LIMIT 1[0m  [["id", 10]]
+  [1m[35m (0.3ms)[0m  BEGIN
+  [1m[36m (0.2ms)[0m  [1mCOMMIT[0m
+Redirected to http://localhost:3000/
+Completed 302 Found in 42ms (ActiveRecord: 0.9ms)
+
+
+Started GET "/" for 127.0.0.1 at 2016-06-30 12:27:38 -0400
+Processing by PagesController#home as HTML
+  Rendered pages/home.html.slim within layouts/application (97.6ms)
+  Rendered layouts/_navbar.html.slim (0.2ms)
+Completed 200 OK in 632ms (Views: 630.2ms | ActiveRecord: 0.0ms)
+
+
+Started POST "/sign_up" for 127.0.0.1 at 2016-06-30 12:27:59 -0400
+Processing by RegistrationsController#create as */*
+  Parameters: {"applicant"=>{"email"=>"test1@test.com", "password"=>"[FILTERED]", "password_confirmation"=>"[FILTERED]"}}
+  [1m[35m (0.2ms)[0m  BEGIN
+  [1m[36mApplicant Exists (54.0ms)[0m  [1mSELECT  1 AS one FROM "applicants" WHERE "applicants"."email" = 'test1@test.com' LIMIT 1[0m
+  [1m[35mQuestion Load (0.6ms)[0m  SELECT  "questions".* FROM "questions"  ORDER BY "questions"."id" ASC LIMIT 1000
+  [1m[36mSQL (141.9ms)[0m  [1mINSERT INTO "responses" ("question_id", "created_at", "updated_at") VALUES ($1, $2, $3) RETURNING "id"[0m  [["question_id", 27], ["created_at", "2016-06-30 16:27:59.607068"], ["updated_at", "2016-06-30 16:27:59.607068"]]
+  [1m[35mSQL (0.5ms)[0m  INSERT INTO "responses" ("question_id", "created_at", "updated_at") VALUES ($1, $2, $3) RETURNING "id"  [["question_id", 28], ["created_at", "2016-06-30 16:27:59.804439"], ["updated_at", "2016-06-30 16:27:59.804439"]]
+  [1m[36mSQL (0.6ms)[0m  [1mINSERT INTO "responses" ("question_id", "created_at", "updated_at") VALUES ($1, $2, $3) RETURNING "id"[0m  [["question_id", 29], ["created_at", "2016-06-30 16:27:59.808034"], ["updated_at", "2016-06-30 16:27:59.808034"]]
+  [1m[35mSQL (0.5ms)[0m  INSERT INTO "responses" ("question_id", "created_at", "updated_at") VALUES ($1, $2, $3) RETURNING "id"  [["question_id", 30], ["created_at", "2016-06-30 16:27:59.811065"], ["updated_at", "2016-06-30 16:27:59.811065"]]
+  [1m[36mSQL (0.3ms)[0m  [1mINSERT INTO "responses" ("question_id", "created_at", "updated_at") VALUES ($1, $2, $3) RETURNING "id"[0m  [["question_id", 31], ["created_at", "2016-06-30 16:27:59.814053"], ["updated_at", "2016-06-30 16:27:59.814053"]]
+  [1m[35mSQL (0.3ms)[0m  INSERT INTO "responses" ("question_id", "created_at", "updated_at") VALUES ($1, $2, $3) RETURNING "id"  [["question_id", 32], ["created_at", "2016-06-30 16:27:59.816530"], ["updated_at", "2016-06-30 16:27:59.816530"]]
+  [1m[36mSQL (0.2ms)[0m  [1mINSERT INTO "responses" ("question_id", "created_at", "updated_at") VALUES ($1, $2, $3) RETURNING "id"[0m  [["question_id", 33], ["created_at", "2016-06-30 16:27:59.818541"], ["updated_at", "2016-06-30 16:27:59.818541"]]
+  [1m[35mSQL (0.2ms)[0m  INSERT INTO "responses" ("question_id", "created_at", "updated_at") VALUES ($1, $2, $3) RETURNING "id"  [["question_id", 34], ["created_at", "2016-06-30 16:27:59.820170"], ["updated_at", "2016-06-30 16:27:59.820170"]]
+  [1m[36mSQL (0.3ms)[0m  [1mINSERT INTO "responses" ("question_id", "created_at", "updated_at") VALUES ($1, $2, $3) RETURNING "id"[0m  [["question_id", 35], ["created_at", "2016-06-30 16:27:59.823053"], ["updated_at", "2016-06-30 16:27:59.823053"]]
+  [1m[35mSQL (0.2ms)[0m  INSERT INTO "responses" ("question_id", "created_at", "updated_at") VALUES ($1, $2, $3) RETURNING "id"  [["question_id", 36], ["created_at", "2016-06-30 16:27:59.824847"], ["updated_at", "2016-06-30 16:27:59.824847"]]
+  [1m[36mSQL (0.2ms)[0m  [1mINSERT INTO "responses" ("question_id", "created_at", "updated_at") VALUES ($1, $2, $3) RETURNING "id"[0m  [["question_id", 37], ["created_at", "2016-06-30 16:27:59.826438"], ["updated_at", "2016-06-30 16:27:59.826438"]]
+  [1m[35mSQL (0.2ms)[0m  INSERT INTO "responses" ("question_id", "created_at", "updated_at") VALUES ($1, $2, $3) RETURNING "id"  [["question_id", 38], ["created_at", "2016-06-30 16:27:59.828168"], ["updated_at", "2016-06-30 16:27:59.828168"]]
+  [1m[36mSQL (0.2ms)[0m  [1mINSERT INTO "responses" ("question_id", "created_at", "updated_at") VALUES ($1, $2, $3) RETURNING "id"[0m  [["question_id", 39], ["created_at", "2016-06-30 16:27:59.829736"], ["updated_at", "2016-06-30 16:27:59.829736"]]
+  [1m[35mSQL (74.1ms)[0m  INSERT INTO "applicants" ("email", "encrypted_password", "created_at", "updated_at") VALUES ($1, $2, $3, $4) RETURNING "id"  [["email", "test1@test.com"], ["encrypted_password", "$2a$10$u7vMrZ4Ayk5YmNu9rRLtj.xCE4.64Tp3KKyubT9tdnuKxZ7xJlB0O"], ["created_at", "2016-06-30 16:27:59.601259"], ["updated_at", "2016-06-30 16:27:59.601259"]]
+  [1m[36mSQL (0.7ms)[0m  [1mUPDATE "responses" SET "applicant_id" = $1, "updated_at" = $2 WHERE "responses"."id" = $3[0m  [["applicant_id", 11], ["updated_at", "2016-06-30 16:27:59.907828"], ["id", 131]]
+  [1m[35mSQL (0.5ms)[0m  UPDATE "responses" SET "applicant_id" = $1, "updated_at" = $2 WHERE "responses"."id" = $3  [["applicant_id", 11], ["updated_at", "2016-06-30 16:27:59.942153"], ["id", 132]]
+  [1m[36mSQL (0.5ms)[0m  [1mUPDATE "responses" SET "applicant_id" = $1, "updated_at" = $2 WHERE "responses"."id" = $3[0m  [["applicant_id", 11], ["updated_at", "2016-06-30 16:27:59.944958"], ["id", 133]]
+  [1m[35mSQL (0.6ms)[0m  UPDATE "responses" SET "applicant_id" = $1, "updated_at" = $2 WHERE "responses"."id" = $3  [["applicant_id", 11], ["updated_at", "2016-06-30 16:27:59.947609"], ["id", 134]]
+  [1m[36mSQL (0.6ms)[0m  [1mUPDATE "responses" SET "applicant_id" = $1, "updated_at" = $2 WHERE "responses"."id" = $3[0m  [["applicant_id", 11], ["updated_at", "2016-06-30 16:27:59.950518"], ["id", 135]]
+  [1m[35mSQL (0.4ms)[0m  UPDATE "responses" SET "applicant_id" = $1, "updated_at" = $2 WHERE "responses"."id" = $3  [["applicant_id", 11], ["updated_at", "2016-06-30 16:27:59.953518"], ["id", 136]]
+  [1m[36mSQL (0.3ms)[0m  [1mUPDATE "responses" SET "applicant_id" = $1, "updated_at" = $2 WHERE "responses"."id" = $3[0m  [["applicant_id", 11], ["updated_at", "2016-06-30 16:27:59.955963"], ["id", 137]]
+  [1m[35mSQL (0.3ms)[0m  UPDATE "responses" SET "applicant_id" = $1, "updated_at" = $2 WHERE "responses"."id" = $3  [["applicant_id", 11], ["updated_at", "2016-06-30 16:27:59.957700"], ["id", 138]]
+  [1m[36mSQL (0.3ms)[0m  [1mUPDATE "responses" SET "applicant_id" = $1, "updated_at" = $2 WHERE "responses"."id" = $3[0m  [["applicant_id", 11], ["updated_at", "2016-06-30 16:27:59.960622"], ["id", 139]]
+  [1m[35mSQL (0.2ms)[0m  UPDATE "responses" SET "applicant_id" = $1, "updated_at" = $2 WHERE "responses"."id" = $3  [["applicant_id", 11], ["updated_at", "2016-06-30 16:27:59.962295"], ["id", 140]]
+  [1m[36mSQL (0.2ms)[0m  [1mUPDATE "responses" SET "applicant_id" = $1, "updated_at" = $2 WHERE "responses"."id" = $3[0m  [["applicant_id", 11], ["updated_at", "2016-06-30 16:27:59.963793"], ["id", 141]]
+  [1m[35mSQL (0.2ms)[0m  UPDATE "responses" SET "applicant_id" = $1, "updated_at" = $2 WHERE "responses"."id" = $3  [["applicant_id", 11], ["updated_at", "2016-06-30 16:27:59.965480"], ["id", 142]]
+  [1m[36mSQL (0.2ms)[0m  [1mUPDATE "responses" SET "applicant_id" = $1, "updated_at" = $2 WHERE "responses"."id" = $3[0m  [["applicant_id", 11], ["updated_at", "2016-06-30 16:27:59.967089"], ["id", 143]]
+  [1m[35m (17.7ms)[0m  COMMIT
+  [1m[36m (0.2ms)[0m  [1mBEGIN[0m
+  [1m[35mSQL (1.1ms)[0m  UPDATE "applicants" SET "last_sign_in_at" = $1, "current_sign_in_at" = $2, "last_sign_in_ip" = $3, "current_sign_in_ip" = $4, "sign_in_count" = $5, "updated_at" = $6 WHERE "applicants"."id" = $7  [["last_sign_in_at", "2016-06-30 16:27:59.988175"], ["current_sign_in_at", "2016-06-30 16:27:59.988175"], ["last_sign_in_ip", "127.0.0.1/32"], ["current_sign_in_ip", "127.0.0.1/32"], ["sign_in_count", 1], ["updated_at", "2016-06-30 16:27:59.989446"], ["id", 11]]
+  [1m[36m (0.7ms)[0m  [1mCOMMIT[0m
+  [1m[35mSettings Load (0.4ms)[0m  SELECT  "settings".* FROM "settings"  ORDER BY "settings"."id" ASC LIMIT 1
+Completed 200 OK in 698ms (Views: 3.5ms | ActiveRecord: 299.6ms)
+
+
+Started GET "/applicants/11/apply" for 127.0.0.1 at 2016-06-30 12:28:00 -0400
+Processing by ApplicantsController#apply as HTML
+  Parameters: {"applicant_id"=>"11"}
+  [1m[36mApplicant Load (0.5ms)[0m  [1mSELECT  "applicants".* FROM "applicants" WHERE "applicants"."id" = $1 LIMIT 1[0m  [["id", 11]]
+  [1m[35mApplicant Load (0.4ms)[0m  SELECT  "applicants".* FROM "applicants" WHERE "applicants"."id" = $1  ORDER BY "applicants"."id" ASC LIMIT 1  [["id", 11]]
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT  "applicants".* FROM "applicants" WHERE "applicants"."id" = $1 LIMIT 1[0m  [["id", "11"]]
+  [1m[35mSettings Load (1.3ms)[0m  SELECT  "settings".* FROM "settings"  ORDER BY "settings"."id" ASC LIMIT 1
+  Rendered applicants/apply.html.slim within layouts/application (0.7ms)
+  Rendered layouts/_navbar.html.slim (0.8ms)
+Completed 200 OK in 594ms (Views: 586.5ms | ActiveRecord: 2.1ms)
+
+
+Started GET "/api/applicants/11.json" for 127.0.0.1 at 2016-06-30 12:28:01 -0400
+Processing by Api::ApplicantsController#show as JSON
+  Parameters: {"id"=>"11"}
+  [1m[36mApplicant Load (0.3ms)[0m  [1mSELECT  "applicants".* FROM "applicants" WHERE "applicants"."id" = $1  ORDER BY "applicants"."id" ASC LIMIT 1[0m  [["id", 11]]
+  [1m[35mApplicant Load (0.4ms)[0m  SELECT  "applicants".* FROM "applicants" WHERE "applicants"."id" = $1 LIMIT 1  [["id", 11]]
+  [1m[36mResponse Load (0.4ms)[0m  [1mSELECT "responses".* FROM "responses" WHERE "responses"."applicant_id" = $1[0m  [["applicant_id", 11]]
+  [1m[35mQuestion Load (0.2ms)[0m  SELECT  "questions".* FROM "questions" WHERE "questions"."id" = $1 LIMIT 1  [["id", 27]]
+  [1m[36mQuestion Load (0.2ms)[0m  [1mSELECT  "questions".* FROM "questions" WHERE "questions"."id" = $1 LIMIT 1[0m  [["id", 28]]
+  [1m[35mQuestion Load (0.2ms)[0m  SELECT  "questions".* FROM "questions" WHERE "questions"."id" = $1 LIMIT 1  [["id", 29]]
+  [1m[36mQuestion Load (0.2ms)[0m  [1mSELECT  "questions".* FROM "questions" WHERE "questions"."id" = $1 LIMIT 1[0m  [["id", 30]]
+  [1m[35mQuestion Load (0.2ms)[0m  SELECT  "questions".* FROM "questions" WHERE "questions"."id" = $1 LIMIT 1  [["id", 31]]
+  [1m[36mQuestion Load (0.2ms)[0m  [1mSELECT  "questions".* FROM "questions" WHERE "questions"."id" = $1 LIMIT 1[0m  [["id", 32]]
+  [1m[35mQuestion Load (0.2ms)[0m  SELECT  "questions".* FROM "questions" WHERE "questions"."id" = $1 LIMIT 1  [["id", 33]]
+  [1m[36mQuestion Load (0.3ms)[0m  [1mSELECT  "questions".* FROM "questions" WHERE "questions"."id" = $1 LIMIT 1[0m  [["id", 34]]
+  [1m[35mQuestion Load (0.3ms)[0m  SELECT  "questions".* FROM "questions" WHERE "questions"."id" = $1 LIMIT 1  [["id", 35]]
+  [1m[36mQuestion Load (0.3ms)[0m  [1mSELECT  "questions".* FROM "questions" WHERE "questions"."id" = $1 LIMIT 1[0m  [["id", 36]]
+  [1m[35mQuestion Load (0.3ms)[0m  SELECT  "questions".* FROM "questions" WHERE "questions"."id" = $1 LIMIT 1  [["id", 37]]
+  [1m[36mQuestion Load (0.2ms)[0m  [1mSELECT  "questions".* FROM "questions" WHERE "questions"."id" = $1 LIMIT 1[0m  [["id", 38]]
+  [1m[35mQuestion Load (0.2ms)[0m  SELECT  "questions".* FROM "questions" WHERE "questions"."id" = $1 LIMIT 1  [["id", 39]]
+  [1m[36mComment Load (0.3ms)[0m  [1mSELECT "comments".* FROM "comments" WHERE "comments"."applicant_id" = $1[0m  [["applicant_id", 11]]
+Completed 200 OK in 27ms (Views: 19.6ms | ActiveRecord: 4.4ms)
+
+
+Started DELETE "/sign_out" for 127.0.0.1 at 2016-06-30 12:29:00 -0400
+Processing by SessionsController#destroy as HTML
+  Parameters: {"authenticity_token"=>"v7VqgMNq80x4KmtL3471DomLi/b7KcrvWERUZg34G2z5OdWnVCi9caCKwMReeLVM/qFqnq/aNWoiFm+mKk20Sg=="}
+  [1m[35mApplicant Load (0.3ms)[0m  SELECT  "applicants".* FROM "applicants" WHERE "applicants"."id" = $1  ORDER BY "applicants"."id" ASC LIMIT 1  [["id", 11]]
+  [1m[36m (0.1ms)[0m  [1mBEGIN[0m
+  [1m[35m (0.1ms)[0m  COMMIT
+Redirected to http://localhost:3000/
+Completed 302 Found in 5ms (ActiveRecord: 0.6ms)
+
+
+Started GET "/" for 127.0.0.1 at 2016-06-30 12:29:00 -0400
+Processing by PagesController#home as HTML
+  Rendered pages/home.html.slim within layouts/application (2.9ms)
+  Rendered layouts/_navbar.html.slim (0.4ms)
+Completed 200 OK in 543ms (Views: 540.9ms | ActiveRecord: 0.0ms)
+  [1m[36m (698.5ms)[0m  [1mDROP DATABASE IF EXISTS "portal_development"[0m
+  [1m[35m (194.2ms)[0m  DROP DATABASE IF EXISTS "portal_test"
+  [1m[36m (2364.9ms)[0m  [1mCREATE DATABASE "portal_development" ENCODING = 'utf8'[0m
+  [1m[35m (918.1ms)[0m  CREATE DATABASE "portal_test" ENCODING = 'utf8'
+  [1m[36mSQL (25.2ms)[0m  [1mCREATE EXTENSION IF NOT EXISTS "plpgsql"[0m
+  [1m[35m (91.1ms)[0m  CREATE TABLE "admins" ("id" serial primary key, "email" character varying DEFAULT '' NOT NULL, "encrypted_password" character varying DEFAULT '' NOT NULL, "reset_password_token" character varying, "reset_password_sent_at" timestamp, "remember_created_at" timestamp, "sign_in_count" integer DEFAULT 0 NOT NULL, "current_sign_in_at" timestamp, "last_sign_in_at" timestamp, "current_sign_in_ip" inet, "last_sign_in_ip" inet, "created_at" timestamp NOT NULL, "updated_at" timestamp NOT NULL, "decision" integer, "name" character varying) 
+  [1m[36m (21.0ms)[0m  [1mCREATE UNIQUE INDEX  "index_admins_on_email" ON "admins" USING btree ("email")[0m
+  [1m[35m (2.0ms)[0m  CREATE UNIQUE INDEX  "index_admins_on_reset_password_token" ON "admins" USING btree ("reset_password_token")
+  [1m[36m (18.0ms)[0m  [1mCREATE TABLE "applicants" ("id" serial primary key, "email" character varying DEFAULT '' NOT NULL, "encrypted_password" character varying DEFAULT '' NOT NULL, "reset_password_token" character varying, "reset_password_sent_at" timestamp, "remember_created_at" timestamp, "sign_in_count" integer DEFAULT 0 NOT NULL, "current_sign_in_at" timestamp, "last_sign_in_at" timestamp, "current_sign_in_ip" inet, "last_sign_in_ip" inet, "created_at" timestamp NOT NULL, "updated_at" timestamp NOT NULL, "first_name" character varying, "last_name" character varying, "phone" character varying, "submit" boolean, "decisions" integer[] DEFAULT '{}', "stage" integer DEFAULT 0, "interview_id" integer, "token" character varying, "org" character varying, "address" character varying, "city" character varying, "state" character varying, "website" character varying, "mission" character varying, "position" character varying) [0m
+  [1m[35m (1.9ms)[0m  CREATE UNIQUE INDEX  "index_applicants_on_email" ON "applicants" USING btree ("email")
+  [1m[36m (1.9ms)[0m  [1mCREATE  INDEX  "index_applicants_on_interview_id" ON "applicants" USING btree ("interview_id")[0m
+  [1m[35m (2.2ms)[0m  CREATE UNIQUE INDEX  "index_applicants_on_reset_password_token" ON "applicants" USING btree ("reset_password_token")
+  [1m[36m (4.3ms)[0m  [1mCREATE TABLE "comments" ("id" serial primary key, "applicant_id" integer, "admin_id" integer, "text" character varying, "created_at" timestamp NOT NULL, "updated_at" timestamp NOT NULL) [0m
+  [1m[35m (35.5ms)[0m  CREATE  INDEX  "index_comments_on_admin_id" ON "comments" USING btree ("admin_id")
+  [1m[36m (4.0ms)[0m  [1mCREATE  INDEX  "index_comments_on_applicant_id" ON "comments" USING btree ("applicant_id")[0m
+  [1m[35m (4.5ms)[0m  CREATE TABLE "emails" ("id" serial primary key, "stage" integer, "accepted" text DEFAULT '', "rejected" text DEFAULT '', "created_at" timestamp NOT NULL, "updated_at" timestamp NOT NULL) 
+  [1m[36m (3.3ms)[0m  [1mCREATE TABLE "interviews" ("id" serial primary key, "timeslot" timestamp, "created_at" timestamp NOT NULL, "updated_at" timestamp NOT NULL) [0m
+  [1m[35m (5.9ms)[0m  CREATE TABLE "questions" ("id" serial primary key, "title" character varying, "qtype" integer, "category" integer, "limit" integer, "created_at" timestamp NOT NULL, "updated_at" timestamp NOT NULL) 
+  [1m[36m (8.3ms)[0m  [1mCREATE TABLE "responses" ("id" serial primary key, "question_id" integer, "applicant_id" integer, "answer" character varying DEFAULT '', "created_at" timestamp NOT NULL, "updated_at" timestamp NOT NULL) [0m
+  [1m[35m (2.8ms)[0m  CREATE  INDEX  "index_responses_on_applicant_id" ON "responses" USING btree ("applicant_id")
+  [1m[36m (1.8ms)[0m  [1mCREATE  INDEX  "index_responses_on_question_id" ON "responses" USING btree ("question_id")[0m
+  [1m[35m (3.1ms)[0m  CREATE TABLE "settings" ("id" serial primary key, "created_at" timestamp NOT NULL, "updated_at" timestamp NOT NULL, "stage" integer DEFAULT 0, "deadline" timestamp) 
+  [1m[36m (3.8ms)[0m  [1mCREATE TABLE "schema_migrations" ("version" character varying NOT NULL) [0m
+  [1m[35m (1.8ms)[0m  CREATE UNIQUE INDEX  "unique_schema_migrations" ON "schema_migrations"  ("version")
+  [1m[36m (0.4ms)[0m  [1mSELECT version FROM "schema_migrations"[0m
+  [1m[35m (1.0ms)[0m  INSERT INTO "schema_migrations" (version) VALUES ('20160629001723')
+  [1m[36m (0.9ms)[0m  [1mINSERT INTO "schema_migrations" (version) VALUES ('20151215032634')[0m
+  [1m[35m (0.7ms)[0m  INSERT INTO "schema_migrations" (version) VALUES ('20151215032702')
+  [1m[36m (0.7ms)[0m  [1mINSERT INTO "schema_migrations" (version) VALUES ('20151216022315')[0m
+  [1m[35m (0.7ms)[0m  INSERT INTO "schema_migrations" (version) VALUES ('20151216022423')
+  [1m[36m (0.6ms)[0m  [1mINSERT INTO "schema_migrations" (version) VALUES ('20151216034928')[0m
+  [1m[35m (0.6ms)[0m  INSERT INTO "schema_migrations" (version) VALUES ('20151217021551')
+  [1m[36m (0.6ms)[0m  [1mINSERT INTO "schema_migrations" (version) VALUES ('20151219035727')[0m
+  [1m[35m (0.6ms)[0m  INSERT INTO "schema_migrations" (version) VALUES ('20151222192405')
+  [1m[36m (0.6ms)[0m  [1mINSERT INTO "schema_migrations" (version) VALUES ('20151224005957')[0m
+  [1m[35m (0.6ms)[0m  INSERT INTO "schema_migrations" (version) VALUES ('20160106024408')
+  [1m[36m (0.6ms)[0m  [1mINSERT INTO "schema_migrations" (version) VALUES ('20160106024527')[0m
+  [1m[35m (0.6ms)[0m  INSERT INTO "schema_migrations" (version) VALUES ('20160106212857')
+  [1m[36m (0.7ms)[0m  [1mINSERT INTO "schema_migrations" (version) VALUES ('20160106220800')[0m
+  [1m[35m (0.6ms)[0m  INSERT INTO "schema_migrations" (version) VALUES ('20160108234048')
+  [1m[36m (0.6ms)[0m  [1mINSERT INTO "schema_migrations" (version) VALUES ('20160108234927')[0m
+  [1m[35m (0.7ms)[0m  INSERT INTO "schema_migrations" (version) VALUES ('20160111212933')
+  [1m[36m (0.6ms)[0m  [1mINSERT INTO "schema_migrations" (version) VALUES ('20160111232400')[0m
+  [1m[35m (0.6ms)[0m  INSERT INTO "schema_migrations" (version) VALUES ('20160114040602')
+  [1m[36m (0.6ms)[0m  [1mINSERT INTO "schema_migrations" (version) VALUES ('20160114212015')[0m
+  [1m[35m (0.6ms)[0m  INSERT INTO "schema_migrations" (version) VALUES ('20160120191010')
+  [1m[36m (0.6ms)[0m  [1mINSERT INTO "schema_migrations" (version) VALUES ('20160122200406')[0m
+  [1m[35m (0.6ms)[0m  INSERT INTO "schema_migrations" (version) VALUES ('20160614044308')
+  [1m[36m (0.6ms)[0m  [1mINSERT INTO "schema_migrations" (version) VALUES ('20160629000634')[0m
+  [1m[35mSQL (0.4ms)[0m  CREATE EXTENSION IF NOT EXISTS "plpgsql"
+  [1m[36m (7.0ms)[0m  [1mCREATE TABLE "admins" ("id" serial primary key, "email" character varying DEFAULT '' NOT NULL, "encrypted_password" character varying DEFAULT '' NOT NULL, "reset_password_token" character varying, "reset_password_sent_at" timestamp, "remember_created_at" timestamp, "sign_in_count" integer DEFAULT 0 NOT NULL, "current_sign_in_at" timestamp, "last_sign_in_at" timestamp, "current_sign_in_ip" inet, "last_sign_in_ip" inet, "created_at" timestamp NOT NULL, "updated_at" timestamp NOT NULL, "decision" integer, "name" character varying) [0m
+  [1m[35m (2.4ms)[0m  CREATE UNIQUE INDEX  "index_admins_on_email" ON "admins" USING btree ("email")
+  [1m[36m (2.0ms)[0m  [1mCREATE UNIQUE INDEX  "index_admins_on_reset_password_token" ON "admins" USING btree ("reset_password_token")[0m
+  [1m[35m (13.9ms)[0m  CREATE TABLE "applicants" ("id" serial primary key, "email" character varying DEFAULT '' NOT NULL, "encrypted_password" character varying DEFAULT '' NOT NULL, "reset_password_token" character varying, "reset_password_sent_at" timestamp, "remember_created_at" timestamp, "sign_in_count" integer DEFAULT 0 NOT NULL, "current_sign_in_at" timestamp, "last_sign_in_at" timestamp, "current_sign_in_ip" inet, "last_sign_in_ip" inet, "created_at" timestamp NOT NULL, "updated_at" timestamp NOT NULL, "first_name" character varying, "last_name" character varying, "phone" character varying, "submit" boolean, "decisions" integer[] DEFAULT '{}', "stage" integer DEFAULT 0, "interview_id" integer, "token" character varying, "org" character varying, "address" character varying, "city" character varying, "state" character varying, "website" character varying, "mission" character varying, "position" character varying) 
+  [1m[36m (29.6ms)[0m  [1mCREATE UNIQUE INDEX  "index_applicants_on_email" ON "applicants" USING btree ("email")[0m
+  [1m[35m (2.5ms)[0m  CREATE  INDEX  "index_applicants_on_interview_id" ON "applicants" USING btree ("interview_id")
+  [1m[36m (10.6ms)[0m  [1mCREATE UNIQUE INDEX  "index_applicants_on_reset_password_token" ON "applicants" USING btree ("reset_password_token")[0m
+  [1m[35m (28.2ms)[0m  CREATE TABLE "comments" ("id" serial primary key, "applicant_id" integer, "admin_id" integer, "text" character varying, "created_at" timestamp NOT NULL, "updated_at" timestamp NOT NULL) 
+  [1m[36m (2.0ms)[0m  [1mCREATE  INDEX  "index_comments_on_admin_id" ON "comments" USING btree ("admin_id")[0m
+  [1m[35m (2.1ms)[0m  CREATE  INDEX  "index_comments_on_applicant_id" ON "comments" USING btree ("applicant_id")
+  [1m[36m (6.1ms)[0m  [1mCREATE TABLE "emails" ("id" serial primary key, "stage" integer, "accepted" text DEFAULT '', "rejected" text DEFAULT '', "created_at" timestamp NOT NULL, "updated_at" timestamp NOT NULL) [0m
+  [1m[35m (5.6ms)[0m  CREATE TABLE "interviews" ("id" serial primary key, "timeslot" timestamp, "created_at" timestamp NOT NULL, "updated_at" timestamp NOT NULL) 
+  [1m[36m (5.3ms)[0m  [1mCREATE TABLE "questions" ("id" serial primary key, "title" character varying, "qtype" integer, "category" integer, "limit" integer, "created_at" timestamp NOT NULL, "updated_at" timestamp NOT NULL) [0m
+  [1m[35m (4.9ms)[0m  CREATE TABLE "responses" ("id" serial primary key, "question_id" integer, "applicant_id" integer, "answer" character varying DEFAULT '', "created_at" timestamp NOT NULL, "updated_at" timestamp NOT NULL) 
+  [1m[36m (2.8ms)[0m  [1mCREATE  INDEX  "index_responses_on_applicant_id" ON "responses" USING btree ("applicant_id")[0m
+  [1m[35m (2.8ms)[0m  CREATE  INDEX  "index_responses_on_question_id" ON "responses" USING btree ("question_id")
+  [1m[36m (6.6ms)[0m  [1mCREATE TABLE "settings" ("id" serial primary key, "created_at" timestamp NOT NULL, "updated_at" timestamp NOT NULL, "stage" integer DEFAULT 0, "deadline" timestamp) [0m
+  [1m[35m (5.2ms)[0m  CREATE TABLE "schema_migrations" ("version" character varying NOT NULL) 
+  [1m[36m (1.7ms)[0m  [1mCREATE UNIQUE INDEX  "unique_schema_migrations" ON "schema_migrations"  ("version")[0m
+  [1m[35m (0.7ms)[0m  SELECT version FROM "schema_migrations"
+  [1m[36m (1.1ms)[0m  [1mINSERT INTO "schema_migrations" (version) VALUES ('20160629001723')[0m
+  [1m[35m (0.8ms)[0m  INSERT INTO "schema_migrations" (version) VALUES ('20151215032634')
+  [1m[36m (0.8ms)[0m  [1mINSERT INTO "schema_migrations" (version) VALUES ('20151215032702')[0m
+  [1m[35m (1.5ms)[0m  INSERT INTO "schema_migrations" (version) VALUES ('20151216022315')
+  [1m[36m (0.8ms)[0m  [1mINSERT INTO "schema_migrations" (version) VALUES ('20151216022423')[0m
+  [1m[35m (0.8ms)[0m  INSERT INTO "schema_migrations" (version) VALUES ('20151216034928')
+  [1m[36m (0.6ms)[0m  [1mINSERT INTO "schema_migrations" (version) VALUES ('20151217021551')[0m
+  [1m[35m (17.0ms)[0m  INSERT INTO "schema_migrations" (version) VALUES ('20151219035727')
+  [1m[36m (0.8ms)[0m  [1mINSERT INTO "schema_migrations" (version) VALUES ('20151222192405')[0m
+  [1m[35m (0.6ms)[0m  INSERT INTO "schema_migrations" (version) VALUES ('20151224005957')
+  [1m[36m (0.7ms)[0m  [1mINSERT INTO "schema_migrations" (version) VALUES ('20160106024408')[0m
+  [1m[35m (0.7ms)[0m  INSERT INTO "schema_migrations" (version) VALUES ('20160106024527')
+  [1m[36m (0.6ms)[0m  [1mINSERT INTO "schema_migrations" (version) VALUES ('20160106212857')[0m
+  [1m[35m (0.6ms)[0m  INSERT INTO "schema_migrations" (version) VALUES ('20160106220800')
+  [1m[36m (0.7ms)[0m  [1mINSERT INTO "schema_migrations" (version) VALUES ('20160108234048')[0m
+  [1m[35m (0.7ms)[0m  INSERT INTO "schema_migrations" (version) VALUES ('20160108234927')
+  [1m[36m (0.7ms)[0m  [1mINSERT INTO "schema_migrations" (version) VALUES ('20160111212933')[0m
+  [1m[35m (0.7ms)[0m  INSERT INTO "schema_migrations" (version) VALUES ('20160111232400')
+  [1m[36m (0.7ms)[0m  [1mINSERT INTO "schema_migrations" (version) VALUES ('20160114040602')[0m
+  [1m[35m (0.7ms)[0m  INSERT INTO "schema_migrations" (version) VALUES ('20160114212015')
+  [1m[36m (0.7ms)[0m  [1mINSERT INTO "schema_migrations" (version) VALUES ('20160120191010')[0m
+  [1m[35m (0.7ms)[0m  INSERT INTO "schema_migrations" (version) VALUES ('20160122200406')
+  [1m[36m (0.6ms)[0m  [1mINSERT INTO "schema_migrations" (version) VALUES ('20160614044308')[0m
+  [1m[35m (0.7ms)[0m  INSERT INTO "schema_migrations" (version) VALUES ('20160629000634')
+  [1m[36mActiveRecord::SchemaMigration Load (0.5ms)[0m  [1mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+  [1m[35mQuestion Load (0.8ms)[0m  SELECT "questions".* FROM "questions"
+  [1m[36m (0.2ms)[0m  [1mBEGIN[0m
+  [1m[35mSQL (0.5ms)[0m  INSERT INTO "questions" ("title", "qtype", "category", "limit", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5, $6) RETURNING "id"  [["title", "What is the current problem(s) your organization faces? Please clearly explain the current situation, why the problem exists (if known), and other relevant information. How has your organization currently addressed these problems?"], ["qtype", 0], ["category", 0], ["limit", 1500], ["created_at", "2016-06-30 16:29:44.192845"], ["updated_at", "2016-06-30 16:29:44.192845"]]
+  [1m[36m (0.7ms)[0m  [1mCOMMIT[0m
+  [1m[35m (0.1ms)[0m  BEGIN
+  [1m[36mSQL (0.4ms)[0m  [1mINSERT INTO "questions" ("title", "qtype", "category", "limit", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5, $6) RETURNING "id"[0m  [["title", "What would the main objectives of the project be? How can TBG help solve these issues? What can TBG do in order to ensure efficiency and effectiveness? If you have several projects or project objectives in mind, feel free to list them all and prioritize them based on your organization's need."], ["qtype", 0], ["category", 0], ["limit", 1500], ["created_at", "2016-06-30 16:29:44.198144"], ["updated_at", "2016-06-30 16:29:44.198144"]]
+  [1m[35m (0.7ms)[0m  COMMIT
+  [1m[36m (0.1ms)[0m  [1mBEGIN[0m
+  [1m[35mSQL (0.4ms)[0m  INSERT INTO "questions" ("title", "qtype", "category", "limit", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5, $6) RETURNING "id"  [["title", "In one sentence, please explicitly summarize the goals of the project."], ["qtype", 0], ["category", 0], ["limit", 500], ["created_at", "2016-06-30 16:29:44.201669"], ["updated_at", "2016-06-30 16:29:44.201669"]]
+  [1m[36m (0.8ms)[0m  [1mCOMMIT[0m
+  [1m[35m (0.2ms)[0m  BEGIN
+  [1m[36mSQL (0.4ms)[0m  [1mINSERT INTO "questions" ("title", "qtype", "category", "limit", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5, $6) RETURNING "id"[0m  [["title", "If your nonprofit is selected to work with TBG this semester, what would success look like after the project was completed? What results do you hope to achieve after working with TBG? What impact will this project have on your organization?"], ["qtype", 0], ["category", 0], ["limit", 1500], ["created_at", "2016-06-30 16:29:44.205611"], ["updated_at", "2016-06-30 16:29:44.205611"]]
+  [1m[35m (0.8ms)[0m  COMMIT
+  [1m[36m (0.2ms)[0m  [1mBEGIN[0m
+  [1m[35mSQL (0.4ms)[0m  INSERT INTO "questions" ("title", "qtype", "category", "limit", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5, $6) RETURNING "id"  [["title", "Have you applied to TBG in the past? If yes, when?"], ["qtype", 0], ["category", 1], ["limit", 500], ["created_at", "2016-06-30 16:29:44.210743"], ["updated_at", "2016-06-30 16:29:44.210743"]]
+  [1m[36m (0.7ms)[0m  [1mCOMMIT[0m
+  [1m[35m (0.3ms)[0m  BEGIN
+  [1m[36mSQL (0.3ms)[0m  [1mINSERT INTO "questions" ("title", "qtype", "category", "limit", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5, $6) RETURNING "id"[0m  [["title", "Have you worked with TBG in the past? If yes, when?"], ["qtype", 0], ["category", 1], ["limit", 500], ["created_at", "2016-06-30 16:29:44.215675"], ["updated_at", "2016-06-30 16:29:44.215675"]]
+  [1m[35m (0.7ms)[0m  COMMIT
+  [1m[36m (0.1ms)[0m  [1mBEGIN[0m
+  [1m[35mSQL (0.2ms)[0m  INSERT INTO "questions" ("title", "qtype", "category", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5) RETURNING "id"  [["title", "Does the nonprofit organization listed above have 501(c)3 status?"], ["qtype", 2], ["category", 1], ["created_at", "2016-06-30 16:29:44.239682"], ["updated_at", "2016-06-30 16:29:44.239682"]]
+  [1m[36m (0.7ms)[0m  [1mCOMMIT[0m
+  [1m[35m (0.1ms)[0m  BEGIN
+  [1m[36mSQL (0.3ms)[0m  [1mINSERT INTO "questions" ("title", "qtype", "category", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5) RETURNING "id"[0m  [["title", "If selected, is the contact listed above available to meet on a weekly basis with a consultant from The Berkeley Group over the course of the engagement?"], ["qtype", 2], ["category", 1], ["created_at", "2016-06-30 16:29:44.243013"], ["updated_at", "2016-06-30 16:29:44.243013"]]
+  [1m[35m (0.6ms)[0m  COMMIT
+  [1m[36m (0.1ms)[0m  [1mBEGIN[0m
+  [1m[35mSQL (0.3ms)[0m  INSERT INTO "questions" ("title", "qtype", "category", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5) RETURNING "id"  [["title", "If selected, is the contact listed above available to meet with the consultants at a location within an hour's transportation of UC Berkeley? (e.g. address listed above, satellite office, café, etc.)"], ["qtype", 2], ["category", 1], ["created_at", "2016-06-30 16:29:44.246100"], ["updated_at", "2016-06-30 16:29:44.246100"]]
+  [1m[36m (0.7ms)[0m  [1mCOMMIT[0m
+  [1m[35m (0.1ms)[0m  BEGIN
+  [1m[36mSQL (0.3ms)[0m  [1mINSERT INTO "questions" ("title", "qtype", "category", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5) RETURNING "id"[0m  [["title", "If selected, will you and your organization fully commit to an engagement with TBG for September 2016 through December 2016?"], ["qtype", 2], ["category", 1], ["created_at", "2016-06-30 16:29:44.249177"], ["updated_at", "2016-06-30 16:29:44.249177"]]
+  [1m[35m (3.1ms)[0m  COMMIT
+  [1m[36m (0.2ms)[0m  [1mBEGIN[0m
+  [1m[35mSQL (0.3ms)[0m  INSERT INTO "questions" ("title", "qtype", "category", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5) RETURNING "id"  [["title", "Does the contact listed above have the ability to implement recommendations developed by The Berkeley Group?"], ["qtype", 2], ["category", 1], ["created_at", "2016-06-30 16:29:44.255082"], ["updated_at", "2016-06-30 16:29:44.255082"]]
+  [1m[36m (0.7ms)[0m  [1mCOMMIT[0m
+  [1m[35m (0.1ms)[0m  BEGIN
+  [1m[36mSQL (0.3ms)[0m  [1mINSERT INTO "questions" ("title", "qtype", "category", "limit", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5, $6) RETURNING "id"[0m  [["title", "In the space below, please share any additional information that you would like The Berkeley Group to know. Please also include any dates or times that you will be unavailable for a follow-up interview between August 22nd, 2016 and August 26th, 2016."], ["qtype", 0], ["category", 2], ["limit", 500], ["created_at", "2016-06-30 16:29:44.259303"], ["updated_at", "2016-06-30 16:29:44.259303"]]
+  [1m[35m (0.7ms)[0m  COMMIT
+  [1m[36m (0.2ms)[0m  [1mBEGIN[0m
+  [1m[35mSQL (0.2ms)[0m  INSERT INTO "questions" ("title", "qtype", "category", "limit", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5, $6) RETURNING "id"  [["title", "By typing my full name in the space below, I agree that the information above is true to the best of my knowledge."], ["qtype", 0], ["category", 2], ["limit", 200], ["created_at", "2016-06-30 16:29:44.262934"], ["updated_at", "2016-06-30 16:29:44.262934"]]
+  [1m[36m (1.6ms)[0m  [1mCOMMIT[0m
+  [1m[35m (0.2ms)[0m  BEGIN
+  [1m[36mApplicant Exists (1.3ms)[0m  [1mSELECT  1 AS one FROM "applicants" WHERE "applicants"."email" = 'app1@tbg.com' LIMIT 1[0m
+  [1m[35mQuestion Load (1.0ms)[0m  SELECT  "questions".* FROM "questions"  ORDER BY "questions"."id" ASC LIMIT 1000
+  [1m[36mSQL (29.2ms)[0m  [1mINSERT INTO "responses" ("question_id", "created_at", "updated_at") VALUES ($1, $2, $3) RETURNING "id"[0m  [["question_id", 1], ["created_at", "2016-06-30 16:29:44.652889"], ["updated_at", "2016-06-30 16:29:44.652889"]]
+  [1m[35mSQL (0.5ms)[0m  INSERT INTO "responses" ("question_id", "created_at", "updated_at") VALUES ($1, $2, $3) RETURNING "id"  [["question_id", 2], ["created_at", "2016-06-30 16:29:44.685125"], ["updated_at", "2016-06-30 16:29:44.685125"]]
+  [1m[36mSQL (0.3ms)[0m  [1mINSERT INTO "responses" ("question_id", "created_at", "updated_at") VALUES ($1, $2, $3) RETURNING "id"[0m  [["question_id", 3], ["created_at", "2016-06-30 16:29:44.687893"], ["updated_at", "2016-06-30 16:29:44.687893"]]
+  [1m[35mSQL (0.3ms)[0m  INSERT INTO "responses" ("question_id", "created_at", "updated_at") VALUES ($1, $2, $3) RETURNING "id"  [["question_id", 4], ["created_at", "2016-06-30 16:29:44.690429"], ["updated_at", "2016-06-30 16:29:44.690429"]]
+  [1m[36mSQL (0.3ms)[0m  [1mINSERT INTO "responses" ("question_id", "created_at", "updated_at") VALUES ($1, $2, $3) RETURNING "id"[0m  [["question_id", 5], ["created_at", "2016-06-30 16:29:44.692347"], ["updated_at", "2016-06-30 16:29:44.692347"]]
+  [1m[35mSQL (0.2ms)[0m  INSERT INTO "responses" ("question_id", "created_at", "updated_at") VALUES ($1, $2, $3) RETURNING "id"  [["question_id", 6], ["created_at", "2016-06-30 16:29:44.694207"], ["updated_at", "2016-06-30 16:29:44.694207"]]
+  [1m[36mSQL (0.2ms)[0m  [1mINSERT INTO "responses" ("question_id", "created_at", "updated_at") VALUES ($1, $2, $3) RETURNING "id"[0m  [["question_id", 7], ["created_at", "2016-06-30 16:29:44.695725"], ["updated_at", "2016-06-30 16:29:44.695725"]]
+  [1m[35mSQL (0.2ms)[0m  INSERT INTO "responses" ("question_id", "created_at", "updated_at") VALUES ($1, $2, $3) RETURNING "id"  [["question_id", 8], ["created_at", "2016-06-30 16:29:44.697265"], ["updated_at", "2016-06-30 16:29:44.697265"]]
+  [1m[36mSQL (0.2ms)[0m  [1mINSERT INTO "responses" ("question_id", "created_at", "updated_at") VALUES ($1, $2, $3) RETURNING "id"[0m  [["question_id", 9], ["created_at", "2016-06-30 16:29:44.698693"], ["updated_at", "2016-06-30 16:29:44.698693"]]
+  [1m[35mSQL (0.2ms)[0m  INSERT INTO "responses" ("question_id", "created_at", "updated_at") VALUES ($1, $2, $3) RETURNING "id"  [["question_id", 10], ["created_at", "2016-06-30 16:29:44.700052"], ["updated_at", "2016-06-30 16:29:44.700052"]]
+  [1m[36mSQL (0.2ms)[0m  [1mINSERT INTO "responses" ("question_id", "created_at", "updated_at") VALUES ($1, $2, $3) RETURNING "id"[0m  [["question_id", 11], ["created_at", "2016-06-30 16:29:44.701416"], ["updated_at", "2016-06-30 16:29:44.701416"]]
+  [1m[35mSQL (0.2ms)[0m  INSERT INTO "responses" ("question_id", "created_at", "updated_at") VALUES ($1, $2, $3) RETURNING "id"  [["question_id", 12], ["created_at", "2016-06-30 16:29:44.702703"], ["updated_at", "2016-06-30 16:29:44.702703"]]
+  [1m[36mSQL (0.2ms)[0m  [1mINSERT INTO "responses" ("question_id", "created_at", "updated_at") VALUES ($1, $2, $3) RETURNING "id"[0m  [["question_id", 13], ["created_at", "2016-06-30 16:29:44.703956"], ["updated_at", "2016-06-30 16:29:44.703956"]]
+  [1m[35mSQL (0.5ms)[0m  INSERT INTO "applicants" ("email", "encrypted_password", "first_name", "last_name", "org", "address", "city", "state", "website", "mission", "position", "phone", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5, $6, $7, $8, $9, $10, $11, $12, $13, $14) RETURNING "id"  [["email", "app1@tbg.com"], ["encrypted_password", "$2a$10$oH.JJtzUUAYcq5fuVxKznu5hiE5IyDNBejZ3qoIk4tdJQiKLvevva"], ["first_name", "River"], ["last_name", "Tremblay"], ["org", "TBG"], ["address", "test"], ["city", "berkeley"], ["state", "ca"], ["website", "www.google.com"], ["mission", "work"], ["position", "ceo"], ["phone", "841-874-9087"], ["created_at", "2016-06-30 16:29:44.602957"], ["updated_at", "2016-06-30 16:29:44.602957"]]
+  [1m[36mSQL (0.3ms)[0m  [1mUPDATE "responses" SET "applicant_id" = $1, "updated_at" = $2 WHERE "responses"."id" = $3[0m  [["applicant_id", 1], ["updated_at", "2016-06-30 16:29:44.707105"], ["id", 1]]
+  [1m[35mSQL (0.3ms)[0m  UPDATE "responses" SET "applicant_id" = $1, "updated_at" = $2 WHERE "responses"."id" = $3  [["applicant_id", 1], ["updated_at", "2016-06-30 16:29:44.715556"], ["id", 2]]
+  [1m[36mSQL (0.2ms)[0m  [1mUPDATE "responses" SET "applicant_id" = $1, "updated_at" = $2 WHERE "responses"."id" = $3[0m  [["applicant_id", 1], ["updated_at", "2016-06-30 16:29:44.716963"], ["id", 3]]
+  [1m[35mSQL (0.2ms)[0m  UPDATE "responses" SET "applicant_id" = $1, "updated_at" = $2 WHERE "responses"."id" = $3  [["applicant_id", 1], ["updated_at", "2016-06-30 16:29:44.718107"], ["id", 4]]
+  [1m[36mSQL (0.2ms)[0m  [1mUPDATE "responses" SET "applicant_id" = $1, "updated_at" = $2 WHERE "responses"."id" = $3[0m  [["applicant_id", 1], ["updated_at", "2016-06-30 16:29:44.719446"], ["id", 5]]
+  [1m[35mSQL (0.2ms)[0m  UPDATE "responses" SET "applicant_id" = $1, "updated_at" = $2 WHERE "responses"."id" = $3  [["applicant_id", 1], ["updated_at", "2016-06-30 16:29:44.720599"], ["id", 6]]
+  [1m[36mSQL (0.2ms)[0m  [1mUPDATE "responses" SET "applicant_id" = $1, "updated_at" = $2 WHERE "responses"."id" = $3[0m  [["applicant_id", 1], ["updated_at", "2016-06-30 16:29:44.721847"], ["id", 7]]
+  [1m[35mSQL (0.2ms)[0m  UPDATE "responses" SET "applicant_id" = $1, "updated_at" = $2 WHERE "responses"."id" = $3  [["applicant_id", 1], ["updated_at", "2016-06-30 16:29:44.723009"], ["id", 8]]
+  [1m[36mSQL (0.2ms)[0m  [1mUPDATE "responses" SET "applicant_id" = $1, "updated_at" = $2 WHERE "responses"."id" = $3[0m  [["applicant_id", 1], ["updated_at", "2016-06-30 16:29:44.724051"], ["id", 9]]
+  [1m[35mSQL (0.2ms)[0m  UPDATE "responses" SET "applicant_id" = $1, "updated_at" = $2 WHERE "responses"."id" = $3  [["applicant_id", 1], ["updated_at", "2016-06-30 16:29:44.725161"], ["id", 10]]
+  [1m[36mSQL (0.2ms)[0m  [1mUPDATE "responses" SET "applicant_id" = $1, "updated_at" = $2 WHERE "responses"."id" = $3[0m  [["applicant_id", 1], ["updated_at", "2016-06-30 16:29:44.726207"], ["id", 11]]
+  [1m[35mSQL (0.2ms)[0m  UPDATE "responses" SET "applicant_id" = $1, "updated_at" = $2 WHERE "responses"."id" = $3  [["applicant_id", 1], ["updated_at", "2016-06-30 16:29:44.727180"], ["id", 12]]
+  [1m[36mSQL (0.2ms)[0m  [1mUPDATE "responses" SET "applicant_id" = $1, "updated_at" = $2 WHERE "responses"."id" = $3[0m  [["applicant_id", 1], ["updated_at", "2016-06-30 16:29:44.728152"], ["id", 13]]
+  [1m[35m (2.7ms)[0m  COMMIT
+  [1m[36m (0.2ms)[0m  [1mBEGIN[0m
+  [1m[35mApplicant Exists (0.4ms)[0m  SELECT  1 AS one FROM "applicants" WHERE "applicants"."email" = 'app2@tbg.com' LIMIT 1
+  [1m[36mQuestion Load (0.3ms)[0m  [1mSELECT  "questions".* FROM "questions"  ORDER BY "questions"."id" ASC LIMIT 1000[0m
+  [1m[35mSQL (0.2ms)[0m  INSERT INTO "responses" ("question_id", "created_at", "updated_at") VALUES ($1, $2, $3) RETURNING "id"  [["question_id", 1], ["created_at", "2016-06-30 16:29:44.831906"], ["updated_at", "2016-06-30 16:29:44.831906"]]
+  [1m[36mSQL (0.2ms)[0m  [1mINSERT INTO "responses" ("question_id", "created_at", "updated_at") VALUES ($1, $2, $3) RETURNING "id"[0m  [["question_id", 2], ["created_at", "2016-06-30 16:29:44.833348"], ["updated_at", "2016-06-30 16:29:44.833348"]]
+  [1m[35mSQL (0.2ms)[0m  INSERT INTO "responses" ("question_id", "created_at", "updated_at") VALUES ($1, $2, $3) RETURNING "id"  [["question_id", 3], ["created_at", "2016-06-30 16:29:44.834612"], ["updated_at", "2016-06-30 16:29:44.834612"]]
+  [1m[36mSQL (0.3ms)[0m  [1mINSERT INTO "responses" ("question_id", "created_at", "updated_at") VALUES ($1, $2, $3) RETURNING "id"[0m  [["question_id", 4], ["created_at", "2016-06-30 16:29:44.836770"], ["updated_at", "2016-06-30 16:29:44.836770"]]
+  [1m[35mSQL (0.3ms)[0m  INSERT INTO "responses" ("question_id", "created_at", "updated_at") VALUES ($1, $2, $3) RETURNING "id"  [["question_id", 5], ["created_at", "2016-06-30 16:29:44.839523"], ["updated_at", "2016-06-30 16:29:44.839523"]]
+  [1m[36mSQL (0.2ms)[0m  [1mINSERT INTO "responses" ("question_id", "created_at", "updated_at") VALUES ($1, $2, $3) RETURNING "id"[0m  [["question_id", 6], ["created_at", "2016-06-30 16:29:44.841864"], ["updated_at", "2016-06-30 16:29:44.841864"]]
+  [1m[35mSQL (0.3ms)[0m  INSERT INTO "responses" ("question_id", "created_at", "updated_at") VALUES ($1, $2, $3) RETURNING "id"  [["question_id", 7], ["created_at", "2016-06-30 16:29:44.843567"], ["updated_at", "2016-06-30 16:29:44.843567"]]
+  [1m[36mSQL (0.2ms)[0m  [1mINSERT INTO "responses" ("question_id", "created_at", "updated_at") VALUES ($1, $2, $3) RETURNING "id"[0m  [["question_id", 8], ["created_at", "2016-06-30 16:29:44.845317"], ["updated_at", "2016-06-30 16:29:44.845317"]]
+  [1m[35mSQL (0.2ms)[0m  INSERT INTO "responses" ("question_id", "created_at", "updated_at") VALUES ($1, $2, $3) RETURNING "id"  [["question_id", 9], ["created_at", "2016-06-30 16:29:44.846690"], ["updated_at", "2016-06-30 16:29:44.846690"]]
+  [1m[36mSQL (0.2ms)[0m  [1mINSERT INTO "responses" ("question_id", "created_at", "updated_at") VALUES ($1, $2, $3) RETURNING "id"[0m  [["question_id", 10], ["created_at", "2016-06-30 16:29:44.847880"], ["updated_at", "2016-06-30 16:29:44.847880"]]
+  [1m[35mSQL (0.2ms)[0m  INSERT INTO "responses" ("question_id", "created_at", "updated_at") VALUES ($1, $2, $3) RETURNING "id"  [["question_id", 11], ["created_at", "2016-06-30 16:29:44.849146"], ["updated_at", "2016-06-30 16:29:44.849146"]]
+  [1m[36mSQL (0.2ms)[0m  [1mINSERT INTO "responses" ("question_id", "created_at", "updated_at") VALUES ($1, $2, $3) RETURNING "id"[0m  [["question_id", 12], ["created_at", "2016-06-30 16:29:44.850460"], ["updated_at", "2016-06-30 16:29:44.850460"]]
+  [1m[35mSQL (0.2ms)[0m  INSERT INTO "responses" ("question_id", "created_at", "updated_at") VALUES ($1, $2, $3) RETURNING "id"  [["question_id", 13], ["created_at", "2016-06-30 16:29:44.851661"], ["updated_at", "2016-06-30 16:29:44.851661"]]
+  [1m[36mSQL (0.3ms)[0m  [1mINSERT INTO "applicants" ("email", "encrypted_password", "first_name", "last_name", "org", "address", "city", "state", "website", "mission", "position", "phone", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5, $6, $7, $8, $9, $10, $11, $12, $13, $14) RETURNING "id"[0m  [["email", "app2@tbg.com"], ["encrypted_password", "$2a$10$I0ZZXvRoLcMW5fBQ27y0heKxhHFc2Q5FtU5zq3UbwK7ReW3pYxQj6"], ["first_name", "Santos"], ["last_name", "Spinka"], ["org", "TBG"], ["address", "test"], ["city", "berkeley"], ["state", "ca"], ["website", "www.google.com"], ["mission", "work"], ["position", "ceo"], ["phone", "612-795-2057"], ["created_at", "2016-06-30 16:29:44.829993"], ["updated_at", "2016-06-30 16:29:44.829993"]]
+  [1m[35mSQL (0.2ms)[0m  UPDATE "responses" SET "applicant_id" = $1, "updated_at" = $2 WHERE "responses"."id" = $3  [["applicant_id", 2], ["updated_at", "2016-06-30 16:29:44.854128"], ["id", 14]]
+  [1m[36mSQL (0.2ms)[0m  [1mUPDATE "responses" SET "applicant_id" = $1, "updated_at" = $2 WHERE "responses"."id" = $3[0m  [["applicant_id", 2], ["updated_at", "2016-06-30 16:29:44.855451"], ["id", 15]]
+  [1m[35mSQL (0.2ms)[0m  UPDATE "responses" SET "applicant_id" = $1, "updated_at" = $2 WHERE "responses"."id" = $3  [["applicant_id", 2], ["updated_at", "2016-06-30 16:29:44.856476"], ["id", 16]]
+  [1m[36mSQL (0.2ms)[0m  [1mUPDATE "responses" SET "applicant_id" = $1, "updated_at" = $2 WHERE "responses"."id" = $3[0m  [["applicant_id", 2], ["updated_at", "2016-06-30 16:29:44.857479"], ["id", 17]]
+  [1m[35mSQL (0.2ms)[0m  UPDATE "responses" SET "applicant_id" = $1, "updated_at" = $2 WHERE "responses"."id" = $3  [["applicant_id", 2], ["updated_at", "2016-06-30 16:29:44.858491"], ["id", 18]]
+  [1m[36mSQL (0.4ms)[0m  [1mUPDATE "responses" SET "applicant_id" = $1, "updated_at" = $2 WHERE "responses"."id" = $3[0m  [["applicant_id", 2], ["updated_at", "2016-06-30 16:29:44.859465"], ["id", 19]]
+  [1m[35mSQL (0.2ms)[0m  UPDATE "responses" SET "applicant_id" = $1, "updated_at" = $2 WHERE "responses"."id" = $3  [["applicant_id", 2], ["updated_at", "2016-06-30 16:29:44.861280"], ["id", 20]]
+  [1m[36mSQL (0.2ms)[0m  [1mUPDATE "responses" SET "applicant_id" = $1, "updated_at" = $2 WHERE "responses"."id" = $3[0m  [["applicant_id", 2], ["updated_at", "2016-06-30 16:29:44.862710"], ["id", 21]]
+  [1m[35mSQL (0.1ms)[0m  UPDATE "responses" SET "applicant_id" = $1, "updated_at" = $2 WHERE "responses"."id" = $3  [["applicant_id", 2], ["updated_at", "2016-06-30 16:29:44.863806"], ["id", 22]]
+  [1m[36mSQL (0.1ms)[0m  [1mUPDATE "responses" SET "applicant_id" = $1, "updated_at" = $2 WHERE "responses"."id" = $3[0m  [["applicant_id", 2], ["updated_at", "2016-06-30 16:29:44.864832"], ["id", 23]]
+  [1m[35mSQL (0.2ms)[0m  UPDATE "responses" SET "applicant_id" = $1, "updated_at" = $2 WHERE "responses"."id" = $3  [["applicant_id", 2], ["updated_at", "2016-06-30 16:29:44.865843"], ["id", 24]]
+  [1m[36mSQL (0.2ms)[0m  [1mUPDATE "responses" SET "applicant_id" = $1, "updated_at" = $2 WHERE "responses"."id" = $3[0m  [["applicant_id", 2], ["updated_at", "2016-06-30 16:29:44.866814"], ["id", 25]]
+  [1m[35mSQL (0.2ms)[0m  UPDATE "responses" SET "applicant_id" = $1, "updated_at" = $2 WHERE "responses"."id" = $3  [["applicant_id", 2], ["updated_at", "2016-06-30 16:29:44.867866"], ["id", 26]]
+  [1m[36m (0.8ms)[0m  [1mCOMMIT[0m
+  [1m[35m (0.2ms)[0m  BEGIN
+  [1m[36mApplicant Exists (0.5ms)[0m  [1mSELECT  1 AS one FROM "applicants" WHERE "applicants"."email" = 'app3@tbg.com' LIMIT 1[0m
+  [1m[35mQuestion Load (0.5ms)[0m  SELECT  "questions".* FROM "questions"  ORDER BY "questions"."id" ASC LIMIT 1000
+  [1m[36mSQL (0.3ms)[0m  [1mINSERT INTO "responses" ("question_id", "created_at", "updated_at") VALUES ($1, $2, $3) RETURNING "id"[0m  [["question_id", 1], ["created_at", "2016-06-30 16:29:44.968003"], ["updated_at", "2016-06-30 16:29:44.968003"]]
+  [1m[35mSQL (0.2ms)[0m  INSERT INTO "responses" ("question_id", "created_at", "updated_at") VALUES ($1, $2, $3) RETURNING "id"  [["question_id", 2], ["created_at", "2016-06-30 16:29:44.969795"], ["updated_at", "2016-06-30 16:29:44.969795"]]
+  [1m[36mSQL (0.3ms)[0m  [1mINSERT INTO "responses" ("question_id", "created_at", "updated_at") VALUES ($1, $2, $3) RETURNING "id"[0m  [["question_id", 3], ["created_at", "2016-06-30 16:29:44.971420"], ["updated_at", "2016-06-30 16:29:44.971420"]]
+  [1m[35mSQL (0.3ms)[0m  INSERT INTO "responses" ("question_id", "created_at", "updated_at") VALUES ($1, $2, $3) RETURNING "id"  [["question_id", 4], ["created_at", "2016-06-30 16:29:44.973842"], ["updated_at", "2016-06-30 16:29:44.973842"]]
+  [1m[36mSQL (1.4ms)[0m  [1mINSERT INTO "responses" ("question_id", "created_at", "updated_at") VALUES ($1, $2, $3) RETURNING "id"[0m  [["question_id", 5], ["created_at", "2016-06-30 16:29:44.976650"], ["updated_at", "2016-06-30 16:29:44.976650"]]
+  [1m[35mSQL (0.3ms)[0m  INSERT INTO "responses" ("question_id", "created_at", "updated_at") VALUES ($1, $2, $3) RETURNING "id"  [["question_id", 6], ["created_at", "2016-06-30 16:29:44.980669"], ["updated_at", "2016-06-30 16:29:44.980669"]]
+  [1m[36mSQL (0.7ms)[0m  [1mINSERT INTO "responses" ("question_id", "created_at", "updated_at") VALUES ($1, $2, $3) RETURNING "id"[0m  [["question_id", 7], ["created_at", "2016-06-30 16:29:44.983046"], ["updated_at", "2016-06-30 16:29:44.983046"]]
+  [1m[35mSQL (0.2ms)[0m  INSERT INTO "responses" ("question_id", "created_at", "updated_at") VALUES ($1, $2, $3) RETURNING "id"  [["question_id", 8], ["created_at", "2016-06-30 16:29:44.986205"], ["updated_at", "2016-06-30 16:29:44.986205"]]
+  [1m[36mSQL (0.2ms)[0m  [1mINSERT INTO "responses" ("question_id", "created_at", "updated_at") VALUES ($1, $2, $3) RETURNING "id"[0m  [["question_id", 9], ["created_at", "2016-06-30 16:29:44.988159"], ["updated_at", "2016-06-30 16:29:44.988159"]]
+  [1m[35mSQL (0.3ms)[0m  INSERT INTO "responses" ("question_id", "created_at", "updated_at") VALUES ($1, $2, $3) RETURNING "id"  [["question_id", 10], ["created_at", "2016-06-30 16:29:44.989872"], ["updated_at", "2016-06-30 16:29:44.989872"]]
+  [1m[36mSQL (0.2ms)[0m  [1mINSERT INTO "responses" ("question_id", "created_at", "updated_at") VALUES ($1, $2, $3) RETURNING "id"[0m  [["question_id", 11], ["created_at", "2016-06-30 16:29:44.991673"], ["updated_at", "2016-06-30 16:29:44.991673"]]
+  [1m[35mSQL (0.2ms)[0m  INSERT INTO "responses" ("question_id", "created_at", "updated_at") VALUES ($1, $2, $3) RETURNING "id"  [["question_id", 12], ["created_at", "2016-06-30 16:29:44.993676"], ["updated_at", "2016-06-30 16:29:44.993676"]]
+  [1m[36mSQL (0.3ms)[0m  [1mINSERT INTO "responses" ("question_id", "created_at", "updated_at") VALUES ($1, $2, $3) RETURNING "id"[0m  [["question_id", 13], ["created_at", "2016-06-30 16:29:44.995978"], ["updated_at", "2016-06-30 16:29:44.995978"]]
+  [1m[35mSQL (0.3ms)[0m  INSERT INTO "applicants" ("email", "encrypted_password", "first_name", "last_name", "org", "address", "city", "state", "website", "mission", "position", "phone", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5, $6, $7, $8, $9, $10, $11, $12, $13, $14) RETURNING "id"  [["email", "app3@tbg.com"], ["encrypted_password", "$2a$10$zq.w35yeubQaRip2ngb8uOlvBUD7XS0ruUJ5ITxvD3WyuPHCNksLK"], ["first_name", "Rosalee"], ["last_name", "Huels"], ["org", "TBG"], ["address", "test"], ["city", "berkeley"], ["state", "ca"], ["website", "www.google.com"], ["mission", "work"], ["position", "ceo"], ["phone", "949-340-1591"], ["created_at", "2016-06-30 16:29:44.965343"], ["updated_at", "2016-06-30 16:29:44.965343"]]
+  [1m[36mSQL (0.6ms)[0m  [1mUPDATE "responses" SET "applicant_id" = $1, "updated_at" = $2 WHERE "responses"."id" = $3[0m  [["applicant_id", 3], ["updated_at", "2016-06-30 16:29:45.000288"], ["id", 27]]
+  [1m[35mSQL (0.3ms)[0m  UPDATE "responses" SET "applicant_id" = $1, "updated_at" = $2 WHERE "responses"."id" = $3  [["applicant_id", 3], ["updated_at", "2016-06-30 16:29:45.003054"], ["id", 28]]
+  [1m[36mSQL (0.5ms)[0m  [1mUPDATE "responses" SET "applicant_id" = $1, "updated_at" = $2 WHERE "responses"."id" = $3[0m  [["applicant_id", 3], ["updated_at", "2016-06-30 16:29:45.005545"], ["id", 29]]
+  [1m[35mSQL (0.6ms)[0m  UPDATE "responses" SET "applicant_id" = $1, "updated_at" = $2 WHERE "responses"."id" = $3  [["applicant_id", 3], ["updated_at", "2016-06-30 16:29:45.008576"], ["id", 30]]
+  [1m[36mSQL (0.3ms)[0m  [1mUPDATE "responses" SET "applicant_id" = $1, "updated_at" = $2 WHERE "responses"."id" = $3[0m  [["applicant_id", 3], ["updated_at", "2016-06-30 16:29:45.011656"], ["id", 31]]
+  [1m[35mSQL (0.3ms)[0m  UPDATE "responses" SET "applicant_id" = $1, "updated_at" = $2 WHERE "responses"."id" = $3  [["applicant_id", 3], ["updated_at", "2016-06-30 16:29:45.013855"], ["id", 32]]
+  [1m[36mSQL (0.2ms)[0m  [1mUPDATE "responses" SET "applicant_id" = $1, "updated_at" = $2 WHERE "responses"."id" = $3[0m  [["applicant_id", 3], ["updated_at", "2016-06-30 16:29:45.015468"], ["id", 33]]
+  [1m[35mSQL (0.3ms)[0m  UPDATE "responses" SET "applicant_id" = $1, "updated_at" = $2 WHERE "responses"."id" = $3  [["applicant_id", 3], ["updated_at", "2016-06-30 16:29:45.017136"], ["id", 34]]
+  [1m[36mSQL (0.3ms)[0m  [1mUPDATE "responses" SET "applicant_id" = $1, "updated_at" = $2 WHERE "responses"."id" = $3[0m  [["applicant_id", 3], ["updated_at", "2016-06-30 16:29:45.019044"], ["id", 35]]
+  [1m[35mSQL (0.3ms)[0m  UPDATE "responses" SET "applicant_id" = $1, "updated_at" = $2 WHERE "responses"."id" = $3  [["applicant_id", 3], ["updated_at", "2016-06-30 16:29:45.020738"], ["id", 36]]
+  [1m[36mSQL (0.4ms)[0m  [1mUPDATE "responses" SET "applicant_id" = $1, "updated_at" = $2 WHERE "responses"."id" = $3[0m  [["applicant_id", 3], ["updated_at", "2016-06-30 16:29:45.022304"], ["id", 37]]
+  [1m[35mSQL (0.2ms)[0m  UPDATE "responses" SET "applicant_id" = $1, "updated_at" = $2 WHERE "responses"."id" = $3  [["applicant_id", 3], ["updated_at", "2016-06-30 16:29:45.024347"], ["id", 38]]
+  [1m[36mSQL (0.2ms)[0m  [1mUPDATE "responses" SET "applicant_id" = $1, "updated_at" = $2 WHERE "responses"."id" = $3[0m  [["applicant_id", 3], ["updated_at", "2016-06-30 16:29:45.025798"], ["id", 39]]
+  [1m[35m (1.0ms)[0m  COMMIT
+  [1m[36m (0.2ms)[0m  [1mBEGIN[0m
+  [1m[35mApplicant Exists (0.4ms)[0m  SELECT  1 AS one FROM "applicants" WHERE "applicants"."email" = 'app4@tbg.com' LIMIT 1
+  [1m[36mQuestion Load (0.4ms)[0m  [1mSELECT  "questions".* FROM "questions"  ORDER BY "questions"."id" ASC LIMIT 1000[0m
+  [1m[35mSQL (0.2ms)[0m  INSERT INTO "responses" ("question_id", "created_at", "updated_at") VALUES ($1, $2, $3) RETURNING "id"  [["question_id", 1], ["created_at", "2016-06-30 16:29:45.134775"], ["updated_at", "2016-06-30 16:29:45.134775"]]
+  [1m[36mSQL (0.2ms)[0m  [1mINSERT INTO "responses" ("question_id", "created_at", "updated_at") VALUES ($1, $2, $3) RETURNING "id"[0m  [["question_id", 2], ["created_at", "2016-06-30 16:29:45.136298"], ["updated_at", "2016-06-30 16:29:45.136298"]]
+  [1m[35mSQL (0.2ms)[0m  INSERT INTO "responses" ("question_id", "created_at", "updated_at") VALUES ($1, $2, $3) RETURNING "id"  [["question_id", 3], ["created_at", "2016-06-30 16:29:45.137513"], ["updated_at", "2016-06-30 16:29:45.137513"]]
+  [1m[36mSQL (0.6ms)[0m  [1mINSERT INTO "responses" ("question_id", "created_at", "updated_at") VALUES ($1, $2, $3) RETURNING "id"[0m  [["question_id", 4], ["created_at", "2016-06-30 16:29:45.138741"], ["updated_at", "2016-06-30 16:29:45.138741"]]
+  [1m[35mSQL (0.2ms)[0m  INSERT INTO "responses" ("question_id", "created_at", "updated_at") VALUES ($1, $2, $3) RETURNING "id"  [["question_id", 5], ["created_at", "2016-06-30 16:29:45.140454"], ["updated_at", "2016-06-30 16:29:45.140454"]]
+  [1m[36mSQL (0.2ms)[0m  [1mINSERT INTO "responses" ("question_id", "created_at", "updated_at") VALUES ($1, $2, $3) RETURNING "id"[0m  [["question_id", 6], ["created_at", "2016-06-30 16:29:45.141813"], ["updated_at", "2016-06-30 16:29:45.141813"]]
+  [1m[35mSQL (0.3ms)[0m  INSERT INTO "responses" ("question_id", "created_at", "updated_at") VALUES ($1, $2, $3) RETURNING "id"  [["question_id", 7], ["created_at", "2016-06-30 16:29:45.143087"], ["updated_at", "2016-06-30 16:29:45.143087"]]
+  [1m[36mSQL (0.2ms)[0m  [1mINSERT INTO "responses" ("question_id", "created_at", "updated_at") VALUES ($1, $2, $3) RETURNING "id"[0m  [["question_id", 8], ["created_at", "2016-06-30 16:29:45.144559"], ["updated_at", "2016-06-30 16:29:45.144559"]]
+  [1m[35mSQL (0.2ms)[0m  INSERT INTO "responses" ("question_id", "created_at", "updated_at") VALUES ($1, $2, $3) RETURNING "id"  [["question_id", 9], ["created_at", "2016-06-30 16:29:45.145939"], ["updated_at", "2016-06-30 16:29:45.145939"]]
+  [1m[36mSQL (0.2ms)[0m  [1mINSERT INTO "responses" ("question_id", "created_at", "updated_at") VALUES ($1, $2, $3) RETURNING "id"[0m  [["question_id", 10], ["created_at", "2016-06-30 16:29:45.147131"], ["updated_at", "2016-06-30 16:29:45.147131"]]
+  [1m[35mSQL (0.2ms)[0m  INSERT INTO "responses" ("question_id", "created_at", "updated_at") VALUES ($1, $2, $3) RETURNING "id"  [["question_id", 11], ["created_at", "2016-06-30 16:29:45.148635"], ["updated_at", "2016-06-30 16:29:45.148635"]]
+  [1m[36mSQL (0.2ms)[0m  [1mINSERT INTO "responses" ("question_id", "created_at", "updated_at") VALUES ($1, $2, $3) RETURNING "id"[0m  [["question_id", 12], ["created_at", "2016-06-30 16:29:45.149993"], ["updated_at", "2016-06-30 16:29:45.149993"]]
+  [1m[35mSQL (0.2ms)[0m  INSERT INTO "responses" ("question_id", "created_at", "updated_at") VALUES ($1, $2, $3) RETURNING "id"  [["question_id", 13], ["created_at", "2016-06-30 16:29:45.151211"], ["updated_at", "2016-06-30 16:29:45.151211"]]
+  [1m[36mSQL (0.3ms)[0m  [1mINSERT INTO "applicants" ("email", "encrypted_password", "first_name", "last_name", "org", "address", "city", "state", "website", "mission", "position", "phone", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5, $6, $7, $8, $9, $10, $11, $12, $13, $14) RETURNING "id"[0m  [["email", "app4@tbg.com"], ["encrypted_password", "$2a$10$gC8FPZ/61P0mlTZyzBA.VeJ/Ss7P2TZdVx4HqSLiUNTE5a005c4hK"], ["first_name", "Maximilian"], ["last_name", "Lynch"], ["org", "TBG"], ["address", "test"], ["city", "berkeley"], ["state", "ca"], ["website", "www.google.com"], ["mission", "work"], ["position", "ceo"], ["phone", "576-195-7383"], ["created_at", "2016-06-30 16:29:45.132071"], ["updated_at", "2016-06-30 16:29:45.132071"]]
+  [1m[35mSQL (0.2ms)[0m  UPDATE "responses" SET "applicant_id" = $1, "updated_at" = $2 WHERE "responses"."id" = $3  [["applicant_id", 4], ["updated_at", "2016-06-30 16:29:45.154020"], ["id", 40]]
+  [1m[36mSQL (0.2ms)[0m  [1mUPDATE "responses" SET "applicant_id" = $1, "updated_at" = $2 WHERE "responses"."id" = $3[0m  [["applicant_id", 4], ["updated_at", "2016-06-30 16:29:45.155288"], ["id", 41]]
+  [1m[35mSQL (0.2ms)[0m  UPDATE "responses" SET "applicant_id" = $1, "updated_at" = $2 WHERE "responses"."id" = $3  [["applicant_id", 4], ["updated_at", "2016-06-30 16:29:45.156316"], ["id", 42]]
+  [1m[36mSQL (0.2ms)[0m  [1mUPDATE "responses" SET "applicant_id" = $1, "updated_at" = $2 WHERE "responses"."id" = $3[0m  [["applicant_id", 4], ["updated_at", "2016-06-30 16:29:45.157284"], ["id", 43]]
+  [1m[35mSQL (0.2ms)[0m  UPDATE "responses" SET "applicant_id" = $1, "updated_at" = $2 WHERE "responses"."id" = $3  [["applicant_id", 4], ["updated_at", "2016-06-30 16:29:45.158254"], ["id", 44]]
+  [1m[36mSQL (0.2ms)[0m  [1mUPDATE "responses" SET "applicant_id" = $1, "updated_at" = $2 WHERE "responses"."id" = $3[0m  [["applicant_id", 4], ["updated_at", "2016-06-30 16:29:45.159215"], ["id", 45]]
+  [1m[35mSQL (0.2ms)[0m  UPDATE "responses" SET "applicant_id" = $1, "updated_at" = $2 WHERE "responses"."id" = $3  [["applicant_id", 4], ["updated_at", "2016-06-30 16:29:45.160192"], ["id", 46]]
+  [1m[36mSQL (0.2ms)[0m  [1mUPDATE "responses" SET "applicant_id" = $1, "updated_at" = $2 WHERE "responses"."id" = $3[0m  [["applicant_id", 4], ["updated_at", "2016-06-30 16:29:45.161188"], ["id", 47]]
+  [1m[35mSQL (0.2ms)[0m  UPDATE "responses" SET "applicant_id" = $1, "updated_at" = $2 WHERE "responses"."id" = $3  [["applicant_id", 4], ["updated_at", "2016-06-30 16:29:45.162183"], ["id", 48]]
+  [1m[36mSQL (0.2ms)[0m  [1mUPDATE "responses" SET "applicant_id" = $1, "updated_at" = $2 WHERE "responses"."id" = $3[0m  [["applicant_id", 4], ["updated_at", "2016-06-30 16:29:45.163220"], ["id", 49]]
+  [1m[35mSQL (0.2ms)[0m  UPDATE "responses" SET "applicant_id" = $1, "updated_at" = $2 WHERE "responses"."id" = $3  [["applicant_id", 4], ["updated_at", "2016-06-30 16:29:45.164237"], ["id", 50]]
+  [1m[36mSQL (0.2ms)[0m  [1mUPDATE "responses" SET "applicant_id" = $1, "updated_at" = $2 WHERE "responses"."id" = $3[0m  [["applicant_id", 4], ["updated_at", "2016-06-30 16:29:45.165202"], ["id", 51]]
+  [1m[35mSQL (0.2ms)[0m  UPDATE "responses" SET "applicant_id" = $1, "updated_at" = $2 WHERE "responses"."id" = $3  [["applicant_id", 4], ["updated_at", "2016-06-30 16:29:45.166963"], ["id", 52]]
+  [1m[36m (1.0ms)[0m  [1mCOMMIT[0m
+  [1m[35m (0.2ms)[0m  BEGIN
+  [1m[36mApplicant Exists (0.3ms)[0m  [1mSELECT  1 AS one FROM "applicants" WHERE "applicants"."email" = 'app5@tbg.com' LIMIT 1[0m
+  [1m[35mQuestion Load (0.3ms)[0m  SELECT  "questions".* FROM "questions"  ORDER BY "questions"."id" ASC LIMIT 1000
+  [1m[36mSQL (0.2ms)[0m  [1mINSERT INTO "responses" ("question_id", "created_at", "updated_at") VALUES ($1, $2, $3) RETURNING "id"[0m  [["question_id", 1], ["created_at", "2016-06-30 16:29:45.265383"], ["updated_at", "2016-06-30 16:29:45.265383"]]
+  [1m[35mSQL (0.3ms)[0m  INSERT INTO "responses" ("question_id", "created_at", "updated_at") VALUES ($1, $2, $3) RETURNING "id"  [["question_id", 2], ["created_at", "2016-06-30 16:29:45.267047"], ["updated_at", "2016-06-30 16:29:45.267047"]]
+  [1m[36mSQL (0.2ms)[0m  [1mINSERT INTO "responses" ("question_id", "created_at", "updated_at") VALUES ($1, $2, $3) RETURNING "id"[0m  [["question_id", 3], ["created_at", "2016-06-30 16:29:45.269033"], ["updated_at", "2016-06-30 16:29:45.269033"]]
+  [1m[35mSQL (0.2ms)[0m  INSERT INTO "responses" ("question_id", "created_at", "updated_at") VALUES ($1, $2, $3) RETURNING "id"  [["question_id", 4], ["created_at", "2016-06-30 16:29:45.270573"], ["updated_at", "2016-06-30 16:29:45.270573"]]
+  [1m[36mSQL (0.2ms)[0m  [1mINSERT INTO "responses" ("question_id", "created_at", "updated_at") VALUES ($1, $2, $3) RETURNING "id"[0m  [["question_id", 5], ["created_at", "2016-06-30 16:29:45.271805"], ["updated_at", "2016-06-30 16:29:45.271805"]]
+  [1m[35mSQL (0.2ms)[0m  INSERT INTO "responses" ("question_id", "created_at", "updated_at") VALUES ($1, $2, $3) RETURNING "id"  [["question_id", 6], ["created_at", "2016-06-30 16:29:45.273007"], ["updated_at", "2016-06-30 16:29:45.273007"]]
+  [1m[36mSQL (0.2ms)[0m  [1mINSERT INTO "responses" ("question_id", "created_at", "updated_at") VALUES ($1, $2, $3) RETURNING "id"[0m  [["question_id", 7], ["created_at", "2016-06-30 16:29:45.274200"], ["updated_at", "2016-06-30 16:29:45.274200"]]
+  [1m[35mSQL (0.2ms)[0m  INSERT INTO "responses" ("question_id", "created_at", "updated_at") VALUES ($1, $2, $3) RETURNING "id"  [["question_id", 8], ["created_at", "2016-06-30 16:29:45.275533"], ["updated_at", "2016-06-30 16:29:45.275533"]]
+  [1m[36mSQL (0.2ms)[0m  [1mINSERT INTO "responses" ("question_id", "created_at", "updated_at") VALUES ($1, $2, $3) RETURNING "id"[0m  [["question_id", 9], ["created_at", "2016-06-30 16:29:45.276752"], ["updated_at", "2016-06-30 16:29:45.276752"]]
+  [1m[35mSQL (0.2ms)[0m  INSERT INTO "responses" ("question_id", "created_at", "updated_at") VALUES ($1, $2, $3) RETURNING "id"  [["question_id", 10], ["created_at", "2016-06-30 16:29:45.277942"], ["updated_at", "2016-06-30 16:29:45.277942"]]
+  [1m[36mSQL (0.2ms)[0m  [1mINSERT INTO "responses" ("question_id", "created_at", "updated_at") VALUES ($1, $2, $3) RETURNING "id"[0m  [["question_id", 11], ["created_at", "2016-06-30 16:29:45.279334"], ["updated_at", "2016-06-30 16:29:45.279334"]]
+  [1m[35mSQL (0.1ms)[0m  INSERT INTO "responses" ("question_id", "created_at", "updated_at") VALUES ($1, $2, $3) RETURNING "id"  [["question_id", 12], ["created_at", "2016-06-30 16:29:45.280619"], ["updated_at", "2016-06-30 16:29:45.280619"]]
+  [1m[36mSQL (0.5ms)[0m  [1mINSERT INTO "responses" ("question_id", "created_at", "updated_at") VALUES ($1, $2, $3) RETURNING "id"[0m  [["question_id", 13], ["created_at", "2016-06-30 16:29:45.281887"], ["updated_at", "2016-06-30 16:29:45.281887"]]
+  [1m[35mSQL (0.4ms)[0m  INSERT INTO "applicants" ("email", "encrypted_password", "first_name", "last_name", "org", "address", "city", "state", "website", "mission", "position", "phone", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5, $6, $7, $8, $9, $10, $11, $12, $13, $14) RETURNING "id"  [["email", "app5@tbg.com"], ["encrypted_password", "$2a$10$BXcB9YRZ0CYhynut6K4qVePNjixi8F1M1ZpptNvoZIgeC6zl3tTxy"], ["first_name", "Magnus"], ["last_name", "Dicki"], ["org", "TBG"], ["address", "test"], ["city", "berkeley"], ["state", "ca"], ["website", "www.google.com"], ["mission", "work"], ["position", "ceo"], ["phone", "867-869-4674"], ["created_at", "2016-06-30 16:29:45.263559"], ["updated_at", "2016-06-30 16:29:45.263559"]]
+  [1m[36mSQL (0.4ms)[0m  [1mUPDATE "responses" SET "applicant_id" = $1, "updated_at" = $2 WHERE "responses"."id" = $3[0m  [["applicant_id", 5], ["updated_at", "2016-06-30 16:29:45.287267"], ["id", 53]]
+  [1m[35mSQL (0.3ms)[0m  UPDATE "responses" SET "applicant_id" = $1, "updated_at" = $2 WHERE "responses"."id" = $3  [["applicant_id", 5], ["updated_at", "2016-06-30 16:29:45.289582"], ["id", 54]]
+  [1m[36mSQL (0.2ms)[0m  [1mUPDATE "responses" SET "applicant_id" = $1, "updated_at" = $2 WHERE "responses"."id" = $3[0m  [["applicant_id", 5], ["updated_at", "2016-06-30 16:29:45.291294"], ["id", 55]]
+  [1m[35mSQL (0.2ms)[0m  UPDATE "responses" SET "applicant_id" = $1, "updated_at" = $2 WHERE "responses"."id" = $3  [["applicant_id", 5], ["updated_at", "2016-06-30 16:29:45.292980"], ["id", 56]]
+  [1m[36mSQL (0.2ms)[0m  [1mUPDATE "responses" SET "applicant_id" = $1, "updated_at" = $2 WHERE "responses"."id" = $3[0m  [["applicant_id", 5], ["updated_at", "2016-06-30 16:29:45.294192"], ["id", 57]]
+  [1m[35mSQL (0.2ms)[0m  UPDATE "responses" SET "applicant_id" = $1, "updated_at" = $2 WHERE "responses"."id" = $3  [["applicant_id", 5], ["updated_at", "2016-06-30 16:29:45.295606"], ["id", 58]]
+  [1m[36mSQL (0.2ms)[0m  [1mUPDATE "responses" SET "applicant_id" = $1, "updated_at" = $2 WHERE "responses"."id" = $3[0m  [["applicant_id", 5], ["updated_at", "2016-06-30 16:29:45.297209"], ["id", 59]]
+  [1m[35mSQL (0.2ms)[0m  UPDATE "responses" SET "applicant_id" = $1, "updated_at" = $2 WHERE "responses"."id" = $3  [["applicant_id", 5], ["updated_at", "2016-06-30 16:29:45.298549"], ["id", 60]]
+  [1m[36mSQL (0.2ms)[0m  [1mUPDATE "responses" SET "applicant_id" = $1, "updated_at" = $2 WHERE "responses"."id" = $3[0m  [["applicant_id", 5], ["updated_at", "2016-06-30 16:29:45.299613"], ["id", 61]]
+  [1m[35mSQL (0.2ms)[0m  UPDATE "responses" SET "applicant_id" = $1, "updated_at" = $2 WHERE "responses"."id" = $3  [["applicant_id", 5], ["updated_at", "2016-06-30 16:29:45.300622"], ["id", 62]]
+  [1m[36mSQL (0.3ms)[0m  [1mUPDATE "responses" SET "applicant_id" = $1, "updated_at" = $2 WHERE "responses"."id" = $3[0m  [["applicant_id", 5], ["updated_at", "2016-06-30 16:29:45.301627"], ["id", 63]]
+  [1m[35mSQL (0.2ms)[0m  UPDATE "responses" SET "applicant_id" = $1, "updated_at" = $2 WHERE "responses"."id" = $3  [["applicant_id", 5], ["updated_at", "2016-06-30 16:29:45.303031"], ["id", 64]]
+  [1m[36mSQL (0.1ms)[0m  [1mUPDATE "responses" SET "applicant_id" = $1, "updated_at" = $2 WHERE "responses"."id" = $3[0m  [["applicant_id", 5], ["updated_at", "2016-06-30 16:29:45.304135"], ["id", 65]]
+  [1m[35m (1.0ms)[0m  COMMIT
+  [1m[36m (0.2ms)[0m  [1mBEGIN[0m
+  [1m[35mAdmin Exists (1.0ms)[0m  SELECT  1 AS one FROM "admins" WHERE "admins"."email" = 'pres@tbg.com' LIMIT 1
+  [1m[36mSQL (0.9ms)[0m  [1mINSERT INTO "admins" ("email", "name", "decision", "encrypted_password", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5, $6) RETURNING "id"[0m  [["email", "pres@tbg.com"], ["name", "pres"], ["decision", 0], ["encrypted_password", "$2a$10$7dWDnTadsdKCh68DQU4/8u6cwqetVBu9esOefmIuEGfwf7z3dIhSC"], ["created_at", "2016-06-30 16:29:45.420897"], ["updated_at", "2016-06-30 16:29:45.420897"]]
+  [1m[35m (0.8ms)[0m  COMMIT
+  [1m[36m (0.2ms)[0m  [1mBEGIN[0m
+  [1m[35mAdmin Exists (0.3ms)[0m  SELECT  1 AS one FROM "admins" WHERE "admins"."email" = 'ivp@tbg.com' LIMIT 1
+  [1m[36mSQL (0.3ms)[0m  [1mINSERT INTO "admins" ("email", "name", "decision", "encrypted_password", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5, $6) RETURNING "id"[0m  [["email", "ivp@tbg.com"], ["name", "ivp"], ["decision", 1], ["encrypted_password", "$2a$10$1Cp71gdRxIZMOQ9OZ3tIdOxu6HYB5MoW.VOh4D1N0m8bncUxM0YgO"], ["created_at", "2016-06-30 16:29:45.525231"], ["updated_at", "2016-06-30 16:29:45.525231"]]
+  [1m[35m (5.5ms)[0m  COMMIT
+  [1m[36m (0.2ms)[0m  [1mBEGIN[0m
+  [1m[35mAdmin Exists (0.3ms)[0m  SELECT  1 AS one FROM "admins" WHERE "admins"."email" = 'vpd@tbg.com' LIMIT 1
+  [1m[36mSQL (0.2ms)[0m  [1mINSERT INTO "admins" ("email", "name", "decision", "encrypted_password", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5, $6) RETURNING "id"[0m  [["email", "vpd@tbg.com"], ["name", "vpd"], ["decision", 2], ["encrypted_password", "$2a$10$ndED4Idcx8MZE0sPOZBewOqqO96g0iJnZ79PKgJ6AT5W1bOlbBTRe"], ["created_at", "2016-06-30 16:29:45.627302"], ["updated_at", "2016-06-30 16:29:45.627302"]]
+  [1m[35m (0.7ms)[0m  COMMIT
+  [1m[36m (0.2ms)[0m  [1mBEGIN[0m
+  [1m[35mAdmin Exists (0.3ms)[0m  SELECT  1 AS one FROM "admins" WHERE "admins"."email" = 'pvp@tbg.com' LIMIT 1
+  [1m[36mSQL (0.2ms)[0m  [1mINSERT INTO "admins" ("email", "name", "decision", "encrypted_password", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5, $6) RETURNING "id"[0m  [["email", "pvp@tbg.com"], ["name", "pvp"], ["decision", 3], ["encrypted_password", "$2a$10$x5nFTVIXgs6YmHikExbPbuQVkSXHqsfBtqI3dbiiQ2xe0rv1z2.Cy"], ["created_at", "2016-06-30 16:29:45.733525"], ["updated_at", "2016-06-30 16:29:45.733525"]]
+  [1m[35m (0.9ms)[0m  COMMIT
+  [1m[36m (0.2ms)[0m  [1mBEGIN[0m
+  [1m[35mAdmin Exists (0.4ms)[0m  SELECT  1 AS one FROM "admins" WHERE "admins"."email" = 'evp@tbg.com' LIMIT 1
+  [1m[36mSQL (0.3ms)[0m  [1mINSERT INTO "admins" ("email", "name", "decision", "encrypted_password", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5, $6) RETURNING "id"[0m  [["email", "evp@tbg.com"], ["name", "evp"], ["decision", 4], ["encrypted_password", "$2a$10$JqFvPy5tdtv3okO05B/EzOe8CBaG25eSDEqUbrVUsHKtQMQ6EO51G"], ["created_at", "2016-06-30 16:29:45.835405"], ["updated_at", "2016-06-30 16:29:45.835405"]]
+  [1m[35m (1.0ms)[0m  COMMIT
+  [1m[36m (0.2ms)[0m  [1mBEGIN[0m
+  [1m[35mSQL (0.5ms)[0m  INSERT INTO "emails" ("stage", "created_at", "updated_at") VALUES ($1, $2, $3) RETURNING "id"  [["stage", 0], ["created_at", "2016-06-30 16:29:45.875117"], ["updated_at", "2016-06-30 16:29:45.875117"]]
+  [1m[36m (0.9ms)[0m  [1mCOMMIT[0m
+  [1m[35m (0.2ms)[0m  BEGIN
+  [1m[36mSQL (0.3ms)[0m  [1mINSERT INTO "emails" ("stage", "created_at", "updated_at") VALUES ($1, $2, $3) RETURNING "id"[0m  [["stage", 1], ["created_at", "2016-06-30 16:29:45.879015"], ["updated_at", "2016-06-30 16:29:45.879015"]]
+  [1m[35m (0.7ms)[0m  COMMIT
+  [1m[36m (0.2ms)[0m  [1mBEGIN[0m
+  [1m[35mSQL (0.3ms)[0m  INSERT INTO "emails" ("stage", "created_at", "updated_at") VALUES ($1, $2, $3) RETURNING "id"  [["stage", 2], ["created_at", "2016-06-30 16:29:45.882522"], ["updated_at", "2016-06-30 16:29:45.882522"]]
+  [1m[36m (0.7ms)[0m  [1mCOMMIT[0m
+  [1m[35mSettings Load (0.5ms)[0m  SELECT  "settings".* FROM "settings"  ORDER BY "settings"."id" ASC LIMIT 1
+  [1m[36m (0.2ms)[0m  [1mBEGIN[0m
+  [1m[35mSQL (0.4ms)[0m  INSERT INTO "settings" ("created_at", "updated_at") VALUES ($1, $2) RETURNING "id"  [["created_at", "2016-06-30 16:29:45.897420"], ["updated_at", "2016-06-30 16:29:45.897420"]]
+  [1m[36m (0.8ms)[0m  [1mCOMMIT[0m
+  [1m[35m (0.1ms)[0m  BEGIN
+  [1m[36mSQL (0.3ms)[0m  [1mUPDATE "settings" SET "deadline" = $1, "updated_at" = $2 WHERE "settings"."id" = $3[0m  [["deadline", "2016-08-30 16:29:45.900026"], ["updated_at", "2016-06-30 16:29:45.900681"], ["id", 1]]
+  [1m[35m (0.6ms)[0m  COMMIT
+  [1m[36mActiveRecord::SchemaMigration Load (0.9ms)[0m  [1mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+  [1m[35mActiveRecord::SchemaMigration Load (0.5ms)[0m  SELECT "schema_migrations".* FROM "schema_migrations"
+  [1m[36m (2.4ms)[0m  [1mSELECT t2.oid::regclass::text AS to_table, a1.attname AS column, a2.attname AS primary_key, c.conname AS name, c.confupdtype AS on_update, c.confdeltype AS on_delete
+FROM pg_constraint c
+JOIN pg_class t1 ON c.conrelid = t1.oid
+JOIN pg_class t2 ON c.confrelid = t2.oid
+JOIN pg_attribute a1 ON a1.attnum = c.conkey[1] AND a1.attrelid = t1.oid
+JOIN pg_attribute a2 ON a2.attnum = c.confkey[1] AND a2.attrelid = t2.oid
+JOIN pg_namespace t3 ON c.connamespace = t3.oid
+WHERE c.contype = 'f'
+  AND t1.relname = 'admins'
+  AND t3.nspname = ANY (current_schemas(false))
+ORDER BY c.conname
+[0m
+  [1m[35m (2.2ms)[0m  SELECT t2.oid::regclass::text AS to_table, a1.attname AS column, a2.attname AS primary_key, c.conname AS name, c.confupdtype AS on_update, c.confdeltype AS on_delete
+FROM pg_constraint c
+JOIN pg_class t1 ON c.conrelid = t1.oid
+JOIN pg_class t2 ON c.confrelid = t2.oid
+JOIN pg_attribute a1 ON a1.attnum = c.conkey[1] AND a1.attrelid = t1.oid
+JOIN pg_attribute a2 ON a2.attnum = c.confkey[1] AND a2.attrelid = t2.oid
+JOIN pg_namespace t3 ON c.connamespace = t3.oid
+WHERE c.contype = 'f'
+  AND t1.relname = 'applicants'
+  AND t3.nspname = ANY (current_schemas(false))
+ORDER BY c.conname
+
+  [1m[36m (2.4ms)[0m  [1mSELECT t2.oid::regclass::text AS to_table, a1.attname AS column, a2.attname AS primary_key, c.conname AS name, c.confupdtype AS on_update, c.confdeltype AS on_delete
+FROM pg_constraint c
+JOIN pg_class t1 ON c.conrelid = t1.oid
+JOIN pg_class t2 ON c.confrelid = t2.oid
+JOIN pg_attribute a1 ON a1.attnum = c.conkey[1] AND a1.attrelid = t1.oid
+JOIN pg_attribute a2 ON a2.attnum = c.confkey[1] AND a2.attrelid = t2.oid
+JOIN pg_namespace t3 ON c.connamespace = t3.oid
+WHERE c.contype = 'f'
+  AND t1.relname = 'comments'
+  AND t3.nspname = ANY (current_schemas(false))
+ORDER BY c.conname
+[0m
+  [1m[35m (3.0ms)[0m  SELECT t2.oid::regclass::text AS to_table, a1.attname AS column, a2.attname AS primary_key, c.conname AS name, c.confupdtype AS on_update, c.confdeltype AS on_delete
+FROM pg_constraint c
+JOIN pg_class t1 ON c.conrelid = t1.oid
+JOIN pg_class t2 ON c.confrelid = t2.oid
+JOIN pg_attribute a1 ON a1.attnum = c.conkey[1] AND a1.attrelid = t1.oid
+JOIN pg_attribute a2 ON a2.attnum = c.confkey[1] AND a2.attrelid = t2.oid
+JOIN pg_namespace t3 ON c.connamespace = t3.oid
+WHERE c.contype = 'f'
+  AND t1.relname = 'emails'
+  AND t3.nspname = ANY (current_schemas(false))
+ORDER BY c.conname
+
+  [1m[36m (2.8ms)[0m  [1mSELECT t2.oid::regclass::text AS to_table, a1.attname AS column, a2.attname AS primary_key, c.conname AS name, c.confupdtype AS on_update, c.confdeltype AS on_delete
+FROM pg_constraint c
+JOIN pg_class t1 ON c.conrelid = t1.oid
+JOIN pg_class t2 ON c.confrelid = t2.oid
+JOIN pg_attribute a1 ON a1.attnum = c.conkey[1] AND a1.attrelid = t1.oid
+JOIN pg_attribute a2 ON a2.attnum = c.confkey[1] AND a2.attrelid = t2.oid
+JOIN pg_namespace t3 ON c.connamespace = t3.oid
+WHERE c.contype = 'f'
+  AND t1.relname = 'interviews'
+  AND t3.nspname = ANY (current_schemas(false))
+ORDER BY c.conname
+[0m
+  [1m[35m (2.7ms)[0m  SELECT t2.oid::regclass::text AS to_table, a1.attname AS column, a2.attname AS primary_key, c.conname AS name, c.confupdtype AS on_update, c.confdeltype AS on_delete
+FROM pg_constraint c
+JOIN pg_class t1 ON c.conrelid = t1.oid
+JOIN pg_class t2 ON c.confrelid = t2.oid
+JOIN pg_attribute a1 ON a1.attnum = c.conkey[1] AND a1.attrelid = t1.oid
+JOIN pg_attribute a2 ON a2.attnum = c.confkey[1] AND a2.attrelid = t2.oid
+JOIN pg_namespace t3 ON c.connamespace = t3.oid
+WHERE c.contype = 'f'
+  AND t1.relname = 'questions'
+  AND t3.nspname = ANY (current_schemas(false))
+ORDER BY c.conname
+
+  [1m[36m (3.3ms)[0m  [1mSELECT t2.oid::regclass::text AS to_table, a1.attname AS column, a2.attname AS primary_key, c.conname AS name, c.confupdtype AS on_update, c.confdeltype AS on_delete
+FROM pg_constraint c
+JOIN pg_class t1 ON c.conrelid = t1.oid
+JOIN pg_class t2 ON c.confrelid = t2.oid
+JOIN pg_attribute a1 ON a1.attnum = c.conkey[1] AND a1.attrelid = t1.oid
+JOIN pg_attribute a2 ON a2.attnum = c.confkey[1] AND a2.attrelid = t2.oid
+JOIN pg_namespace t3 ON c.connamespace = t3.oid
+WHERE c.contype = 'f'
+  AND t1.relname = 'responses'
+  AND t3.nspname = ANY (current_schemas(false))
+ORDER BY c.conname
+[0m
+  [1m[35m (3.0ms)[0m  SELECT t2.oid::regclass::text AS to_table, a1.attname AS column, a2.attname AS primary_key, c.conname AS name, c.confupdtype AS on_update, c.confdeltype AS on_delete
+FROM pg_constraint c
+JOIN pg_class t1 ON c.conrelid = t1.oid
+JOIN pg_class t2 ON c.confrelid = t2.oid
+JOIN pg_attribute a1 ON a1.attnum = c.conkey[1] AND a1.attrelid = t1.oid
+JOIN pg_attribute a2 ON a2.attnum = c.confkey[1] AND a2.attrelid = t2.oid
+JOIN pg_namespace t3 ON c.connamespace = t3.oid
+WHERE c.contype = 'f'
+  AND t1.relname = 'settings'
+  AND t3.nspname = ANY (current_schemas(false))
+ORDER BY c.conname
+
+  [1m[36mActiveRecord::SchemaMigration Load (0.5ms)[0m  [1mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+  [1m[35mQuestion Load (0.8ms)[0m  SELECT "questions".* FROM "questions"
+  [1m[36m (0.2ms)[0m  [1mBEGIN[0m
+  [1m[35mSQL (0.8ms)[0m  DELETE FROM "questions" WHERE "questions"."id" = $1  [["id", 1]]
+  [1m[36m (36.9ms)[0m  [1mCOMMIT[0m
+  [1m[35m (0.2ms)[0m  BEGIN
+  [1m[36mSQL (0.4ms)[0m  [1mDELETE FROM "questions" WHERE "questions"."id" = $1[0m  [["id", 2]]
+  [1m[35m (0.8ms)[0m  COMMIT
+  [1m[36m (0.2ms)[0m  [1mBEGIN[0m
+  [1m[35mSQL (0.3ms)[0m  DELETE FROM "questions" WHERE "questions"."id" = $1  [["id", 3]]
+  [1m[36m (0.8ms)[0m  [1mCOMMIT[0m
+  [1m[35m (0.2ms)[0m  BEGIN
+  [1m[36mSQL (0.3ms)[0m  [1mDELETE FROM "questions" WHERE "questions"."id" = $1[0m  [["id", 4]]
+  [1m[35m (0.7ms)[0m  COMMIT
+  [1m[36m (0.1ms)[0m  [1mBEGIN[0m
+  [1m[35mSQL (0.3ms)[0m  DELETE FROM "questions" WHERE "questions"."id" = $1  [["id", 5]]
+  [1m[36m (0.7ms)[0m  [1mCOMMIT[0m
+  [1m[35m (0.1ms)[0m  BEGIN
+  [1m[36mSQL (0.3ms)[0m  [1mDELETE FROM "questions" WHERE "questions"."id" = $1[0m  [["id", 6]]
+  [1m[35m (0.7ms)[0m  COMMIT
+  [1m[36m (0.1ms)[0m  [1mBEGIN[0m
+  [1m[35mSQL (0.2ms)[0m  DELETE FROM "questions" WHERE "questions"."id" = $1  [["id", 7]]
+  [1m[36m (0.6ms)[0m  [1mCOMMIT[0m
+  [1m[35m (0.1ms)[0m  BEGIN
+  [1m[36mSQL (0.2ms)[0m  [1mDELETE FROM "questions" WHERE "questions"."id" = $1[0m  [["id", 8]]
+  [1m[35m (0.6ms)[0m  COMMIT
+  [1m[36m (0.1ms)[0m  [1mBEGIN[0m
+  [1m[35mSQL (0.2ms)[0m  DELETE FROM "questions" WHERE "questions"."id" = $1  [["id", 9]]
+  [1m[36m (0.6ms)[0m  [1mCOMMIT[0m
+  [1m[35m (0.1ms)[0m  BEGIN
+  [1m[36mSQL (0.1ms)[0m  [1mDELETE FROM "questions" WHERE "questions"."id" = $1[0m  [["id", 10]]
+  [1m[35m (0.7ms)[0m  COMMIT
+  [1m[36m (0.1ms)[0m  [1mBEGIN[0m
+  [1m[35mSQL (0.1ms)[0m  DELETE FROM "questions" WHERE "questions"."id" = $1  [["id", 11]]
+  [1m[36m (0.6ms)[0m  [1mCOMMIT[0m
+  [1m[35m (0.1ms)[0m  BEGIN
+  [1m[36mSQL (0.1ms)[0m  [1mDELETE FROM "questions" WHERE "questions"."id" = $1[0m  [["id", 12]]
+  [1m[35m (0.6ms)[0m  COMMIT
+  [1m[36m (0.1ms)[0m  [1mBEGIN[0m
+  [1m[35mSQL (0.1ms)[0m  DELETE FROM "questions" WHERE "questions"."id" = $1  [["id", 13]]
+  [1m[36m (0.6ms)[0m  [1mCOMMIT[0m
+  [1m[35m (0.1ms)[0m  BEGIN
+  [1m[36mSQL (36.8ms)[0m  [1mINSERT INTO "questions" ("title", "qtype", "category", "limit", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5, $6) RETURNING "id"[0m  [["title", "What is the current problem(s) your organization faces? Please clearly explain the current situation, why the problem exists (if known), and other relevant information. How has your organization currently addressed these problems?"], ["qtype", 0], ["category", 0], ["limit", 1500], ["created_at", "2016-06-30 16:32:29.406517"], ["updated_at", "2016-06-30 16:32:29.406517"]]
+  [1m[35m (2.0ms)[0m  COMMIT
+  [1m[36m (0.3ms)[0m  [1mBEGIN[0m
+  [1m[35mSQL (5.3ms)[0m  INSERT INTO "questions" ("title", "qtype", "category", "limit", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5, $6) RETURNING "id"  [["title", "What would the main objectives of the project be? How can TBG help solve these issues? What can TBG do in order to ensure efficiency and effectiveness? If you have several projects or project objectives in mind, feel free to list them all and prioritize them based on your organization's need."], ["qtype", 0], ["category", 0], ["limit", 1500], ["created_at", "2016-06-30 16:32:29.451845"], ["updated_at", "2016-06-30 16:32:29.451845"]]
+  [1m[36m (0.8ms)[0m  [1mCOMMIT[0m
+  [1m[35m (0.3ms)[0m  BEGIN
+  [1m[36mSQL (0.7ms)[0m  [1mINSERT INTO "questions" ("title", "qtype", "category", "limit", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5, $6) RETURNING "id"[0m  [["title", "In one sentence, please explicitly summarize the goals of the project."], ["qtype", 0], ["category", 0], ["limit", 500], ["created_at", "2016-06-30 16:32:29.465942"], ["updated_at", "2016-06-30 16:32:29.465942"]]
+  [1m[35m (0.7ms)[0m  COMMIT
+  [1m[36m (0.1ms)[0m  [1mBEGIN[0m
+  [1m[35mSQL (0.3ms)[0m  INSERT INTO "questions" ("title", "qtype", "category", "limit", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5, $6) RETURNING "id"  [["title", "If your nonprofit is selected to work with TBG this semester, what would success look like after the project was completed? What results do you hope to achieve after working with TBG? What impact will this project have on your organization?"], ["qtype", 0], ["category", 0], ["limit", 1500], ["created_at", "2016-06-30 16:32:29.470952"], ["updated_at", "2016-06-30 16:32:29.470952"]]
+  [1m[36m (0.6ms)[0m  [1mCOMMIT[0m
+  [1m[35m (0.2ms)[0m  BEGIN
+  [1m[36mSQL (0.4ms)[0m  [1mINSERT INTO "questions" ("title", "qtype", "category", "limit", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5, $6) RETURNING "id"[0m  [["title", "Have you applied to TBG in the past? If yes, when?"], ["qtype", 0], ["category", 1], ["limit", 500], ["created_at", "2016-06-30 16:32:29.475119"], ["updated_at", "2016-06-30 16:32:29.475119"]]
+  [1m[35m (0.8ms)[0m  COMMIT
+  [1m[36m (0.1ms)[0m  [1mBEGIN[0m
+  [1m[35mSQL (0.3ms)[0m  INSERT INTO "questions" ("title", "qtype", "category", "limit", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5, $6) RETURNING "id"  [["title", "Have you worked with TBG in the past? If yes, when?"], ["qtype", 0], ["category", 1], ["limit", 500], ["created_at", "2016-06-30 16:32:29.479855"], ["updated_at", "2016-06-30 16:32:29.479855"]]
+  [1m[36m (0.7ms)[0m  [1mCOMMIT[0m
+  [1m[35m (0.1ms)[0m  BEGIN
+  [1m[36mSQL (0.3ms)[0m  [1mINSERT INTO "questions" ("title", "qtype", "category", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5) RETURNING "id"[0m  [["title", "Does the nonprofit organization listed above have 501(c)3 status?"], ["qtype", 2], ["category", 1], ["created_at", "2016-06-30 16:32:29.483441"], ["updated_at", "2016-06-30 16:32:29.483441"]]
+  [1m[35m (0.6ms)[0m  COMMIT
+  [1m[36m (0.1ms)[0m  [1mBEGIN[0m
+  [1m[35mSQL (0.3ms)[0m  INSERT INTO "questions" ("title", "qtype", "category", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5) RETURNING "id"  [["title", "If selected, is the contact listed above available to meet on a weekly basis with a consultant from The Berkeley Group over the course of the engagement?"], ["qtype", 2], ["category", 1], ["created_at", "2016-06-30 16:32:29.486657"], ["updated_at", "2016-06-30 16:32:29.486657"]]
+  [1m[36m (0.7ms)[0m  [1mCOMMIT[0m
+  [1m[35m (0.1ms)[0m  BEGIN
+  [1m[36mSQL (0.3ms)[0m  [1mINSERT INTO "questions" ("title", "qtype", "category", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5) RETURNING "id"[0m  [["title", "If selected, is the contact listed above available to meet with the consultants at a location within an hour's transportation of UC Berkeley? (e.g. address listed above, satellite office, café, etc.)"], ["qtype", 2], ["category", 1], ["created_at", "2016-06-30 16:32:29.489999"], ["updated_at", "2016-06-30 16:32:29.489999"]]
+  [1m[35m (0.6ms)[0m  COMMIT
+  [1m[36m (0.1ms)[0m  [1mBEGIN[0m
+  [1m[35mSQL (0.3ms)[0m  INSERT INTO "questions" ("title", "qtype", "category", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5) RETURNING "id"  [["title", "If selected, will you and your organization fully commit to an engagement with TBG for September 2016 through December 2016?"], ["qtype", 2], ["category", 1], ["created_at", "2016-06-30 16:32:29.492921"], ["updated_at", "2016-06-30 16:32:29.492921"]]
+  [1m[36m (0.8ms)[0m  [1mCOMMIT[0m
+  [1m[35m (0.2ms)[0m  BEGIN
+  [1m[36mSQL (0.3ms)[0m  [1mINSERT INTO "questions" ("title", "qtype", "category", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5) RETURNING "id"[0m  [["title", "Does the contact listed above have the ability to implement recommendations developed by The Berkeley Group?"], ["qtype", 2], ["category", 1], ["created_at", "2016-06-30 16:32:29.496509"], ["updated_at", "2016-06-30 16:32:29.496509"]]
+  [1m[35m (0.7ms)[0m  COMMIT
+  [1m[36m (0.1ms)[0m  [1mBEGIN[0m
+  [1m[35mSQL (0.3ms)[0m  INSERT INTO "questions" ("title", "qtype", "category", "limit", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5, $6) RETURNING "id"  [["title", "In the space below, please share any additional information that you would like The Berkeley Group to know. Please also include any dates or times that you will be unavailable for a follow-up interview between August 22nd, 2016 and August 26th, 2016."], ["qtype", 0], ["category", 2], ["limit", 500], ["created_at", "2016-06-30 16:32:29.499838"], ["updated_at", "2016-06-30 16:32:29.499838"]]
+  [1m[36m (1.3ms)[0m  [1mCOMMIT[0m
+  [1m[35m (0.2ms)[0m  BEGIN
+  [1m[36mSQL (0.3ms)[0m  [1mINSERT INTO "questions" ("title", "qtype", "category", "limit", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5, $6) RETURNING "id"[0m  [["title", "By typing my full name in the space below, I agree that the information above is true to the best of my knowledge."], ["qtype", 0], ["category", 2], ["limit", 200], ["created_at", "2016-06-30 16:32:29.504122"], ["updated_at", "2016-06-30 16:32:29.504122"]]
+  [1m[35m (0.7ms)[0m  COMMIT
+  [1m[36m (0.2ms)[0m  [1mBEGIN[0m
+  [1m[35mApplicant Exists (27.5ms)[0m  SELECT  1 AS one FROM "applicants" WHERE "applicants"."email" = 'app1@tbg.com' LIMIT 1
+  [1m[36m (30.4ms)[0m  [1mROLLBACK[0m
+  [1m[35m (0.2ms)[0m  BEGIN
+  [1m[36mApplicant Exists (0.4ms)[0m  [1mSELECT  1 AS one FROM "applicants" WHERE "applicants"."email" = 'app2@tbg.com' LIMIT 1[0m
+  [1m[35m (0.2ms)[0m  ROLLBACK
+  [1m[36m (0.2ms)[0m  [1mBEGIN[0m
+  [1m[35mApplicant Exists (0.3ms)[0m  SELECT  1 AS one FROM "applicants" WHERE "applicants"."email" = 'app3@tbg.com' LIMIT 1
+  [1m[36m (0.2ms)[0m  [1mROLLBACK[0m
+  [1m[35m (0.2ms)[0m  BEGIN
+  [1m[36mApplicant Exists (0.4ms)[0m  [1mSELECT  1 AS one FROM "applicants" WHERE "applicants"."email" = 'app4@tbg.com' LIMIT 1[0m
+  [1m[35m (0.3ms)[0m  ROLLBACK
+  [1m[36m (0.2ms)[0m  [1mBEGIN[0m
+  [1m[35mApplicant Exists (0.4ms)[0m  SELECT  1 AS one FROM "applicants" WHERE "applicants"."email" = 'app5@tbg.com' LIMIT 1
+  [1m[36m (0.2ms)[0m  [1mROLLBACK[0m
+  [1m[35m (0.2ms)[0m  BEGIN
+  [1m[36mAdmin Exists (0.7ms)[0m  [1mSELECT  1 AS one FROM "admins" WHERE "admins"."email" = 'pres@tbg.com' LIMIT 1[0m
+  [1m[35m (0.4ms)[0m  ROLLBACK
+  [1m[36m (0.2ms)[0m  [1mBEGIN[0m
+  [1m[35mAdmin Exists (0.4ms)[0m  SELECT  1 AS one FROM "admins" WHERE "admins"."email" = 'ivp@tbg.com' LIMIT 1
+  [1m[36m (0.2ms)[0m  [1mROLLBACK[0m
+  [1m[35m (0.2ms)[0m  BEGIN
+  [1m[36mAdmin Exists (0.3ms)[0m  [1mSELECT  1 AS one FROM "admins" WHERE "admins"."email" = 'vpd@tbg.com' LIMIT 1[0m
+  [1m[35m (0.2ms)[0m  ROLLBACK
+  [1m[36m (0.3ms)[0m  [1mBEGIN[0m
+  [1m[35mAdmin Exists (0.5ms)[0m  SELECT  1 AS one FROM "admins" WHERE "admins"."email" = 'pvp@tbg.com' LIMIT 1
+  [1m[36m (0.2ms)[0m  [1mROLLBACK[0m
+  [1m[35m (0.2ms)[0m  BEGIN
+  [1m[36mAdmin Exists (0.4ms)[0m  [1mSELECT  1 AS one FROM "admins" WHERE "admins"."email" = 'evp@tbg.com' LIMIT 1[0m
+  [1m[35m (0.1ms)[0m  ROLLBACK
+  [1m[36m (0.2ms)[0m  [1mBEGIN[0m
+  [1m[35mSQL (0.4ms)[0m  INSERT INTO "emails" ("stage", "created_at", "updated_at") VALUES ($1, $2, $3) RETURNING "id"  [["stage", 0], ["created_at", "2016-06-30 16:32:31.142602"], ["updated_at", "2016-06-30 16:32:31.142602"]]
+  [1m[36m (0.8ms)[0m  [1mCOMMIT[0m
+  [1m[35m (0.1ms)[0m  BEGIN
+  [1m[36mSQL (0.3ms)[0m  [1mINSERT INTO "emails" ("stage", "created_at", "updated_at") VALUES ($1, $2, $3) RETURNING "id"[0m  [["stage", 1], ["created_at", "2016-06-30 16:32:31.146052"], ["updated_at", "2016-06-30 16:32:31.146052"]]
+  [1m[35m (1.4ms)[0m  COMMIT
+  [1m[36m (0.1ms)[0m  [1mBEGIN[0m
+  [1m[35mSQL (0.3ms)[0m  INSERT INTO "emails" ("stage", "created_at", "updated_at") VALUES ($1, $2, $3) RETURNING "id"  [["stage", 2], ["created_at", "2016-06-30 16:32:31.149349"], ["updated_at", "2016-06-30 16:32:31.149349"]]
+  [1m[36m (0.7ms)[0m  [1mCOMMIT[0m
+  [1m[35mSettings Load (0.7ms)[0m  SELECT  "settings".* FROM "settings"  ORDER BY "settings"."id" ASC LIMIT 1
+  [1m[36m (0.2ms)[0m  [1mBEGIN[0m
+  [1m[35mSQL (0.3ms)[0m  UPDATE "settings" SET "deadline" = $1, "updated_at" = $2 WHERE "settings"."id" = $3  [["deadline", "2016-08-30 16:32:31.163169"], ["updated_at", "2016-06-30 16:32:31.164521"], ["id", 1]]
+  [1m[36m (0.6ms)[0m  [1mCOMMIT[0m
+  [1m[36mQuestion Load (0.7ms)[0m  [1mSELECT "questions".* FROM "questions"[0m
+  [1m[35m (0.2ms)[0m  BEGIN
+  [1m[36mSQL (0.4ms)[0m  [1mDELETE FROM "questions" WHERE "questions"."id" = $1[0m  [["id", 14]]
+  [1m[35m (1.0ms)[0m  COMMIT
+  [1m[36m (0.1ms)[0m  [1mBEGIN[0m
+  [1m[35mSQL (0.2ms)[0m  DELETE FROM "questions" WHERE "questions"."id" = $1  [["id", 15]]
+  [1m[36m (0.6ms)[0m  [1mCOMMIT[0m
+  [1m[35m (0.2ms)[0m  BEGIN
+  [1m[36mSQL (0.2ms)[0m  [1mDELETE FROM "questions" WHERE "questions"."id" = $1[0m  [["id", 16]]
+  [1m[35m (0.7ms)[0m  COMMIT
+  [1m[36m (0.1ms)[0m  [1mBEGIN[0m
+  [1m[35mSQL (0.2ms)[0m  DELETE FROM "questions" WHERE "questions"."id" = $1  [["id", 17]]
+  [1m[36m (0.6ms)[0m  [1mCOMMIT[0m
+  [1m[35m (0.1ms)[0m  BEGIN
+  [1m[36mSQL (0.2ms)[0m  [1mDELETE FROM "questions" WHERE "questions"."id" = $1[0m  [["id", 18]]
+  [1m[35m (0.6ms)[0m  COMMIT
+  [1m[36m (0.1ms)[0m  [1mBEGIN[0m
+  [1m[35mSQL (0.2ms)[0m  DELETE FROM "questions" WHERE "questions"."id" = $1  [["id", 19]]
+  [1m[36m (0.6ms)[0m  [1mCOMMIT[0m
+  [1m[35m (0.1ms)[0m  BEGIN
+  [1m[36mSQL (0.1ms)[0m  [1mDELETE FROM "questions" WHERE "questions"."id" = $1[0m  [["id", 20]]
+  [1m[35m (0.6ms)[0m  COMMIT
+  [1m[36m (0.1ms)[0m  [1mBEGIN[0m
+  [1m[35mSQL (0.1ms)[0m  DELETE FROM "questions" WHERE "questions"."id" = $1  [["id", 21]]
+  [1m[36m (0.6ms)[0m  [1mCOMMIT[0m
+  [1m[35m (0.1ms)[0m  BEGIN
+  [1m[36mSQL (0.1ms)[0m  [1mDELETE FROM "questions" WHERE "questions"."id" = $1[0m  [["id", 22]]
+  [1m[35m (1.7ms)[0m  COMMIT
+  [1m[36m (0.1ms)[0m  [1mBEGIN[0m
+  [1m[35mSQL (0.1ms)[0m  DELETE FROM "questions" WHERE "questions"."id" = $1  [["id", 23]]
+  [1m[36m (0.6ms)[0m  [1mCOMMIT[0m
+  [1m[35m (0.1ms)[0m  BEGIN
+  [1m[36mSQL (0.1ms)[0m  [1mDELETE FROM "questions" WHERE "questions"."id" = $1[0m  [["id", 24]]
+  [1m[35m (0.6ms)[0m  COMMIT
+  [1m[36m (0.1ms)[0m  [1mBEGIN[0m
+  [1m[35mSQL (0.1ms)[0m  DELETE FROM "questions" WHERE "questions"."id" = $1  [["id", 25]]
+  [1m[36m (0.6ms)[0m  [1mCOMMIT[0m
+  [1m[35m (0.1ms)[0m  BEGIN
+  [1m[36mSQL (0.1ms)[0m  [1mDELETE FROM "questions" WHERE "questions"."id" = $1[0m  [["id", 26]]
+  [1m[35m (0.6ms)[0m  COMMIT
+  [1m[36m (0.2ms)[0m  [1mBEGIN[0m
+  [1m[35mSQL (0.5ms)[0m  INSERT INTO "questions" ("title", "qtype", "category", "limit", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5, $6) RETURNING "id"  [["title", "What is the current problem(s) your organization faces? Please clearly explain the current situation, why the problem exists (if known), and other relevant information. How has your organization currently addressed these problems?"], ["qtype", 0], ["category", 0], ["limit", 1500], ["created_at", "2016-06-30 16:32:56.855027"], ["updated_at", "2016-06-30 16:32:56.855027"]]
+  [1m[36m (0.7ms)[0m  [1mCOMMIT[0m
+  [1m[35m (0.2ms)[0m  BEGIN
+  [1m[36mSQL (0.4ms)[0m  [1mINSERT INTO "questions" ("title", "qtype", "category", "limit", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5, $6) RETURNING "id"[0m  [["title", "What would the main objectives of the project be? How can TBG help solve these issues? What can TBG do in order to ensure efficiency and effectiveness? If you have several projects or project objectives in mind, feel free to list them all and prioritize them based on your organization's need."], ["qtype", 0], ["category", 0], ["limit", 1500], ["created_at", "2016-06-30 16:32:56.860343"], ["updated_at", "2016-06-30 16:32:56.860343"]]
+  [1m[35m (0.6ms)[0m  COMMIT
+  [1m[36m (0.1ms)[0m  [1mBEGIN[0m
+  [1m[35mSQL (0.3ms)[0m  INSERT INTO "questions" ("title", "qtype", "category", "limit", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5, $6) RETURNING "id"  [["title", "In one sentence, please explicitly summarize the goals of the project."], ["qtype", 0], ["category", 0], ["limit", 500], ["created_at", "2016-06-30 16:32:56.863966"], ["updated_at", "2016-06-30 16:32:56.863966"]]
+  [1m[36m (0.6ms)[0m  [1mCOMMIT[0m
+  [1m[35m (0.1ms)[0m  BEGIN
+  [1m[36mSQL (0.5ms)[0m  [1mINSERT INTO "questions" ("title", "qtype", "category", "limit", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5, $6) RETURNING "id"[0m  [["title", "If your nonprofit is selected to work with TBG this semester, what would success look like after the project was completed? What results do you hope to achieve after working with TBG? What impact will this project have on your organization?"], ["qtype", 0], ["category", 0], ["limit", 1500], ["created_at", "2016-06-30 16:32:56.867141"], ["updated_at", "2016-06-30 16:32:56.867141"]]
+  [1m[35m (0.8ms)[0m  COMMIT
+  [1m[36m (0.2ms)[0m  [1mBEGIN[0m
+  [1m[35mSQL (0.3ms)[0m  INSERT INTO "questions" ("title", "qtype", "category", "limit", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5, $6) RETURNING "id"  [["title", "Have you applied to TBG in the past? If yes, when?"], ["qtype", 0], ["category", 1], ["limit", 500], ["created_at", "2016-06-30 16:32:56.871176"], ["updated_at", "2016-06-30 16:32:56.871176"]]
+  [1m[36m (0.6ms)[0m  [1mCOMMIT[0m
+  [1m[35m (0.1ms)[0m  BEGIN
+  [1m[36mSQL (0.4ms)[0m  [1mINSERT INTO "questions" ("title", "qtype", "category", "limit", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5, $6) RETURNING "id"[0m  [["title", "Have you worked with TBG in the past? If yes, when?"], ["qtype", 0], ["category", 1], ["limit", 500], ["created_at", "2016-06-30 16:32:56.874426"], ["updated_at", "2016-06-30 16:32:56.874426"]]
+  [1m[35m (0.6ms)[0m  COMMIT
+  [1m[36m (0.1ms)[0m  [1mBEGIN[0m
+  [1m[35mSQL (0.2ms)[0m  INSERT INTO "questions" ("title", "qtype", "category", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5) RETURNING "id"  [["title", "Does the nonprofit organization listed above have 501(c)3 status?"], ["qtype", 2], ["category", 1], ["created_at", "2016-06-30 16:32:56.877782"], ["updated_at", "2016-06-30 16:32:56.877782"]]
+  [1m[36m (0.7ms)[0m  [1mCOMMIT[0m
+  [1m[35m (0.1ms)[0m  BEGIN
+  [1m[36mSQL (0.3ms)[0m  [1mINSERT INTO "questions" ("title", "qtype", "category", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5) RETURNING "id"[0m  [["title", "If selected, is the contact listed above available to meet on a weekly basis with a consultant from The Berkeley Group over the course of the engagement?"], ["qtype", 2], ["category", 1], ["created_at", "2016-06-30 16:32:56.881075"], ["updated_at", "2016-06-30 16:32:56.881075"]]
+  [1m[35m (0.7ms)[0m  COMMIT
+  [1m[36m (0.1ms)[0m  [1mBEGIN[0m
+  [1m[35mSQL (0.2ms)[0m  INSERT INTO "questions" ("title", "qtype", "category", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5) RETURNING "id"  [["title", "If selected, is the contact listed above available to meet with the consultants at a location within an hour's transportation of UC Berkeley? (e.g. address listed above, satellite office, café, etc.)"], ["qtype", 2], ["category", 1], ["created_at", "2016-06-30 16:32:56.883951"], ["updated_at", "2016-06-30 16:32:56.883951"]]
+  [1m[36m (0.7ms)[0m  [1mCOMMIT[0m
+  [1m[35m (0.2ms)[0m  BEGIN
+  [1m[36mSQL (0.3ms)[0m  [1mINSERT INTO "questions" ("title", "qtype", "category", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5) RETURNING "id"[0m  [["title", "If selected, will you and your organization fully commit to an engagement with TBG for September 2016 through December 2016?"], ["qtype", 2], ["category", 1], ["created_at", "2016-06-30 16:32:56.886799"], ["updated_at", "2016-06-30 16:32:56.886799"]]
+  [1m[35m (1.6ms)[0m  COMMIT
+  [1m[36m (0.1ms)[0m  [1mBEGIN[0m
+  [1m[35mSQL (0.2ms)[0m  INSERT INTO "questions" ("title", "qtype", "category", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5) RETURNING "id"  [["title", "Does the contact listed above have the ability to implement recommendations developed by The Berkeley Group?"], ["qtype", 2], ["category", 1], ["created_at", "2016-06-30 16:32:56.890897"], ["updated_at", "2016-06-30 16:32:56.890897"]]
+  [1m[36m (0.8ms)[0m  [1mCOMMIT[0m
+  [1m[35m (0.1ms)[0m  BEGIN
+  [1m[36mSQL (36.2ms)[0m  [1mINSERT INTO "questions" ("title", "qtype", "category", "limit", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5, $6) RETURNING "id"[0m  [["title", "In the space below, please share any additional information that you would like The Berkeley Group to know. Please also include any dates or times that you will be unavailable for a follow-up interview between August 22nd, 2016 and August 26th, 2016."], ["qtype", 0], ["category", 2], ["limit", 500], ["created_at", "2016-06-30 16:32:56.893552"], ["updated_at", "2016-06-30 16:32:56.893552"]]
+  [1m[35m (0.7ms)[0m  COMMIT
+  [1m[36m (0.1ms)[0m  [1mBEGIN[0m
+  [1m[35mSQL (0.2ms)[0m  INSERT INTO "questions" ("title", "qtype", "category", "limit", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5, $6) RETURNING "id"  [["title", "By typing my full name in the space below, I agree that the information above is true to the best of my knowledge."], ["qtype", 0], ["category", 2], ["limit", 200], ["created_at", "2016-06-30 16:32:56.932683"], ["updated_at", "2016-06-30 16:32:56.932683"]]
+  [1m[36m (0.7ms)[0m  [1mCOMMIT[0m
+
+
+Started GET "/" for 127.0.0.1 at 2016-06-30 12:34:04 -0400
+  [1m[36mActiveRecord::SchemaMigration Load (0.8ms)[0m  [1mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+Processing by PagesController#home as HTML
+  Rendered pages/home.html.slim within layouts/application (590.5ms)
+  Rendered layouts/_navbar.html.slim (8.4ms)
+Completed 200 OK in 5832ms (Views: 5797.3ms | ActiveRecord: 0.0ms)
+
+
+Started POST "/sign_in" for 127.0.0.1 at 2016-06-30 12:34:31 -0400
+Processing by SessionsController#create as */*
+  Parameters: {"applicant"=>{"email"=>"adithya.iyengar@berkeley.edu", "password"=>"[FILTERED]"}}
+  [1m[35mApplicant Load (0.8ms)[0m  SELECT  "applicants".* FROM "applicants" WHERE "applicants"."email" = $1  ORDER BY "applicants"."id" ASC LIMIT 1  [["email", "adithya.iyengar@berkeley.edu"]]
+  [1m[36mAdmin Load (0.5ms)[0m  [1mSELECT  "admins".* FROM "admins" WHERE "admins"."email" = $1  ORDER BY "admins"."id" ASC LIMIT 1[0m  [["email", "adithya.iyengar@berkeley.edu"]]
+Completed 401 Unauthorized in 62ms (ActiveRecord: 6.7ms)
+Processing by SessionsController#failure as */*
+  Parameters: {"applicant"=>{"email"=>"adithya.iyengar@berkeley.edu", "password"=>"[FILTERED]"}, "admin"=>{"email"=>"adithya.iyengar@berkeley.edu", "password"=>"[FILTERED]"}}
+Completed 401 Unauthorized in 5ms (Views: 4.7ms | ActiveRecord: 0.0ms)
+
+
+Started POST "/sign_up" for 127.0.0.1 at 2016-06-30 12:34:40 -0400
+Processing by RegistrationsController#create as */*
+  Parameters: {"applicant"=>{"password"=>"[FILTERED]", "password_confirmation"=>"[FILTERED]", "email"=>"adithya.iyengar@berkeley.edu"}}
+  [1m[35m (0.2ms)[0m  BEGIN
+  [1m[36mApplicant Exists (0.5ms)[0m  [1mSELECT  1 AS one FROM "applicants" WHERE "applicants"."email" = 'adithya.iyengar@berkeley.edu' LIMIT 1[0m
+  [1m[35mQuestion Load (0.6ms)[0m  SELECT  "questions".* FROM "questions"  ORDER BY "questions"."id" ASC LIMIT 1000
+  [1m[36mSQL (0.5ms)[0m  [1mINSERT INTO "responses" ("question_id", "created_at", "updated_at") VALUES ($1, $2, $3) RETURNING "id"[0m  [["question_id", 27], ["created_at", "2016-06-30 16:34:40.857761"], ["updated_at", "2016-06-30 16:34:40.857761"]]
+  [1m[35mSQL (0.3ms)[0m  INSERT INTO "responses" ("question_id", "created_at", "updated_at") VALUES ($1, $2, $3) RETURNING "id"  [["question_id", 28], ["created_at", "2016-06-30 16:34:40.860685"], ["updated_at", "2016-06-30 16:34:40.860685"]]
+  [1m[36mSQL (0.6ms)[0m  [1mINSERT INTO "responses" ("question_id", "created_at", "updated_at") VALUES ($1, $2, $3) RETURNING "id"[0m  [["question_id", 29], ["created_at", "2016-06-30 16:34:40.862983"], ["updated_at", "2016-06-30 16:34:40.862983"]]
+  [1m[35mSQL (0.4ms)[0m  INSERT INTO "responses" ("question_id", "created_at", "updated_at") VALUES ($1, $2, $3) RETURNING "id"  [["question_id", 30], ["created_at", "2016-06-30 16:34:40.866060"], ["updated_at", "2016-06-30 16:34:40.866060"]]
+  [1m[36mSQL (0.3ms)[0m  [1mINSERT INTO "responses" ("question_id", "created_at", "updated_at") VALUES ($1, $2, $3) RETURNING "id"[0m  [["question_id", 31], ["created_at", "2016-06-30 16:34:40.868593"], ["updated_at", "2016-06-30 16:34:40.868593"]]
+  [1m[35mSQL (0.4ms)[0m  INSERT INTO "responses" ("question_id", "created_at", "updated_at") VALUES ($1, $2, $3) RETURNING "id"  [["question_id", 32], ["created_at", "2016-06-30 16:34:40.870881"], ["updated_at", "2016-06-30 16:34:40.870881"]]
+  [1m[36mSQL (0.3ms)[0m  [1mINSERT INTO "responses" ("question_id", "created_at", "updated_at") VALUES ($1, $2, $3) RETURNING "id"[0m  [["question_id", 33], ["created_at", "2016-06-30 16:34:40.873315"], ["updated_at", "2016-06-30 16:34:40.873315"]]
+  [1m[35mSQL (0.2ms)[0m  INSERT INTO "responses" ("question_id", "created_at", "updated_at") VALUES ($1, $2, $3) RETURNING "id"  [["question_id", 34], ["created_at", "2016-06-30 16:34:40.892564"], ["updated_at", "2016-06-30 16:34:40.892564"]]
+  [1m[36mSQL (0.3ms)[0m  [1mINSERT INTO "responses" ("question_id", "created_at", "updated_at") VALUES ($1, $2, $3) RETURNING "id"[0m  [["question_id", 35], ["created_at", "2016-06-30 16:34:40.894898"], ["updated_at", "2016-06-30 16:34:40.894898"]]
+  [1m[35mSQL (0.4ms)[0m  INSERT INTO "responses" ("question_id", "created_at", "updated_at") VALUES ($1, $2, $3) RETURNING "id"  [["question_id", 36], ["created_at", "2016-06-30 16:34:40.897123"], ["updated_at", "2016-06-30 16:34:40.897123"]]
+  [1m[36mSQL (0.4ms)[0m  [1mINSERT INTO "responses" ("question_id", "created_at", "updated_at") VALUES ($1, $2, $3) RETURNING "id"[0m  [["question_id", 37], ["created_at", "2016-06-30 16:34:40.900063"], ["updated_at", "2016-06-30 16:34:40.900063"]]
+  [1m[35mSQL (0.2ms)[0m  INSERT INTO "responses" ("question_id", "created_at", "updated_at") VALUES ($1, $2, $3) RETURNING "id"  [["question_id", 38], ["created_at", "2016-06-30 16:34:40.902813"], ["updated_at", "2016-06-30 16:34:40.902813"]]
+  [1m[36mSQL (0.2ms)[0m  [1mINSERT INTO "responses" ("question_id", "created_at", "updated_at") VALUES ($1, $2, $3) RETURNING "id"[0m  [["question_id", 39], ["created_at", "2016-06-30 16:34:40.905225"], ["updated_at", "2016-06-30 16:34:40.905225"]]
+  [1m[35mSQL (36.6ms)[0m  INSERT INTO "applicants" ("email", "encrypted_password", "created_at", "updated_at") VALUES ($1, $2, $3, $4) RETURNING "id"  [["email", "adithya.iyengar@berkeley.edu"], ["encrypted_password", "$2a$10$a2/.XlyKuPO1aqlHc4nF2uLcMQ5TLTkgYmhaSZ6XV4NOtVoc7E3Le"], ["created_at", "2016-06-30 16:34:40.787618"], ["updated_at", "2016-06-30 16:34:40.787618"]]
+  [1m[36mSQL (0.5ms)[0m  [1mUPDATE "responses" SET "applicant_id" = $1, "updated_at" = $2 WHERE "responses"."id" = $3[0m  [["applicant_id", 6], ["updated_at", "2016-06-30 16:34:40.946698"], ["id", 66]]
+  [1m[35mSQL (0.4ms)[0m  UPDATE "responses" SET "applicant_id" = $1, "updated_at" = $2 WHERE "responses"."id" = $3  [["applicant_id", 6], ["updated_at", "2016-06-30 16:34:40.950154"], ["id", 67]]
+  [1m[36mSQL (0.3ms)[0m  [1mUPDATE "responses" SET "applicant_id" = $1, "updated_at" = $2 WHERE "responses"."id" = $3[0m  [["applicant_id", 6], ["updated_at", "2016-06-30 16:34:40.952351"], ["id", 68]]
+  [1m[35mSQL (0.3ms)[0m  UPDATE "responses" SET "applicant_id" = $1, "updated_at" = $2 WHERE "responses"."id" = $3  [["applicant_id", 6], ["updated_at", "2016-06-30 16:34:40.954247"], ["id", 69]]
+  [1m[36mSQL (0.3ms)[0m  [1mUPDATE "responses" SET "applicant_id" = $1, "updated_at" = $2 WHERE "responses"."id" = $3[0m  [["applicant_id", 6], ["updated_at", "2016-06-30 16:34:40.956191"], ["id", 70]]
+  [1m[35mSQL (0.4ms)[0m  UPDATE "responses" SET "applicant_id" = $1, "updated_at" = $2 WHERE "responses"."id" = $3  [["applicant_id", 6], ["updated_at", "2016-06-30 16:34:40.957860"], ["id", 71]]
+  [1m[36mSQL (0.3ms)[0m  [1mUPDATE "responses" SET "applicant_id" = $1, "updated_at" = $2 WHERE "responses"."id" = $3[0m  [["applicant_id", 6], ["updated_at", "2016-06-30 16:34:40.959774"], ["id", 72]]
+  [1m[35mSQL (0.2ms)[0m  UPDATE "responses" SET "applicant_id" = $1, "updated_at" = $2 WHERE "responses"."id" = $3  [["applicant_id", 6], ["updated_at", "2016-06-30 16:34:40.961910"], ["id", 73]]
+  [1m[36mSQL (0.6ms)[0m  [1mUPDATE "responses" SET "applicant_id" = $1, "updated_at" = $2 WHERE "responses"."id" = $3[0m  [["applicant_id", 6], ["updated_at", "2016-06-30 16:34:40.963542"], ["id", 74]]
+  [1m[35mSQL (0.3ms)[0m  UPDATE "responses" SET "applicant_id" = $1, "updated_at" = $2 WHERE "responses"."id" = $3  [["applicant_id", 6], ["updated_at", "2016-06-30 16:34:40.966641"], ["id", 75]]
+  [1m[36mSQL (0.3ms)[0m  [1mUPDATE "responses" SET "applicant_id" = $1, "updated_at" = $2 WHERE "responses"."id" = $3[0m  [["applicant_id", 6], ["updated_at", "2016-06-30 16:34:40.969377"], ["id", 76]]
+  [1m[35mSQL (0.2ms)[0m  UPDATE "responses" SET "applicant_id" = $1, "updated_at" = $2 WHERE "responses"."id" = $3  [["applicant_id", 6], ["updated_at", "2016-06-30 16:34:40.971263"], ["id", 77]]
+  [1m[36mSQL (0.3ms)[0m  [1mUPDATE "responses" SET "applicant_id" = $1, "updated_at" = $2 WHERE "responses"."id" = $3[0m  [["applicant_id", 6], ["updated_at", "2016-06-30 16:34:40.973423"], ["id", 78]]
+  [1m[35m (21.4ms)[0m  COMMIT
+  [1m[36m (0.1ms)[0m  [1mBEGIN[0m
+  [1m[35mSQL (0.6ms)[0m  UPDATE "applicants" SET "last_sign_in_at" = $1, "current_sign_in_at" = $2, "last_sign_in_ip" = $3, "current_sign_in_ip" = $4, "sign_in_count" = $5, "updated_at" = $6 WHERE "applicants"."id" = $7  [["last_sign_in_at", "2016-06-30 16:34:40.997542"], ["current_sign_in_at", "2016-06-30 16:34:40.997542"], ["last_sign_in_ip", "127.0.0.1/32"], ["current_sign_in_ip", "127.0.0.1/32"], ["sign_in_count", 1], ["updated_at", "2016-06-30 16:34:40.999090"], ["id", 6]]
+  [1m[36m (0.8ms)[0m  [1mCOMMIT[0m
+  [1m[35mSettings Load (0.5ms)[0m  SELECT  "settings".* FROM "settings"  ORDER BY "settings"."id" ASC LIMIT 1
+Completed 200 OK in 509ms (Views: 4.5ms | ActiveRecord: 76.0ms)
+
+
+Started GET "/applicants/6/apply" for 127.0.0.1 at 2016-06-30 12:34:41 -0400
+Processing by ApplicantsController#apply as HTML
+  Parameters: {"applicant_id"=>"6"}
+  [1m[36mApplicant Load (0.6ms)[0m  [1mSELECT  "applicants".* FROM "applicants" WHERE "applicants"."id" = $1 LIMIT 1[0m  [["id", 6]]
+  [1m[35mApplicant Load (0.7ms)[0m  SELECT  "applicants".* FROM "applicants" WHERE "applicants"."id" = $1  ORDER BY "applicants"."id" ASC LIMIT 1  [["id", 6]]
+  [1m[36mCACHE (0.3ms)[0m  [1mSELECT  "applicants".* FROM "applicants" WHERE "applicants"."id" = $1 LIMIT 1[0m  [["id", "6"]]
+  [1m[35mSettings Load (0.4ms)[0m  SELECT  "settings".* FROM "settings"  ORDER BY "settings"."id" ASC LIMIT 1
+  Rendered applicants/apply.html.slim within layouts/application (14.3ms)
+  Rendered layouts/_navbar.html.slim (0.7ms)
+Completed 200 OK in 693ms (Views: 664.4ms | ActiveRecord: 1.9ms)
+
+
+Started GET "/api/applicants/6.json" for 127.0.0.1 at 2016-06-30 12:34:42 -0400
+Processing by Api::ApplicantsController#show as JSON
+  Parameters: {"id"=>"6"}
+  [1m[36mApplicant Load (7.5ms)[0m  [1mSELECT  "applicants".* FROM "applicants" WHERE "applicants"."id" = $1  ORDER BY "applicants"."id" ASC LIMIT 1[0m  [["id", 6]]
+  [1m[35mApplicant Load (1.0ms)[0m  SELECT  "applicants".* FROM "applicants" WHERE "applicants"."id" = $1 LIMIT 1  [["id", 6]]
+  [1m[36mResponse Load (0.5ms)[0m  [1mSELECT "responses".* FROM "responses" WHERE "responses"."applicant_id" = $1[0m  [["applicant_id", 6]]
+  [1m[35mQuestion Load (0.3ms)[0m  SELECT  "questions".* FROM "questions" WHERE "questions"."id" = $1 LIMIT 1  [["id", 27]]
+  [1m[36mQuestion Load (0.4ms)[0m  [1mSELECT  "questions".* FROM "questions" WHERE "questions"."id" = $1 LIMIT 1[0m  [["id", 28]]
+  [1m[35mQuestion Load (0.3ms)[0m  SELECT  "questions".* FROM "questions" WHERE "questions"."id" = $1 LIMIT 1  [["id", 29]]
+  [1m[36mQuestion Load (0.2ms)[0m  [1mSELECT  "questions".* FROM "questions" WHERE "questions"."id" = $1 LIMIT 1[0m  [["id", 30]]
+  [1m[35mQuestion Load (0.2ms)[0m  SELECT  "questions".* FROM "questions" WHERE "questions"."id" = $1 LIMIT 1  [["id", 31]]
+  [1m[36mQuestion Load (0.2ms)[0m  [1mSELECT  "questions".* FROM "questions" WHERE "questions"."id" = $1 LIMIT 1[0m  [["id", 32]]
+  [1m[35mQuestion Load (0.2ms)[0m  SELECT  "questions".* FROM "questions" WHERE "questions"."id" = $1 LIMIT 1  [["id", 33]]
+  [1m[36mQuestion Load (0.3ms)[0m  [1mSELECT  "questions".* FROM "questions" WHERE "questions"."id" = $1 LIMIT 1[0m  [["id", 34]]
+  [1m[35mQuestion Load (0.2ms)[0m  SELECT  "questions".* FROM "questions" WHERE "questions"."id" = $1 LIMIT 1  [["id", 35]]
+  [1m[36mQuestion Load (0.3ms)[0m  [1mSELECT  "questions".* FROM "questions" WHERE "questions"."id" = $1 LIMIT 1[0m  [["id", 36]]
+  [1m[35mQuestion Load (0.2ms)[0m  SELECT  "questions".* FROM "questions" WHERE "questions"."id" = $1 LIMIT 1  [["id", 37]]
+  [1m[36mQuestion Load (0.3ms)[0m  [1mSELECT  "questions".* FROM "questions" WHERE "questions"."id" = $1 LIMIT 1[0m  [["id", 38]]
+  [1m[35mQuestion Load (0.2ms)[0m  SELECT  "questions".* FROM "questions" WHERE "questions"."id" = $1 LIMIT 1  [["id", 39]]
+  [1m[36mComment Load (30.7ms)[0m  [1mSELECT "comments".* FROM "comments" WHERE "comments"."applicant_id" = $1[0m  [["applicant_id", 6]]
+Completed 200 OK in 401ms (Views: 322.5ms | ActiveRecord: 44.0ms)
+
+
+Started GET "/applicants/6/apply" for 127.0.0.1 at 2016-06-30 12:35:14 -0400
+Processing by ApplicantsController#apply as HTML
+  Parameters: {"applicant_id"=>"6"}
+  [1m[35mApplicant Load (0.4ms)[0m  SELECT  "applicants".* FROM "applicants" WHERE "applicants"."id" = $1 LIMIT 1  [["id", 6]]
+  [1m[36mApplicant Load (0.4ms)[0m  [1mSELECT  "applicants".* FROM "applicants" WHERE "applicants"."id" = $1  ORDER BY "applicants"."id" ASC LIMIT 1[0m  [["id", 6]]
+  [1m[35mCACHE (0.0ms)[0m  SELECT  "applicants".* FROM "applicants" WHERE "applicants"."id" = $1 LIMIT 1  [["id", "6"]]
+  [1m[36mSettings Load (0.4ms)[0m  [1mSELECT  "settings".* FROM "settings"  ORDER BY "settings"."id" ASC LIMIT 1[0m
+  Rendered applicants/apply.html.slim within layouts/application (0.9ms)
+  Rendered layouts/_navbar.html.slim (0.7ms)
+Completed 200 OK in 2019ms (Views: 2011.5ms | ActiveRecord: 1.2ms)
+
+
+Started GET "/api/applicants/6.json" for 127.0.0.1 at 2016-06-30 12:35:17 -0400
+Processing by Api::ApplicantsController#show as JSON
+  Parameters: {"id"=>"6"}
+  [1m[35mApplicant Load (0.5ms)[0m  SELECT  "applicants".* FROM "applicants" WHERE "applicants"."id" = $1  ORDER BY "applicants"."id" ASC LIMIT 1  [["id", 6]]
+  [1m[36mApplicant Load (0.4ms)[0m  [1mSELECT  "applicants".* FROM "applicants" WHERE "applicants"."id" = $1 LIMIT 1[0m  [["id", 6]]
+  [1m[35mResponse Load (1.3ms)[0m  SELECT "responses".* FROM "responses" WHERE "responses"."applicant_id" = $1  [["applicant_id", 6]]
+  [1m[36mQuestion Load (0.4ms)[0m  [1mSELECT  "questions".* FROM "questions" WHERE "questions"."id" = $1 LIMIT 1[0m  [["id", 27]]
+  [1m[35mQuestion Load (0.3ms)[0m  SELECT  "questions".* FROM "questions" WHERE "questions"."id" = $1 LIMIT 1  [["id", 28]]
+  [1m[36mQuestion Load (0.3ms)[0m  [1mSELECT  "questions".* FROM "questions" WHERE "questions"."id" = $1 LIMIT 1[0m  [["id", 29]]
+  [1m[35mQuestion Load (0.4ms)[0m  SELECT  "questions".* FROM "questions" WHERE "questions"."id" = $1 LIMIT 1  [["id", 30]]
+  [1m[36mQuestion Load (1.0ms)[0m  [1mSELECT  "questions".* FROM "questions" WHERE "questions"."id" = $1 LIMIT 1[0m  [["id", 31]]
+  [1m[35mQuestion Load (3.6ms)[0m  SELECT  "questions".* FROM "questions" WHERE "questions"."id" = $1 LIMIT 1  [["id", 32]]
+  [1m[36mQuestion Load (0.9ms)[0m  [1mSELECT  "questions".* FROM "questions" WHERE "questions"."id" = $1 LIMIT 1[0m  [["id", 33]]
+  [1m[35mQuestion Load (0.2ms)[0m  SELECT  "questions".* FROM "questions" WHERE "questions"."id" = $1 LIMIT 1  [["id", 34]]
+  [1m[36mQuestion Load (0.2ms)[0m  [1mSELECT  "questions".* FROM "questions" WHERE "questions"."id" = $1 LIMIT 1[0m  [["id", 35]]
+  [1m[35mQuestion Load (0.3ms)[0m  SELECT  "questions".* FROM "questions" WHERE "questions"."id" = $1 LIMIT 1  [["id", 36]]
+  [1m[36mQuestion Load (0.3ms)[0m  [1mSELECT  "questions".* FROM "questions" WHERE "questions"."id" = $1 LIMIT 1[0m  [["id", 37]]
+  [1m[35mQuestion Load (0.3ms)[0m  SELECT  "questions".* FROM "questions" WHERE "questions"."id" = $1 LIMIT 1  [["id", 38]]
+  [1m[36mQuestion Load (0.2ms)[0m  [1mSELECT  "questions".* FROM "questions" WHERE "questions"."id" = $1 LIMIT 1[0m  [["id", 39]]
+  [1m[35mComment Load (0.9ms)[0m  SELECT "comments".* FROM "comments" WHERE "comments"."applicant_id" = $1  [["applicant_id", 6]]
+Completed 200 OK in 44ms (Views: 29.0ms | ActiveRecord: 11.2ms)
+
+
+Started DELETE "/sign_out" for 127.0.0.1 at 2016-06-30 12:35:22 -0400
+Processing by SessionsController#destroy as HTML
+  Parameters: {"authenticity_token"=>"t+G9UxRhTTgsesy12AX7w2eyYGuBvrPf06GKZLQIgEhXbgqBrJQqL9uzbVBtz3gqeoKwsqFnE/le933ouwbYeA=="}
+  [1m[36mApplicant Load (0.5ms)[0m  [1mSELECT  "applicants".* FROM "applicants" WHERE "applicants"."id" = $1  ORDER BY "applicants"."id" ASC LIMIT 1[0m  [["id", 6]]
+  [1m[35m (0.2ms)[0m  BEGIN
+  [1m[36m (0.2ms)[0m  [1mCOMMIT[0m
+Redirected to http://localhost:3000/
+Completed 302 Found in 19ms (ActiveRecord: 0.8ms)
+
+
+Started GET "/" for 127.0.0.1 at 2016-06-30 12:35:22 -0400
+Processing by PagesController#home as HTML
+  Rendered pages/home.html.slim within layouts/application (27.9ms)
+  Rendered layouts/_navbar.html.slim (0.2ms)
+Completed 200 OK in 617ms (Views: 616.1ms | ActiveRecord: 0.0ms)
