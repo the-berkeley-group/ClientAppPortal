@@ -70,17 +70,18 @@ questions:
       2
     category:
       1
-  - title:
-      'If selected, is the contact listed above available to meet with the consultants at
-      a location within an hour''s transportation of UC Berkeley?
-      (e.g. address listed above, satellite office, café, etc.)'
-    qtype:
-      2
-    category:
-      1
+# Deleted following question for Fall 2020 cycle because of remote projects due to COVID-19:
+#  - title:
+#      'If selected, is the contact listed above available to meet with the consultants at
+#      a location within an hour''s transportation of UC Berkeley?
+#      (e.g. address listed above, satellite office, café, etc.)'
+#    qtype:
+#      2
+#    category:
+#      1
   - title:
       'If selected, will you and your organization fully commit to an engagement with TBG
-      for February 2019 through May 2019?'
+      for September 2020 through December 2020?'
     qtype:
       2
     category:
@@ -95,7 +96,7 @@ questions:
   - title:
       'In the space below, please share any additional information that you would like The Berkeley Group to know.
       Please also include any dates or times that you will be unavailable for a follow-up
-      interview between February 3rd, 2020 and February 5th, 2020.'
+      interview between September 7th, 2020 and September 9th, 2020.'
     qtype:
       0
     category:
